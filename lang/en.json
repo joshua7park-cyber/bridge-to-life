@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "code": "en",
+    "name": "English",
+    "nativeName": "English",
+    "tts": "en-US",
+    "dir": "ltr",
+    "bible": "ESV",
+    "version": 2
+  },
+  "ui": {
+    "appName": "Bridge to Life",
+    "tagline": "The way to God",
+    "start": "Start",
+    "prev": "Back",
+    "next": "Next",
+    "listen": "Listen",
+    "pause": "Pause",
+    "language": "Language",
+    "installed": "Languages",
+    "addLang": "Add a language",
+    "catalog": "Online language list",
+    "catalogHint": "Download a language file from the server and use it right away.",
+    "fromFile": "Open a language file on this device (.json)",
+    "fromUrl": "Download a language file from a URL",
+    "urlPh": "https://…/lang/fr.json",
+    "load": "Download",
+    "get": "Get",
+    "installedBadge": "Installed",
+    "builtinBadge": "Built-in",
+    "remove": "Remove",
+    "newLang": "Create a new language",
+    "newLangHint": "Save the current language file, translate it, change meta.code to the new language code, then add it with “Open a language file”.",
+    "exportBtn": "Save current language file",
+    "copyBtn": "Copy contents",
+    "settings": "Settings",
+    "speed": "Speaking speed",
+    "voice": "Voice",
+    "voiceAuto": "Automatic",
+    "autoNext": "Go to the next step after listening",
+    "textSize": "Text size",
+    "noVoice": "This device has no {lang} voice. Download one in your device’s text-to-speech (TTS) settings to listen.",
+    "noTTS": "This browser does not support listening.",
+    "invalid": "Could not read the language file: {reason}",
+    "loaded": "{lang} added.",
+    "removed": "Removed.",
+    "saved": "File saved.",
+    "copied": "Copied.",
+    "netError": "Download failed. Check your connection and the address.",
+    "restart": "Start over",
+    "prayer": "A prayer to receive Jesus",
+    "growth": "Growing in your new life",
+    "close": "Close",
+    "bible": "Bible: {v}",
+    "swipeHint": "Swipe or tap “Next” to continue",
+    "home": "Home",
+    "back": "Back",
+    "steps": "Steps",
+    "cover": "Cover",
+    "voiceEngine": "Reading voice",
+    "voiceAutoDesc": "Picks the best voice on this device",
+    "aiBadge": "AI quality",
+    "packBadge": "AI voice pack",
+    "preview": "Preview",
+    "voiceCatalog": "Get AI voice packs",
+    "voiceCatalogHint": "High-quality voices recorded in advance with AI. Once downloaded, they play without internet.",
+    "noVoicePacks": "No AI voice pack for this language on the server yet.",
+    "downloading": "Downloading {n}/{total}",
+    "packFiles": "Open voice pack files (select pack.json together with the audio files)",
+    "packUrl": "Download a voice pack from a URL (pack.json)",
+    "packAdded": "AI voice “{name}” added.",
+    "packOtherLang": "This voice pack is for {lang}. Switch the language to select it.",
+    "guideTitle": "Add free AI voices to your phone",
+    "guideIOS": "iPhone: Settings › Accessibility › Spoken Content › Voices › choose a language › download an “Enhanced” or “Premium” voice",
+    "guideAndroid": "Android: Settings › General management › Text-to-speech › set Google as the engine › ⚙ › Install voice data › choose a language and voice",
+    "guideAfter": "After downloading, reopen this screen and the voice appears with an “AI quality” badge."
+  },
+  "labels": {
+    "me": "Me",
+    "god": "God",
+    "sin": "SIN",
+    "sinner": "Sinner",
+    "death": "Death",
+    "judgment": "Judgment",
+    "works": "Good deeds",
+    "religion": "Religion",
+    "morality": "Morality",
+    "education": "Education",
+    "jesus": "JESUS CHRIST",
+    "eternal": "Eternal life",
+    "forgiven": "Forgiven",
+    "child": "Child of God",
+    "knock": "Knock knock",
+    "abundant": "Abundant life"
+  },
+  "steps": [
+    {
+      "title": "Bridge to Life",
+      "body": [
+        "Let’s look together at the way of life God has prepared for you. Read or listen one step at a time."
+      ],
+      "verses": [
+        {
+          "ref": "John 14:6",
+          "say": "John chapter 14, verse 6",
+          "text": "Jesus said to him, “I am the way, and the truth, and the life. No one comes to the Father except through me.”"
+        }
+      ]
+    },
+    {
+      "title": "God wants you to have abundant life",
+      "body": [
+        "What is most precious in your life? Gaining the whole world means nothing if you lose your life.",
+        "God created people out of love, and He planned for us to enjoy an abundant, eternal life with Him.",
+        "So why do so many people live with emptiness instead of this life?"
+      ],
+      "verses": [
+        {
+          "ref": "Mark 8:36",
+          "say": "Mark chapter 8, verse 36",
+          "text": "For what does it profit a man to gain the whole world and forfeit his soul?"
+        },
+        {
+          "ref": "John 10:10",
+          "say": "John chapter 10, verse 10",
+          "text": "I came that they may have life and have it abundantly."
+        }
+      ]
+    },
+    {
+      "title": "Sin has separated us from God",
+      "body": [
+        "God is holy and righteous. But people have turned away from God and lived their own way.",
+        "The Bible calls this sin. Sin is going against God’s will in our thoughts, words and actions.",
+        "As a result, a deep gap now lies between God and people."
+      ],
+      "verses": [
+        {
+          "ref": "Romans 3:23",
+          "say": "Romans chapter 3, verse 23",
+          "text": "For all have sinned and fall short of the glory of God."
+        }
+      ]
+    },
+    {
+      "title": "The result of sin is death and judgment",
+      "body": [
+        "The price of sin is death: being separated forever from God, the source of life.",
+        "Every person dies once, and after that faces judgment before God.",
+        "This is the most important question in life, and no one can avoid it."
+      ],
+      "verses": [
+        {
+          "ref": "Romans 6:23",
+          "say": "Romans chapter 6, verse 23",
+          "text": "For the wages of sin is death, but the free gift of God is eternal life in Christ Jesus our Lord."
+        },
+        {
+          "ref": "Hebrews 9:27",
+          "say": "Hebrews chapter 9, verse 27",
+          "text": "And just as it is appointed for man to die once, and after that comes judgment."
+        }
+      ]
+    },
+    {
+      "title": "Human effort cannot cross the gap",
+      "body": [
+        "Many people try to cross this gap through good deeds, morality, religion or education.",
+        "These efforts have value, but they fall far short of reaching a holy God.",
+        "Salvation is not earned by what we do. It is a free gift from God."
+      ],
+      "verses": [
+        {
+          "ref": "Isaiah 64:6",
+          "say": "Isaiah chapter 64, verse 6",
+          "text": "We have all become like one who is unclean, and all our righteous deeds are like a polluted garment."
+        },
+        {
+          "ref": "Ephesians 2:8-9",
+          "say": "Ephesians chapter 2, verses 8 and 9",
+          "text": "For by grace you have been saved through faith. And this is not your own doing; it is the gift of God, not a result of works, so that no one may boast."
+        }
+      ]
+    },
+    {
+      "title": "God built the bridge through Jesus Christ",
+      "body": [
+        "God loved us so much that He sent His Son, Jesus Christ, into the world.",
+        "Jesus, who had no sin, took our sins upon Himself and died on the cross. He was buried, and on the third day He rose again.",
+        "The cross of Jesus is the only bridge to God."
+      ],
+      "verses": [
+        {
+          "ref": "Romans 5:8",
+          "say": "Romans chapter 5, verse 8",
+          "text": "But God shows his love for us in that while we were still sinners, Christ died for us."
+        },
+        {
+          "ref": "1 Corinthians 15:3-4",
+          "say": "First Corinthians chapter 15, verses 3 and 4",
+          "text": "Christ died for our sins in accordance with the Scriptures, that he was buried, that he was raised on the third day in accordance with the Scriptures."
+        }
+      ]
+    },
+    {
+      "title": "Believe and receive Jesus, and you will have life",
+      "body": [
+        "A bridge does no good unless you cross it.",
+        "Faith is more than knowing about Jesus. It means receiving Him as your Savior and Lord and trusting Him with your life.",
+        "Whoever believes in Jesus does not come into judgment, but has passed from death to life."
+      ],
+      "verses": [
+        {
+          "ref": "John 1:12",
+          "say": "John chapter 1, verse 12",
+          "text": "But to all who did receive him, who believed in his name, he gave the right to become children of God."
+        },
+        {
+          "ref": "John 5:24",
+          "say": "John chapter 5, verse 24",
+          "text": "Truly, truly, I say to you, whoever hears my word and believes him who sent me has eternal life. He does not come into judgment, but has passed from death to life."
+        }
+      ]
+    },
+    {
+      "title": "Will you receive Jesus into your heart now?",
+      "body": [
+        "Jesus is knocking on the door of your heart even now.",
+        "The prayer below is only an example. What matters is not the exact words but a sincere heart. If this prayer expresses your heart, pray it to God now."
+      ],
+      "verses": [
+        {
+          "ref": "Revelation 3:20",
+          "say": "Revelation chapter 3, verse 20",
+          "text": "Behold, I stand at the door and knock. If anyone hears my voice and opens the door, I will come in to him and eat with him, and he with me."
+        }
+      ],
+      "prayer": "Father God, I admit that I am a sinner and cannot come to You on my own. I believe that Jesus died on the cross for my sins and rose again. Right now I receive Jesus into my heart as my Savior and Lord. Thank You for forgiving my sins and making me Your child. Please lead my life from now on. In Jesus’ name I pray. Amen."
+    },
+    {
+      "title": "To you, now a child of God",
+      "body": [
+        "Everyone who has received Jesus has eternal life. This assurance rests not on feelings but on God’s unchanging promise."
+      ],
+      "verses": [
+        {
+          "ref": "1 John 5:12-13",
+          "say": "First John chapter 5, verses 12 and 13",
+          "text": "Whoever has the Son has life; whoever does not have the Son of God does not have life. I write these things to you who believe in the name of the Son of God, that you may know that you have eternal life."
+        }
+      ],
+      "list": [
+        "Talk with God in prayer every day.",
+        "Read the Bible every day. Start with the Gospel of John.",
+        "Join a church and worship with your family of faith.",
+        "Share this good news with others."
+      ]
+    }
+  ]
+}

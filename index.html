@@ -1,0 +1,1185 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#eef2f5">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="생명의 다리">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:0;box-sizing:border-box}*,*::before,*::after{box-sizing:border-box}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<script>window.__PWA__=true</script>
+</head>
+<body>
+<title>생명의 다리</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap">
+<style>
+/* Layout: one-screen phone app — header (back · home · logo · language · settings) / story (illustration + text) / step strip + listen bar */
+:root{
+  --bg:#eef2f5; --surface:#ffffff; --ink:#152035; --muted:#5a6578; --line:#d8dfe8;
+  --gold:#a8690f; --gold-ink:#ffffff; --gold-soft:#f8eedb; --night:#1b2640; --hl:#fff1c9;
+  --sprout:#4f9a3c; --sprout-ink:#2f7a26;
+  --sans:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Hiragino Sans","PingFang SC","Noto Sans CJK SC","Segoe UI",Roboto,system-ui,sans-serif;
+  --serif:"Gowun Batang","Noto Serif KR","Nanum Myeongjo","Hiragino Mincho ProN","Songti SC","Noto Serif CJK SC",Georgia,serif;
+  --fs:1;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d1320; --surface:#151d2c; --ink:#e7ecf4; --muted:#9ba6b9; --line:#253047;
+  --gold:#efb34c; --gold-ink:#1b1305; --gold-soft:#2a2214; --night:#0a0f1b; --hl:#3a2f15;
+  --sprout:#7fcf5c; --sprout-ink:#9be07a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1320; --surface:#151d2c; --ink:#e7ecf4; --muted:#9ba6b9; --line:#253047;
+  --gold:#efb34c; --gold-ink:#1b1305; --gold-soft:#2a2214; --night:#0a0f1b; --hl:#3a2f15;
+  --sprout:#7fcf5c; --sprout-ink:#9be07a; color-scheme:dark}
+html,body{height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  -webkit-tap-highlight-color:transparent;overflow:hidden}
+.app{height:100%;max-width:560px;margin:0 auto;display:flex;flex-direction:column}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:8px}
+
+/* header */
+.top{display:flex;align-items:center;gap:8px;padding-block:8px 8px}
+.icon-btn{width:40px;height:40px;border-radius:20px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;cursor:pointer;flex:none}
+.icon-btn:disabled{opacity:.35;cursor:default}
+.brand{flex:1;min-width:0;display:flex;align-items:center;justify-content:center;gap:8px}
+.brand svg{flex:none;display:block}
+.brand b{font-family:var(--serif);font-size:18px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:none}
+@media (min-width:440px){.brand{justify-content:flex-start}.brand b{display:block}}
+.chip{display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 12px;border-radius:20px;border:1px solid var(--line);background:var(--surface);cursor:pointer;font-weight:600;font-size:14px;max-width:34vw;flex:none}
+.chip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* story */
+main{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding-bottom:20px;scroll-behavior:smooth}
+.stage{position:relative;border-radius:20px;overflow:hidden;background:#cfe0f0;box-shadow:0 1px 0 rgba(0,0,0,.04),0 10px 30px -18px rgba(20,30,60,.5)}
+@media (min-height:720px){.stage{position:sticky;top:0;z-index:2}}
+.scene{display:block;width:100%;height:auto;aspect-ratio:400/240;max-width:100%}
+.content{padding-block:16px 8px;font-size:calc(17px * var(--fs));line-height:1.75}
+.eyebrow{display:flex;align-items:center;gap:8px}
+.eyebrow i{flex:1;height:1px;background:var(--line)}
+.list-btn{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px 0 10px;border-radius:16px;border:1px solid var(--line);background:var(--surface);color:var(--muted);font-size:13px;font-weight:700;cursor:pointer;font-variant-numeric:tabular-nums}
+h1.title{font-size:calc(23px * var(--fs));line-height:1.38;font-weight:800;margin:10px 0 14px;text-wrap:balance;letter-spacing:-.01em}
+.cover h1.title{font-family:var(--serif);font-size:calc(34px * var(--fs));font-weight:700;margin:6px 0 4px;letter-spacing:0}
+.tagline{color:var(--gold);font-weight:700;margin:0 0 14px}
+.verse{margin:0 0 12px;padding:14px 16px 12px;background:var(--gold-soft);border-radius:14px;font-family:var(--serif);font-size:calc(17.5px * var(--fs));line-height:1.8;position:relative}
+.verse::before{content:"\201C";position:absolute;left:10px;top:-6px;font-size:44px;line-height:1;color:var(--gold);opacity:.45;font-family:Georgia,serif}
+.verse p{margin:0;padding-left:14px}
+.verse cite{display:block;text-align:right;font-style:normal;font-family:var(--sans);font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.03em;margin-top:6px}
+.body p{margin:0 0 12px}
+.say{transition:background-color .3s,box-shadow .3s;border-radius:8px}
+.say.speaking{background:var(--hl);box-shadow:0 0 0 6px var(--hl)}
+.verse.say.speaking{box-shadow:0 0 0 3px var(--gold)}
+.prayer{margin:16px 0 8px;padding:18px 18px 14px;border-radius:16px;border:1.5px solid var(--gold);background:var(--surface)}
+.prayer h2,.growth h2{margin:0 0 8px;font-size:14px;letter-spacing:.06em;color:var(--gold);font-weight:800}
+.prayer p{margin:0;font-family:var(--serif);font-size:calc(17.5px * var(--fs));line-height:1.9}
+.growth{margin-top:16px}
+.growth ol{margin:0;padding:0;list-style:none;display:grid;gap:8px;counter-reset:g}
+.growth li{counter-increment:g;display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+.growth li::before{content:counter(g);flex:none;width:26px;height:26px;border-radius:13px;background:var(--sprout);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:700;margin-top:2px}
+.meta-line{color:var(--muted);font-size:12.5px;margin-top:14px}
+.start-btn{margin-top:10px;width:100%;height:52px;border:0;border-radius:14px;background:var(--gold);color:var(--gold-ink);font-weight:800;font-size:17px;cursor:pointer}
+.ghost-btn{margin-top:10px;width:100%;height:46px;border-radius:12px;border:1px solid var(--line);background:var(--surface);font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+.hint{color:var(--muted);font-size:13px;text-align:center;margin-top:10px}
+
+/* step strip + bottom nav */
+.nav{padding-block:6px calc(22px + env(safe-area-inset-bottom,0px))}
+.steps{display:grid;grid-template-columns:repeat(9,1fr);gap:4px;margin-bottom:10px}
+.steps button{height:34px;min-width:0;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--muted);font-weight:800;font-size:13px;cursor:pointer;display:grid;place-items:center;padding:0;font-variant-numeric:tabular-nums;transition:background .3s,color .3s,border-color .3s}
+.steps button.done{background:var(--gold-soft);border-color:transparent;color:var(--gold)}
+.steps button.cur{background:var(--gold);border-color:var(--gold);color:var(--gold-ink)}
+.nav-row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px}
+.nav-btn{height:48px;border-radius:14px;border:1px solid var(--line);background:var(--surface);font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;padding:0 10px;min-width:0}
+.nav-btn span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nav-btn:disabled{opacity:.4;cursor:default}
+.play{width:62px;height:62px;border-radius:31px;border:0;background:var(--night);color:#fff;cursor:pointer;display:grid;place-items:center;box-shadow:0 8px 20px -10px rgba(10,20,40,.7);position:relative}
+:root[data-theme="dark"] .play{background:var(--gold);color:var(--gold-ink)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .play{background:var(--gold);color:var(--gold-ink)}}
+.play small{position:absolute;bottom:-17px;font-size:11px;font-weight:700;color:var(--muted);white-space:nowrap}
+.play.on::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--gold);animation:pulse 1.6s ease-out infinite}
+@keyframes pulse{from{transform:scale(.92);opacity:1}to{transform:scale(1.18);opacity:0}}
+
+/* sheets */
+.veil{position:fixed;inset:0;background:rgba(8,12,22,.5);z-index:20;display:flex;align-items:flex-end;justify-content:center}
+.sheet{width:100%;max-width:560px;max-height:88%;overflow-y:auto;background:var(--bg);border-radius:22px 22px 0 0;
+  padding:8px max(18px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px));
+  animation:up .28s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{transform:translateY(40px);opacity:0}}
+.grab{width:40px;height:5px;border-radius:3px;background:var(--line);margin:4px auto 10px}
+.sheet-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.sheet-head h2{margin:0;font-size:19px}
+.sec{margin-top:18px}
+.sec h3{margin:0 0 8px;font-size:13px;letter-spacing:.06em;color:var(--muted);font-weight:800}
+.sec p.small{margin:0 0 10px;color:var(--muted);font-size:13px;line-height:1.55}
+.list{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.row{display:flex;align-items:center;gap:12px;padding:12px 14px;border-top:1px solid var(--line);min-height:56px}
+.row:first-child{border-top:0}
+.row .txt{flex:1;min-width:0}
+.row .txt b{display:block;font-size:16px;line-height:1.35}
+.row .txt small{display:block;color:var(--muted);font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row.sel{background:var(--gold-soft)}
+.row input[type=radio]{width:20px;height:20px;accent-color:var(--gold);flex:none}
+label.row,button.row{cursor:pointer}
+button.row{width:100%;text-align:left;border-left:0;border-right:0;border-bottom:0;background:transparent;font:inherit;color:inherit}
+.list > button.row:first-child{border-top:0}
+.num{flex:none;width:30px;height:30px;border-radius:10px;display:grid;place-items:center;font-weight:800;font-size:14px;background:var(--bg);color:var(--muted)}
+.row.sel .num{background:var(--gold);color:var(--gold-ink)}
+.badge{font-size:11px;font-weight:800;padding:3px 8px;border-radius:10px;background:var(--bg);color:var(--muted);flex:none}
+.badge.ai{background:#e3f4d9;color:#2f7a26}
+.badge.pack{background:var(--gold-soft);color:var(--gold)}
+.sm-btn{height:34px;padding:0 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface);font-weight:700;font-size:13px;cursor:pointer;flex:none}
+.sm-btn.pri{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
+.sm-btn.warn{color:#c0392b}
+.sm-btn.round{width:34px;padding:0;display:grid;place-items:center;border-radius:17px}
+.field{display:flex;gap:8px}
+.field input{flex:1;min-width:0;height:42px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:0 12px;font:inherit;font-size:14px}
+.filebtn{display:flex;align-items:center;justify-content:center;min-height:46px;border-radius:12px;border:1.5px dashed var(--line);background:var(--surface);font-weight:700;cursor:pointer;font-size:14px;text-align:center;padding:8px 12px;position:relative}
+.filebtn input{position:absolute;width:1px;height:1px;opacity:0}
+.seg{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:3px;gap:3px}
+.seg button{height:38px;border:0;border-radius:9px;background:transparent;font-weight:700;cursor:pointer;font-variant-numeric:tabular-nums}
+.seg button.on{background:var(--night);color:#fff}
+.check{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--surface);border:1px solid var(--line);border-radius:12px;cursor:pointer}
+.check input{width:22px;height:22px;accent-color:var(--gold);flex:none}
+.guide{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:13.5px;line-height:1.6}
+.guide b{display:block;margin-bottom:6px;font-size:14px}
+.guide p{margin:0 0 8px}
+.guide p:last-child{margin:0;color:var(--muted)}
+textarea.dump{width:100%;height:120px;margin-top:8px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:12px/1.4 ui-monospace,Menlo,monospace;padding:8px}
+.toast{position:fixed;left:50%;bottom:calc(150px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--night);color:#fff;padding:10px 16px;border-radius:12px;font-size:14px;line-height:1.45;z-index:40;max-width:min(90vw,480px);box-shadow:0 10px 30px -10px rgba(0,0,0,.5);animation:up .25s}
+
+/* ---------- scene: flat illustration, same palette in both themes ---------- */
+.scene{--st:#bcd7ea;--sb:#f5e4c6;--far1:#a7bccf;--far2:#c3d1de;--cloud:#ffffff;--cloudo:.9;
+  --rock:#5d7186;--rock-d:#4a5c70;--rock-l:#6f8499;--grass:#80b26a;--grass-d:#5f9150;--leaf:#5ea94f;--leaf-d:#4a8f3f;--leaf-l:#86c770}
+.scene.s1{--st:#acdbf5;--sb:#fff3d4;--far1:#a9cbe0;--far2:#c9e0ee;--grass:#8cc26f;--grass-d:#6aa557;--leaf:#5cb04c}
+.scene.s2{--st:#a1b2c4;--sb:#dccfb9;--far1:#97a8ba;--far2:#b4c1cf;--cloudo:.65;--grass:#8a9a68;--grass-d:#6f7d52;--leaf:#8f8c5f;--leaf-d:#76724c;--leaf-l:#a6a272}
+.scene.s3,.scene.s4{--st:#63749a;--sb:#a99c8f;--far1:#5f6f8a;--far2:#77869f;--cloud:#c9cfdb;--cloudo:.5;--rock:#4b5b6e;--rock-d:#3c4a5b;--rock-l:#5a6b80;--grass:#6f7b5c;--grass-d:#58634a;--leaf:#7e7857;--leaf-d:#666146;--leaf-l:#938d69}
+.scene.s5{--st:#86a2c6;--sb:#f3d69b;--far1:#8fa6c0;--far2:#b0c1d4;--cloudo:.75;--leaf:#7e7857;--leaf-d:#666146;--leaf-l:#938d69}
+.scene.s6{--st:#a8d1ee;--sb:#fde6ad;--far1:#a3c4dc;--far2:#c6dcec;--grass:#8cc26f;--grass-d:#6aa557}
+.scene.s7{--st:#1f2742;--sb:#3a3c5c}
+.scene.s8{--st:#acdaf6;--sb:#ffe1a2;--far1:#a8c9df;--far2:#cde2f0;--grass:#93cc70;--grass-d:#6fae58;--leaf:#5cb04c}
+#skyTop{stop-color:var(--st);transition:stop-color 1.4s}
+#skyBot{stop-color:var(--sb);transition:stop-color 1.4s}
+.far1{fill:var(--far1);transition:fill 1.4s}.far2{fill:var(--far2);transition:fill 1.4s}
+.cloud{fill:var(--cloud);opacity:var(--cloudo);transition:opacity 1.4s,fill 1.4s}
+.rock{fill:var(--rock);transition:fill 1.4s}.rock-d{fill:var(--rock-d);transition:fill 1.4s,opacity 1s}.rock-l{fill:var(--rock-l);transition:fill 1.4s}
+.grass{fill:var(--grass);transition:fill 1.4s}.tuft{stroke:var(--grass-d);transition:stroke 1.4s}
+.leaf{fill:var(--leaf);transition:fill 1.4s}.leaf-d{fill:var(--leaf-d);transition:fill 1.4s}.leaf-l{fill:var(--leaf-l);transition:fill 1.4s}
+.c1{animation:drift 46s linear infinite}.c2{animation:drift 64s linear infinite -20s}.c3{animation:drift 80s linear infinite -50s}
+@keyframes drift{from{transform:translateX(-90px)}to{transform:translateX(430px)}}
+.tag rect{fill:rgba(255,255,255,.94)}
+.tag text{font-family:var(--sans);font-weight:800;font-size:11px;fill:#24314b;text-anchor:middle}
+.tag.dark rect{fill:rgba(14,20,36,.62)}
+.tag.dark text{fill:#fff}
+.tag.gold rect{fill:#fff3cf}
+.tag.gold text{fill:#7a4d0f}
+.sin{font-family:var(--sans);font-weight:900;font-size:24px;letter-spacing:.1em;fill:#ff9483;text-anchor:middle;opacity:0;transition:opacity 1s}
+.s2 .sin,.s3 .sin,.s4 .sin{opacity:1}
+.g{transition:opacity 1s}
+.cliff-l,.cliff-r{transition:transform 1.5s cubic-bezier(.6,0,.2,1)}
+.s1 .cliff-l{transform:translateX(72px)}
+.s1 .cliff-r{transform:translateX(-72px)}
+.s1 .shade{opacity:0}
+.abyss-g{opacity:1}.s1 .abyss-g{opacity:0}
+.deep{opacity:0;transition:opacity 1.4s}.s3 .deep,.s4 .deep{opacity:.55}
+.rays{transform-box:fill-box;transform-origin:center;animation:spin 70s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.godlight{transform:translate(358px,44px);transition:transform 1.4s}
+.s8 .godlight{transform:translate(358px,44px) scale(1.1)}
+.beam{opacity:0;transition:opacity 1.2s}.s5 .beam{opacity:.55}.s6 .beam{opacity:.3}
+.hearts,.abundant{opacity:0;transition:opacity .8s}.s1 .hearts,.s1 .abundant{opacity:1}
+.heart{transform-box:fill-box;transform-origin:center}
+.play-anim.s1 .heart{animation:rise 3.6s ease-out infinite}
+.play-anim.s1 .heart:nth-child(2){animation-delay:1.2s}.play-anim.s1 .heart:nth-child(3){animation-delay:2.4s}
+@keyframes rise{0%{transform:translate(0,10px) scale(.6);opacity:0}25%{opacity:1}100%{transform:translate(18px,-46px) scale(1.1);opacity:0}}
+.person{transform:translate(72px,145px);transition:transform 1.3s cubic-bezier(.4,0,.2,1)}
+.s1 .person{transform:translate(170px,145px)}
+.s4 .person{transform:translate(110px,145px)}
+.s6 .person,.s7 .person,.s8 .person{transform:translate(294px,145px)}
+.limb{transform-box:fill-box;transition:transform .8s}
+.leg-l,.leg-r{transform-origin:50% 0%}
+.arm-l{transform-origin:100% 0%}.arm-r{transform-origin:0% 0%}
+.s8 .arm-l{transform:rotate(105deg)}.s8 .arm-r{transform:rotate(-105deg)}
+.s1 .arm-l{transform:rotate(35deg)}.s1 .arm-r{transform:rotate(-35deg)}
+.s4 .arm-l{transform:rotate(-40deg)}.s4 .arm-r{transform:rotate(-75deg)}
+.play-anim.s6 .person{animation:cross 4.4s .6s both}
+@keyframes cross{0%{transform:translate(72px,145px)}17%{transform:translate(126px,144px)}82%{transform:translate(272px,144px)}100%{transform:translate(294px,145px)}}
+.play-anim.s6 .leg-l{animation:stepA .34s .6s 13 alternate ease-in-out}
+.play-anim.s6 .leg-r{animation:stepB .34s .6s 13 alternate ease-in-out}
+.play-anim.s4 .person{animation:strain 1.6s ease-in-out infinite}
+@keyframes strain{0%,100%{transform:translate(110px,145px)}50%{transform:translate(113px,145px)}}
+@keyframes stepA{from{transform:rotate(20deg)}to{transform:rotate(-20deg)}}
+@keyframes stepB{from{transform:rotate(-20deg)}to{transform:rotate(20deg)}}
+.play-anim.s2 .land{animation:quake .9s .1s ease-in-out}
+@keyframes quake{0%,100%{transform:none}15%{transform:translate(-3px,1px)}30%{transform:translate(3px,-1px)}45%{transform:translate(-2px,1px)}60%{transform:translate(2px,0)}80%{transform:translate(-1px,0)}}
+.tags-l .tag,.tags-r .tag{opacity:0;transition:opacity .8s}
+.s3 .tags-l .tag,.s4 .tags-l .tag,.s5 .tags-l .tag{opacity:1}
+.s6 .tags-r .tag,.s8 .tags-r .tag{opacity:1}
+.play-anim.s3 .tags-l .tag{animation:fade .7s both}
+.play-anim.s3 .t1{animation-delay:.5s!important}.play-anim.s3 .t2{animation-delay:1.2s!important}.play-anim.s3 .t3{animation-delay:1.9s!important}
+.play-anim.s6 .tags-r .tag{animation:fade .7s both}
+.play-anim.s6 .t1{animation-delay:4.6s!important}.play-anim.s6 .t2{animation-delay:5.1s!important}.play-anim.s6 .t3{animation-delay:5.6s!important}
+.play-anim.s6 .tags-l .tag{transition-delay:3s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.tree{transition:transform 1.4s;transform-box:fill-box;transform-origin:50% 100%}
+.s2 .tree,.s3 .tree,.s4 .tree,.s5 .tree{transform:scale(.92) rotate(-4deg)}
+.planks{opacity:0;transition:opacity .5s}.s4 .planks{opacity:1}
+.plank{transform-box:fill-box;transform-origin:0% 50%;transform:scaleX(0)}
+.play-anim.s4 .plank{animation:plank 6.4s cubic-bezier(.4,0,.6,1) infinite}
+.play-anim.s4 .p2{animation-delay:1.6s}.play-anim.s4 .p3{animation-delay:3.2s}.play-anim.s4 .p4{animation-delay:4.8s}
+@keyframes plank{0%{transform:scaleX(0);opacity:1}13%{transform:scaleX(1);opacity:1}19%{transform:rotate(7deg);opacity:1}31%{transform:translate(14px,96px) rotate(62deg);opacity:0}100%{transform:translate(14px,96px) rotate(62deg);opacity:0}}
+.cross{opacity:0;transform:translateY(-250px);transition:transform 1.8s cubic-bezier(.2,.8,.2,1),opacity .9s}
+.s0 .cross,.s5 .cross,.s6 .cross,.s7 .cross,.s8 .cross{opacity:1;transform:none}
+.halo{opacity:0;transition:opacity 1s}
+.s5 .halo,.s0 .halo,.s8 .halo{opacity:1}
+.play-anim.s5 .halo{animation:glow 2.4s 1.6s ease-in-out infinite}
+@keyframes glow{0%,100%{opacity:.55}50%{opacity:1}}
+.melbl{transition:opacity .6s}.s7 .melbl{opacity:0}
+.sprout{transform-box:fill-box;transform-origin:50% 100%;transform:scale(0);transition:transform 1.4s .4s cubic-bezier(.3,1.4,.5,1)}
+.s8 .sprout{transform:scale(1)}
+.birds{opacity:0;transition:opacity 1s}.s8 .birds{opacity:1}
+.play-anim.s8 .birds{animation:fly 9s linear infinite}
+@keyframes fly{from{transform:translate(-40px,0)}to{transform:translate(120px,-30px)}}
+.door{opacity:0;pointer-events:none;transition:opacity .9s}.s7 .door{opacity:1}
+.door-panel{transform-box:fill-box;transform-origin:0% 50%}
+.play-anim.s7 .door-panel{animation:open 1.6s 3.8s cubic-bezier(.5,0,.2,1) both}
+@keyframes open{to{transform:scaleX(.12)}}
+.door-spill{opacity:0}
+.play-anim.s7 .door-spill{animation:spill 1.6s 4s both}
+@keyframes spill{to{opacity:.5}}
+.ripple{transform-box:fill-box;transform-origin:center;opacity:0}
+.play-anim.s7 .ripple{animation:ripple 1.1s ease-out 3}
+.play-anim.s7 .ripple.r2{animation-delay:.22s}
+@keyframes ripple{0%{transform:scale(.3);opacity:.9}100%{transform:scale(1.6);opacity:0}}
+.knock{opacity:0}
+.play-anim.s7 .knock{animation:knock 1.1s 3}
+@keyframes knock{0%,60%{opacity:0}15%,45%{opacity:1}}
+.twinkle{animation:tw 3s ease-in-out infinite}
+.twinkle:nth-child(2n){animation-delay:1.4s}
+@keyframes tw{50%{opacity:.25}}
+@media (prefers-reduced-motion: reduce){
+  .scene *{animation:none!important;transition:none!important}
+  .s4 .p1{transform:rotate(28deg)}
+  .s7 .door-panel{transform:scaleX(.12)}.s7 .door-spill{opacity:.5}
+  main{scroll-behavior:auto}
+}
+</style>
+
+<div class="app" id="app">
+  <header class="top">
+    <button class="icon-btn" id="backBtn" type="button" aria-label="뒤로" disabled>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14L4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg>
+    </button>
+    <button class="icon-btn" id="homeBtn" type="button" aria-label="처음으로">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>
+    </button>
+    <div class="brand">
+      <svg width="40" height="46" viewBox="0 0 40 46" role="img" aria-label="Life">
+        <path d="M5 30.5Q20 25.5 35 30.5" fill="none" stroke="#a07a50" stroke-width="2" stroke-linecap="round" opacity=".55"/>
+        <path d="M20 26.5C20 21 20.2 16.5 21.2 12" fill="none" stroke="#4f9a3c" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M21 13.5C23.5 6.5 30.5 4.6 35.5 6.4 33.6 12.8 27.2 16.4 21 13.5Z" fill="#6cc04a"/>
+        <path d="M22.5 12.6C26 10.6 29.5 8.8 33 7.4" fill="none" stroke="#4f9a3c" stroke-width="1.1" stroke-linecap="round"/>
+        <path d="M20.2 17.2C16.6 12 10.6 11.6 7 13.4 9.6 18.8 15.4 20.2 20.2 17.2Z" fill="#9adb72"/>
+        <path d="M19 16.6C16 15.4 12.8 14.4 9.6 14" fill="none" stroke="#5aa845" stroke-width="1" stroke-linecap="round"/>
+        <path d="M13.6 28.6C13.6 24.8 16.6 23.4 19.6 25.4L20 29.6C17.2 30.6 13.6 30.6 13.6 28.6Z" fill="#b07a42"/>
+        <path d="M26.4 28.6C26.4 24.8 23.4 23.4 20.4 25.4L20 29.6C22.8 30.6 26.4 30.6 26.4 28.6Z" fill="#8f5e2f"/>
+        <text x="20" y="43.5" text-anchor="middle" style="font:900 11.5px var(--sans);fill:var(--sprout-ink);letter-spacing:.06em">Life</text>
+      </svg>
+      <b id="brandName">생명의 다리</b>
+    </div>
+    <button class="chip" id="langBtn" type="button" aria-haspopup="dialog">
+      <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"/></svg>
+      <span id="langName">한국어</span>
+    </button>
+    <button class="icon-btn" id="setBtn" type="button" aria-label="설정" aria-haspopup="dialog">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+    </button>
+  </header>
+
+  <main id="main">
+    <div class="stage">
+      <svg class="scene s0" id="scene" viewBox="0 0 400 240" role="img" aria-label="">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop id="skyTop" offset="0"/><stop id="skyBot" offset="1"/></linearGradient>
+          <linearGradient id="abyss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b3652"/><stop offset="1" stop-color="#0a0e19"/></linearGradient>
+          <linearGradient id="beamG" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3c4" stop-opacity=".95"/><stop offset="1" stop-color="#ffe08a" stop-opacity="0"/></linearGradient>
+          <clipPath id="frame"><rect width="400" height="240"/></clipPath>
+        </defs>
+        <g clip-path="url(#frame)">
+        <rect width="400" height="240" fill="url(#sky)"/>
+
+        <g class="clouds">
+          <path class="cloud c1" d="M40 46h42a8 8 0 0 0 0-16 12 12 0 0 0-22-5 9 9 0 0 0-18 5 8 8 0 0 0-2 16z"/>
+          <path class="cloud c2" d="M150 30h30a6 6 0 0 0 0-12 9 9 0 0 0-16-3 7 7 0 0 0-13 4 6 6 0 0 0-1 11z"/>
+          <path class="cloud c3" d="M230 66h36a7 7 0 0 0 0-14 10 10 0 0 0-19-4 8 8 0 0 0-15 4 7 7 0 0 0-2 14z"/>
+        </g>
+
+        <g class="godlight">
+          <circle r="48" fill="#fff6d8" opacity=".22"/>
+          <circle r="34" fill="#fff3cc" opacity=".38"/>
+          <g class="rays" fill="#fff1c2">
+            <rect x="-2" y="-46" width="4" height="12" rx="2"/><rect x="-2" y="34" width="4" height="12" rx="2"/>
+            <rect x="-46" y="-2" width="12" height="4" rx="2"/><rect x="34" y="-2" width="12" height="4" rx="2"/>
+            <rect x="-2" y="-46" width="4" height="12" rx="2" transform="rotate(45)"/><rect x="-2" y="34" width="4" height="12" rx="2" transform="rotate(45)"/>
+            <rect x="-46" y="-2" width="12" height="4" rx="2" transform="rotate(45)"/><rect x="34" y="-2" width="12" height="4" rx="2" transform="rotate(45)"/>
+          </g>
+          <circle r="21" fill="#ffe9a6"/>
+          <circle r="15" fill="#fffaea"/>
+          <g transform="translate(0 38)"><g class="tag gold" data-l="god" data-max="90"><rect y="-9.5" height="19" rx="9.5"/><text y="4">하나님</text></g></g>
+        </g>
+
+        <path class="far2" d="M0 150V116Q28 98 58 110Q90 90 122 106Q150 94 178 110L204 100Q238 84 270 104Q302 92 332 108Q366 94 400 110V150Z"/>
+        <path class="far1" d="M0 150V130Q40 114 80 127Q120 110 160 125Q200 112 240 125Q282 114 322 127Q362 116 400 127V150Z"/>
+
+        <polygon class="beam" points="346,56 214,146 186,146 336,46" fill="url(#beamG)"/>
+
+        <g class="abyss-g g">
+          <rect x="108" y="146" width="184" height="94" fill="url(#abyss)"/>
+          <path d="M108 196L138 182L162 196L190 180L214 194L242 178L268 192L292 182V240H108Z" fill="#121828" opacity=".75"/>
+          <path d="M108 222L146 210L180 222L214 208L250 222L292 210V240H108Z" fill="#0b0f1a" opacity=".85"/>
+          <ellipse cx="200" cy="232" rx="86" ry="9" fill="#3b4868" opacity=".45"/>
+          <rect class="deep" x="108" y="146" width="184" height="94" fill="#000"/>
+          <text class="sin" x="200" y="206" data-l="sin" data-max="120">죄</text>
+        </g>
+
+        <g class="land">
+          <g class="cliff-r">
+            <path class="rock" d="M270 150H500V240H265L269 214L263 199L267 185L261 172L264 158Q263 151 270 150Z"/>
+            <path class="rock-d shade" d="M286 152H270Q263 151 264 158L261 172L267 185L263 199L269 214L265 240H283L279 214L285 198L280 183L286 168Z"/>
+            <g class="rock-l"><rect x="300" y="176" width="44" height="3" rx="1.5"/><rect x="318" y="198" width="64" height="3" rx="1.5"/><rect x="292" y="222" width="38" height="3" rx="1.5"/><rect x="356" y="166" width="34" height="3" rx="1.5"/></g>
+            <path class="grass" d="M500 143H267a4 4 0 0 0-4 4v2c0 3 3 4 5 3 2 3 6 3 8 1 2 3 6 3 8 0 2 2 5 2 7 0H500Z"/>
+            <path class="tuft" d="M300 143l2-6 2 6M304 143l2-8 2 8M352 143l2-5 2 5M356 143l2-7 2 7M390 143l2-6 2 6" fill="none" stroke-width="1.6" stroke-linecap="round"/>
+            <g class="sprout">
+              <path d="M374 144v-12" stroke="#4f9a3c" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M374.5 134c2-6 7.5-7.5 11.5-6-1.5 5-6.5 8-11.5 6z" fill="#6cc04a"/>
+              <path d="M374 137c-3-4-7.5-4.4-10.4-3 2 4.2 6.6 5.4 10.4 3z" fill="#9adb72"/>
+              <ellipse cx="374" cy="144.5" rx="5" ry="2.2" fill="#9a6a38"/>
+            </g>
+            <g class="tags-r">
+              <g transform="translate(340 178)"><g class="tag t1" data-l="eternal" data-max="104"><rect y="-9.5" height="19" rx="9.5"/><text y="4">영생</text></g></g>
+              <g transform="translate(340 201)"><g class="tag t2" data-l="forgiven" data-max="104"><rect y="-9.5" height="19" rx="9.5"/><text y="4">용서</text></g></g>
+              <g transform="translate(340 224)"><g class="tag t3" data-l="child" data-max="104"><rect y="-9.5" height="19" rx="9.5"/><text y="4">하나님의 자녀</text></g></g>
+            </g>
+          </g>
+          <g class="cliff-l">
+            <path class="rock" d="M-100 150H130Q137 151 136 158L139 172L133 185L137 199L131 214L135 240H-100Z"/>
+            <path class="rock-d shade" d="M114 152H130Q137 151 136 158L139 172L133 185L137 199L131 214L135 240H117L121 214L115 198L120 183L114 168Z"/>
+            <g class="rock-l"><rect x="10" y="176" width="44" height="3" rx="1.5"/><rect x="34" y="198" width="64" height="3" rx="1.5"/><rect x="-6" y="222" width="46" height="3" rx="1.5"/><rect x="74" y="168" width="30" height="3" rx="1.5"/></g>
+            <path class="grass" d="M-100 143H133a4 4 0 0 1 4 4v2c0 3-3 4-5 3-2 3-6 3-8 1-2 3-6 3-8 0-2 2-5 2-7 0H-100Z"/>
+            <path class="tuft" d="M8 143l2-6 2 6M12 143l2-8 2 8M58 143l2-5 2 5M96 143l2-7 2 7M100 143l2-5 2 5" fill="none" stroke-width="1.6" stroke-linecap="round"/>
+            <g class="tree">
+              <path d="M30 144V118" stroke="#7a5534" stroke-width="5" stroke-linecap="round"/>
+              <path d="M30 128l-7-6M30 124l6-5" stroke="#7a5534" stroke-width="2.4" stroke-linecap="round"/>
+              <circle class="leaf-d" cx="21" cy="118" r="10"/><circle class="leaf-d" cx="40" cy="117" r="10"/>
+              <circle class="leaf" cx="30" cy="108" r="14"/><circle class="leaf" cx="20" cy="114" r="8"/><circle class="leaf" cx="40" cy="113" r="8"/>
+              <circle class="leaf-l" cx="25" cy="103" r="4.5"/>
+            </g>
+            <g class="tags-l">
+              <g transform="translate(64 178)"><g class="tag dark t1" data-l="sinner" data-max="104"><rect y="-9.5" height="19" rx="9.5"/><text y="4">죄인</text></g></g>
+              <g transform="translate(64 201)"><g class="tag dark t2" data-l="death" data-max="104"><rect y="-9.5" height="19" rx="9.5"/><text y="4">사망</text></g></g>
+              <g transform="translate(64 224)"><g class="tag dark t3" data-l="judgment" data-max="104"><rect y="-9.5" height="19" rx="9.5"/><text y="4">심판</text></g></g>
+            </g>
+          </g>
+        </g>
+
+        <g class="planks">
+          <g class="plank p1"><rect x="134" y="139" width="80" height="13" rx="2.5" fill="#d9b380"/><rect x="134" y="148" width="80" height="4" rx="1.5" fill="#bf955d"/><text x="174" y="148" style="font:800 8.5px var(--sans);fill:#5e3d14;text-anchor:middle" data-l="works" data-max="70">선행</text></g>
+          <g class="plank p2"><rect x="134" y="139" width="80" height="13" rx="2.5" fill="#c3cfda"/><rect x="134" y="148" width="80" height="4" rx="1.5" fill="#a2b0bf"/><text x="174" y="148" style="font:800 8.5px var(--sans);fill:#34465a;text-anchor:middle" data-l="religion" data-max="70">종교</text></g>
+          <g class="plank p3"><rect x="134" y="139" width="80" height="13" rx="2.5" fill="#e0c2b0"/><rect x="134" y="148" width="80" height="4" rx="1.5" fill="#c6a08a"/><text x="174" y="148" style="font:800 8.5px var(--sans);fill:#5e3c2a;text-anchor:middle" data-l="morality" data-max="70">도덕</text></g>
+          <g class="plank p4"><rect x="134" y="139" width="80" height="13" rx="2.5" fill="#b8cfae"/><rect x="134" y="148" width="80" height="4" rx="1.5" fill="#97b18b"/><text x="174" y="148" style="font:800 8.5px var(--sans);fill:#34502d;text-anchor:middle" data-l="education" data-max="70">교육</text></g>
+        </g>
+
+        <g class="cross">
+          <g class="halo"><circle cx="200" cy="124" r="62" fill="#fff1c4" opacity=".28"/><circle cx="200" cy="124" r="42" fill="#fff1c4" opacity=".38"/></g>
+          <rect x="190" y="84" width="20" height="160" rx="2" fill="#e9c995"/>
+          <rect x="201" y="84" width="9" height="160" fill="#d4ab6e"/>
+          <rect x="190" y="84" width="20" height="4" rx="2" fill="#f5e0b8"/>
+          <rect x="116" y="143" width="168" height="19" rx="3" fill="#e9c995"/>
+          <rect x="116" y="155" width="168" height="7" rx="2" fill="#d4ab6e"/>
+          <rect x="116" y="143" width="168" height="3.5" rx="1.75" fill="#f5e0b8"/>
+          <text x="200" y="154.2" data-l="jesus" data-max="150" style="font:900 9px var(--sans);fill:#6b430c;text-anchor:middle;letter-spacing:.06em">예수 그리스도</text>
+        </g>
+
+        <g class="hearts" fill="#e8607a">
+          <path class="heart" d="M196 112c-3-4-9-1-7 3l7 7 7-7c2-4-4-7-7-3z"/>
+          <path class="heart" d="M214 104c-2-3-7-1-5 2l5 5 5-5c2-3-3-5-5-2z"/>
+          <path class="heart" d="M232 116c-2-3-7-1-5 2l5 5 5-5c2-3-3-5-5-2z"/>
+        </g>
+        <g transform="translate(250 130)"><g class="tag gold abundant" data-l="abundant" data-max="130"><rect y="-9.5" height="19" rx="9.5"/><text y="4">풍성한 생명</text></g></g>
+
+        <g class="person">
+          <ellipse cx="0" cy="0.5" rx="8" ry="1.8" fill="#000" opacity=".15"/>
+          <rect class="limb leg-l" x="-4.6" y="-12" width="4" height="12.5" rx="2" fill="#2e3a55"/>
+          <rect class="limb leg-r" x="0.6" y="-12" width="4" height="12.5" rx="2" fill="#26314a"/>
+          <g class="limb arm-l"><path d="M-5 -22.5L-8.5 -14" stroke="#d9624a" stroke-width="3.6" stroke-linecap="round"/><circle cx="-8.7" cy="-13.3" r="1.9" fill="#f0c49c"/></g>
+          <path d="M-6.2 -11Q-7 -24 0 -25.2Q7 -24 6.2 -11Z" fill="#e8735a"/>
+          <path d="M0 -25.2Q7 -24 6.2 -11H2Q3.5 -19 0 -25.2Z" fill="#d9624a"/>
+          <g class="limb arm-r"><path d="M5 -22.5L8.5 -14" stroke="#e8735a" stroke-width="3.6" stroke-linecap="round"/><circle cx="8.7" cy="-13.3" r="1.9" fill="#f0c49c"/></g>
+          <rect x="-1.6" y="-28" width="3.2" height="3.5" fill="#e6b48a"/>
+          <circle cx="0" cy="-32.5" r="6.2" fill="#f0c49c"/>
+          <path d="M-6.3 -33Q-6 -39.5 0 -39.4Q6 -39.5 6.3 -33Q3 -36 -1 -35.2Q-4 -34.8 -6.3 -33Z" fill="#3a2a1f"/>
+          <g class="melbl" transform="translate(0 -50)"><g class="tag" data-l="me" data-max="80"><rect y="-9.5" height="19" rx="9.5"/><text y="4">나</text></g></g>
+        </g>
+
+        <g class="birds" stroke="#3b4a63" stroke-width="1.6" fill="none" stroke-linecap="round">
+          <path d="M210 40q4-4 8 0q4-4 8 0"/><path d="M236 52q3-3 6 0q3-3 6 0"/>
+        </g>
+
+        <g class="door">
+          <rect width="400" height="240" fill="#1b2240"/>
+          <g fill="#fff"><circle class="twinkle" cx="40" cy="30" r="1.2"/><circle class="twinkle" cx="90" cy="60" r="1"/><circle class="twinkle" cx="330" cy="36" r="1.3"/><circle class="twinkle" cx="362" cy="80" r="1"/><circle class="twinkle" cx="60" cy="96" r="1"/><circle class="twinkle" cx="300" cy="20" r="1"/></g>
+          <circle cx="344" cy="46" r="13" fill="#f4ecd2"/><circle cx="350" cy="42" r="11" fill="#1b2240"/>
+          <rect y="202" width="400" height="38" fill="#141a33"/>
+          <polygon points="112,64 200,26 288,64" fill="#3a4370"/>
+          <rect x="122" y="62" width="156" height="140" fill="#2b3359"/>
+          <rect x="122" y="62" width="156" height="6" fill="#232a4b"/>
+          <polygon class="door-spill" points="176,202 224,202 268,240 132,240" fill="#ffe3a0"/>
+          <rect x="169" y="86" width="62" height="117" rx="3" fill="#c9974f"/>
+          <rect x="175" y="92" width="50" height="111" fill="#ffe3a0"/>
+          <g class="door-panel">
+            <rect x="175" y="92" width="50" height="111" fill="#8b5a36"/>
+            <rect x="181" y="98" width="38" height="40" rx="2" fill="#7a4c2c"/>
+            <rect x="181" y="145" width="38" height="52" rx="2" fill="#7a4c2c"/>
+            <path d="M200 113c-4.6-6-13.4-1.6-10.6 4.4L200 128l10.6-10.6c2.8-6-6-10.4-10.6-4.4z" fill="#e8607a"/>
+            <circle cx="219" cy="152" r="2.6" fill="#f0c46a"/>
+          </g>
+          <rect x="242" y="98" width="10" height="14" rx="2" fill="#f0c46a"/><circle cx="247" cy="105" r="12" fill="#ffe3a0" opacity=".18"/>
+          <circle class="ripple" cx="236" cy="132" r="14" fill="none" stroke="#ffe7a6" stroke-width="2"/>
+          <circle class="ripple r2" cx="236" cy="132" r="14" fill="none" stroke="#ffe7a6" stroke-width="2"/>
+          <g transform="translate(290 128)"><g class="tag gold knock" data-l="knock" data-max="100"><rect y="-9.5" height="19" rx="9.5"/><text y="4">똑똑</text></g></g>
+        </g>
+        </g>
+      </svg>
+    </div>
+    <article class="content" id="content"></article>
+  </main>
+
+  <nav class="nav" id="nav">
+    <div class="steps" id="steps"></div>
+    <div class="nav-row">
+      <button class="nav-btn" id="prevBtn" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span id="prevTxt">이전</span></button>
+      <button class="play" id="playBtn" type="button" aria-pressed="false">
+        <svg id="icPlay" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg id="icPause" hidden width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1" fill="currentColor"/><rect x="14" y="5" width="4" height="14" rx="1" fill="currentColor"/></svg>
+        <small id="playTxt">듣기</small>
+      </button>
+      <button class="nav-btn" id="nextBtn" type="button"><span id="nextTxt">다음</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </nav>
+</div>
+<div id="sheetRoot"></div>
+<div id="toastRoot" aria-live="polite"></div>
+
+<script type="application/json" id="builtin-packs">{"ko":{"meta":{"code":"ko","name":"Korean","nativeName":"한국어","tts":"ko-KR","dir":"ltr","bible":"개역개정","version":2},"ui":{"appName":"생명의 다리","tagline":"하나님께로 가는 길","start":"시작하기","prev":"이전","next":"다음","listen":"듣기","pause":"멈춤","language":"언어","installed":"사용할 언어","addLang":"언어 추가","catalog":"온라인 언어 목록","catalogHint":"서버에 올라온 언어 파일을 받아 바로 쓸 수 있습니다.","fromFile":"내 기기의 언어 파일 열기 (.json)","fromUrl":"주소(URL)로 언어 파일 받기","urlPh":"https://…/lang/fr.json","load":"받기","get":"받기","installedBadge":"설치됨","builtinBadge":"기본","remove":"삭제","newLang":"새 언어 만들기","newLangHint":"현재 언어 파일을 저장해 번역한 뒤 meta.code를 새 언어 코드로 바꾸고, ‘언어 파일 열기’로 추가하세요.","exportBtn":"현재 언어 파일 저장","copyBtn":"내용 복사","settings":"설정","speed":"말하기 속도","voice":"음성","voiceAuto":"자동 선택","autoNext":"다 들으면 다음 단계로 자동 진행","textSize":"글자 크기","noVoice":"이 기기에 {lang} 음성이 없습니다. 기기 설정의 ‘텍스트 음성 변환(TTS)’에서 음성을 내려받으면 들을 수 있습니다.","noTTS":"이 브라우저는 음성 듣기를 지원하지 않습니다.","invalid":"언어 파일을 읽지 못했습니다: {reason}","loaded":"{lang}을(를) 추가했습니다.","removed":"삭제했습니다.","saved":"파일을 저장했습니다.","copied":"복사했습니다.","netError":"받지 못했습니다. 인터넷 연결과 주소를 확인하세요.","restart":"처음으로","prayer":"영접 기도","growth":"새 생명 안에서 자라기","close":"닫기","bible":"성경 번역: {v}","swipeHint":"좌우로 밀거나 ‘다음’을 눌러 진행하세요","home":"처음으로","back":"뒤로","steps":"단계 목록","cover":"표지","voiceEngine":"읽어 줄 목소리","voiceAutoDesc":"기기에서 가장 좋은 음성을 자동으로 고릅니다","aiBadge":"AI 고품질","packBadge":"AI 음성 팩","preview":"미리 듣기","voiceCatalog":"AI 음성 팩 받기","voiceCatalogHint":"AI로 미리 녹음해 둔 고품질 음성입니다. 한 번 받으면 인터넷 없이 재생됩니다.","noVoicePacks":"아직 서버에 이 언어의 AI 음성 팩이 없습니다.","downloading":"받는 중 {n}/{total}","packFiles":"음성 팩 파일 열기 (pack.json과 음성 파일을 함께 선택)","packUrl":"음성 팩 주소(pack.json)로 받기","packAdded":"AI 음성 ‘{name}’을(를) 추가했습니다.","packOtherLang":"이 음성 팩은 {lang}용입니다. 언어를 바꾸면 선택할 수 있습니다.","guideTitle":"휴대폰에 무료 AI 음성 추가하기","guideIOS":"iPhone: 설정 › 손쉬운 사용 › 읽기 및 말하기 › 음성 › 언어 선택 › ‘고품질’ 또는 ‘향상된’ 음성 다운로드","guideAndroid":"Android: 설정 › 일반 관리 › 텍스트 음성 변환 › 기본 엔진을 Google로 › ⚙ › 음성 데이터 설치 › 언어 선택 후 원하는 목소리 받기","guideAfter":"받은 뒤 이 화면을 다시 열면 ‘AI 고품질’ 표시와 함께 목록에 나타납니다."},"labels":{"me":"나","god":"하나님","sin":"죄","sinner":"죄인","death":"사망","judgment":"심판","works":"선행","religion":"종교","morality":"도덕","education":"교육","jesus":"예수 그리스도","eternal":"영생","forgiven":"용서","child":"하나님의 자녀","knock":"똑똑","abundant":"풍성한 생명"},"steps":[{"title":"생명의 다리","body":["하나님께서 당신을 위해 준비하신 생명의 길을 함께 살펴보겠습니다. 한 단계씩 천천히 읽거나 들어 보세요."],"verses":[{"ref":"요한복음 14:6","say":"요한복음 14장 6절","text":"예수께서 이르시되 내가 곧 길이요 진리요 생명이니 나로 말미암지 않고는 아버지께로 올 자가 없느니라"}]},{"title":"하나님은 당신이 풍성한 생명을 누리기 원하십니다","body":["당신의 인생에서 가장 소중한 것은 무엇입니까? 온 세상을 얻어도 생명을 잃으면 아무 소용이 없습니다.","하나님은 사랑으로 사람을 지으셨고, 하나님과 함께하는 풍성하고 영원한 생명을 누리도록 계획하셨습니다.","그런데 왜 많은 사람이 이 생명을 누리지 못한 채 공허함 속에 살아갈까요?"],"verses":[{"ref":"마가복음 8:36","say":"마가복음 8장 36절","text":"사람이 만일 온 천하를 얻고도 자기 목숨을 잃으면 무엇이 유익하리요"},{"ref":"요한복음 10:10","say":"요한복음 10장 10절","text":"내가 온 것은 양으로 생명을 얻게 하고 더 풍성히 얻게 하려는 것이라"}]},{"title":"죄가 하나님과 우리 사이를 갈라놓았습니다","body":["하나님은 거룩하고 의로우신 분입니다. 그러나 사람은 하나님을 떠나 자기 뜻대로 살아왔습니다.","성경은 이것을 죄라고 부릅니다. 죄는 생각과 말과 행동으로 하나님의 뜻을 거스르는 것입니다.","그 결과 하나님과 사람 사이에 깊은 골짜기가 생겼습니다."],"verses":[{"ref":"로마서 3:23","say":"로마서 3장 23절","text":"모든 사람이 죄를 범하였으매 하나님의 영광에 이르지 못하더니"}]},{"title":"죄의 결과는 사망과 심판입니다","body":["죄의 대가는 사망, 곧 생명의 근원이신 하나님과 영원히 분리되는 것입니다.","모든 사람은 한 번 죽고, 그 후에는 하나님 앞에서 심판을 받습니다.","이것은 우리 인생에서 가장 중요하고, 누구도 피할 수 없는 문제입니다."],"verses":[{"ref":"로마서 6:23","say":"로마서 6장 23절","text":"죄의 삯은 사망이요 하나님의 은사는 그리스도 예수 우리 주 안에 있는 영생이니라"},{"ref":"히브리서 9:27","say":"히브리서 9장 27절","text":"한 번 죽는 것은 사람에게 정해진 것이요 그 후에는 심판이 있으리니"}]},{"title":"사람의 노력으로는 건널 수 없습니다","body":["많은 사람이 선행, 도덕, 종교, 교육으로 이 골짜기를 건너려고 애씁니다.","이런 노력도 소중하지만, 거룩하신 하나님께 이르기에는 턱없이 부족합니다.","구원은 우리의 행위로 얻는 것이 아니라, 하나님께서 값없이 주시는 선물입니다."],"verses":[{"ref":"이사야 64:6","say":"이사야 64장 6절","text":"무릇 우리는 다 부정한 자 같아서 우리의 의는 다 더러운 옷 같으며"},{"ref":"에베소서 2:8-9","say":"에베소서 2장 8절에서 9절","text":"너희는 그 은혜에 의하여 믿음으로 말미암아 구원을 받았으니 이것은 너희에게서 난 것이 아니요 하나님의 선물이라 행위에서 난 것이 아니니 이는 누구든지 자랑하지 못하게 함이라"}]},{"title":"하나님께서 예수 그리스도로 다리를 놓으셨습니다","body":["하나님은 우리를 너무나 사랑하셔서 아들 예수 그리스도를 이 땅에 보내셨습니다.","죄가 없으신 예수님이 우리 죄를 대신 지고 십자가에서 죽으셨고, 장사된 지 사흘 만에 다시 살아나셨습니다.","예수님의 십자가는 하나님께 갈 수 있는 유일한 다리입니다."],"verses":[{"ref":"로마서 5:8","say":"로마서 5장 8절","text":"우리가 아직 죄인 되었을 때에 그리스도께서 우리를 위하여 죽으심으로 하나님께서 우리에 대한 자기의 사랑을 확증하셨느니라"},{"ref":"고린도전서 15:3-4","say":"고린도전서 15장 3절에서 4절","text":"그리스도께서 성경대로 우리 죄를 위하여 죽으시고 장사 지낸 바 되셨다가 성경대로 사흘 만에 다시 살아나사"}]},{"title":"예수님을 믿고 영접하면 생명을 얻습니다","body":["다리가 놓였어도 건너가지 않으면 반대편에 이를 수 없습니다.","믿음은 예수님에 대해 아는 것에 그치지 않습니다. 예수님을 나의 구주와 주님으로 모셔 들이고 내 삶을 그분께 맡기는 것입니다.","예수님을 믿는 사람은 심판에 이르지 않고 사망에서 생명으로 옮겨집니다."],"verses":[{"ref":"요한복음 1:12","say":"요한복음 1장 12절","text":"영접하는 자 곧 그 이름을 믿는 자들에게는 하나님의 자녀가 되는 권세를 주셨으니"},{"ref":"요한복음 5:24","say":"요한복음 5장 24절","text":"내가 진실로 진실로 너희에게 이르노니 내 말을 듣고 또 나 보내신 이를 믿는 자는 영생을 얻었고 심판에 이르지 아니하나니 사망에서 생명으로 옮겼느니라"}]},{"title":"지금 예수님을 마음에 모셔 들이시겠습니까?","body":["예수님은 지금도 당신 마음의 문을 두드리고 계십니다.","아래 기도는 하나의 예입니다. 중요한 것은 정확한 말이 아니라 진심입니다. 이 기도가 당신의 마음이라면 지금 하나님께 드려 보세요."],"verses":[{"ref":"요한계시록 3:20","say":"요한계시록 3장 20절","text":"볼지어다 내가 문 밖에 서서 두드리노니 누구든지 내 음성을 듣고 문을 열면 내가 그에게로 들어가 그와 더불어 먹고 그는 나와 더불어 먹으리라"}],"prayer":"하나님 아버지, 저는 죄인이며 제 힘으로는 하나님께 나아갈 수 없음을 고백합니다. 예수님께서 저의 죄를 위해 십자가에서 죽으시고 다시 살아나신 것을 믿습니다. 지금 예수님을 저의 구주와 주님으로 제 마음에 모셔 들입니다. 저의 죄를 용서해 주시고 하나님의 자녀로 삼아 주셔서 감사합니다. 이제부터 제 삶을 인도해 주옵소서. 예수님의 이름으로 기도합니다. 아멘."},{"title":"하나님의 자녀가 된 당신에게","body":["예수님을 영접한 사람에게는 영생이 있습니다. 이 확신은 감정이 아니라 변하지 않는 하나님의 약속에 근거합니다."],"verses":[{"ref":"요한일서 5:12-13","say":"요한일서 5장 12절에서 13절","text":"아들이 있는 자에게는 생명이 있고 하나님의 아들이 없는 자에게는 생명이 없느니라 내가 하나님의 아들의 이름을 믿는 너희에게 이것을 쓰는 것은 너희로 하여금 너희에게 영생이 있음을 알게 하려 함이라"}],"list":["매일 하나님께 기도하세요.","매일 성경을 읽으세요. 요한복음부터 시작해 보세요.","교회에 나가 믿음의 가족과 함께 예배하세요.","이 기쁜 소식을 다른 사람에게 전하세요."]}]},"en":{"meta":{"code":"en","name":"English","nativeName":"English","tts":"en-US","dir":"ltr","bible":"ESV","version":2},"ui":{"appName":"Bridge to Life","tagline":"The way to God","start":"Start","prev":"Back","next":"Next","listen":"Listen","pause":"Pause","language":"Language","installed":"Languages","addLang":"Add a language","catalog":"Online language list","catalogHint":"Download a language file from the server and use it right away.","fromFile":"Open a language file on this device (.json)","fromUrl":"Download a language file from a URL","urlPh":"https://…/lang/fr.json","load":"Download","get":"Get","installedBadge":"Installed","builtinBadge":"Built-in","remove":"Remove","newLang":"Create a new language","newLangHint":"Save the current language file, translate it, change meta.code to the new language code, then add it with “Open a language file”.","exportBtn":"Save current language file","copyBtn":"Copy contents","settings":"Settings","speed":"Speaking speed","voice":"Voice","voiceAuto":"Automatic","autoNext":"Go to the next step after listening","textSize":"Text size","noVoice":"This device has no {lang} voice. Download one in your device’s text-to-speech (TTS) settings to listen.","noTTS":"This browser does not support listening.","invalid":"Could not read the language file: {reason}","loaded":"{lang} added.","removed":"Removed.","saved":"File saved.","copied":"Copied.","netError":"Download failed. Check your connection and the address.","restart":"Start over","prayer":"A prayer to receive Jesus","growth":"Growing in your new life","close":"Close","bible":"Bible: {v}","swipeHint":"Swipe or tap “Next” to continue","home":"Home","back":"Back","steps":"Steps","cover":"Cover","voiceEngine":"Reading voice","voiceAutoDesc":"Picks the best voice on this device","aiBadge":"AI quality","packBadge":"AI voice pack","preview":"Preview","voiceCatalog":"Get AI voice packs","voiceCatalogHint":"High-quality voices recorded in advance with AI. Once downloaded, they play without internet.","noVoicePacks":"No AI voice pack for this language on the server yet.","downloading":"Downloading {n}/{total}","packFiles":"Open voice pack files (select pack.json together with the audio files)","packUrl":"Download a voice pack from a URL (pack.json)","packAdded":"AI voice “{name}” added.","packOtherLang":"This voice pack is for {lang}. Switch the language to select it.","guideTitle":"Add free AI voices to your phone","guideIOS":"iPhone: Settings › Accessibility › Spoken Content › Voices › choose a language › download an “Enhanced” or “Premium” voice","guideAndroid":"Android: Settings › General management › Text-to-speech › set Google as the engine › ⚙ › Install voice data › choose a language and voice","guideAfter":"After downloading, reopen this screen and the voice appears with an “AI quality” badge."},"labels":{"me":"Me","god":"God","sin":"SIN","sinner":"Sinner","death":"Death","judgment":"Judgment","works":"Good deeds","religion":"Religion","morality":"Morality","education":"Education","jesus":"JESUS CHRIST","eternal":"Eternal life","forgiven":"Forgiven","child":"Child of God","knock":"Knock knock","abundant":"Abundant life"},"steps":[{"title":"Bridge to Life","body":["Let’s look together at the way of life God has prepared for you. Read or listen one step at a time."],"verses":[{"ref":"John 14:6","say":"John chapter 14, verse 6","text":"Jesus said to him, “I am the way, and the truth, and the life. No one comes to the Father except through me.”"}]},{"title":"God wants you to have abundant life","body":["What is most precious in your life? Gaining the whole world means nothing if you lose your life.","God created people out of love, and He planned for us to enjoy an abundant, eternal life with Him.","So why do so many people live with emptiness instead of this life?"],"verses":[{"ref":"Mark 8:36","say":"Mark chapter 8, verse 36","text":"For what does it profit a man to gain the whole world and forfeit his soul?"},{"ref":"John 10:10","say":"John chapter 10, verse 10","text":"I came that they may have life and have it abundantly."}]},{"title":"Sin has separated us from God","body":["God is holy and righteous. But people have turned away from God and lived their own way.","The Bible calls this sin. Sin is going against God’s will in our thoughts, words and actions.","As a result, a deep gap now lies between God and people."],"verses":[{"ref":"Romans 3:23","say":"Romans chapter 3, verse 23","text":"For all have sinned and fall short of the glory of God."}]},{"title":"The result of sin is death and judgment","body":["The price of sin is death: being separated forever from God, the source of life.","Every person dies once, and after that faces judgment before God.","This is the most important question in life, and no one can avoid it."],"verses":[{"ref":"Romans 6:23","say":"Romans chapter 6, verse 23","text":"For the wages of sin is death, but the free gift of God is eternal life in Christ Jesus our Lord."},{"ref":"Hebrews 9:27","say":"Hebrews chapter 9, verse 27","text":"And just as it is appointed for man to die once, and after that comes judgment."}]},{"title":"Human effort cannot cross the gap","body":["Many people try to cross this gap through good deeds, morality, religion or education.","These efforts have value, but they fall far short of reaching a holy God.","Salvation is not earned by what we do. It is a free gift from God."],"verses":[{"ref":"Isaiah 64:6","say":"Isaiah chapter 64, verse 6","text":"We have all become like one who is unclean, and all our righteous deeds are like a polluted garment."},{"ref":"Ephesians 2:8-9","say":"Ephesians chapter 2, verses 8 and 9","text":"For by grace you have been saved through faith. And this is not your own doing; it is the gift of God, not a result of works, so that no one may boast."}]},{"title":"God built the bridge through Jesus Christ","body":["God loved us so much that He sent His Son, Jesus Christ, into the world.","Jesus, who had no sin, took our sins upon Himself and died on the cross. He was buried, and on the third day He rose again.","The cross of Jesus is the only bridge to God."],"verses":[{"ref":"Romans 5:8","say":"Romans chapter 5, verse 8","text":"But God shows his love for us in that while we were still sinners, Christ died for us."},{"ref":"1 Corinthians 15:3-4","say":"First Corinthians chapter 15, verses 3 and 4","text":"Christ died for our sins in accordance with the Scriptures, that he was buried, that he was raised on the third day in accordance with the Scriptures."}]},{"title":"Believe and receive Jesus, and you will have life","body":["A bridge does no good unless you cross it.","Faith is more than knowing about Jesus. It means receiving Him as your Savior and Lord and trusting Him with your life.","Whoever believes in Jesus does not come into judgment, but has passed from death to life."],"verses":[{"ref":"John 1:12","say":"John chapter 1, verse 12","text":"But to all who did receive him, who believed in his name, he gave the right to become children of God."},{"ref":"John 5:24","say":"John chapter 5, verse 24","text":"Truly, truly, I say to you, whoever hears my word and believes him who sent me has eternal life. He does not come into judgment, but has passed from death to life."}]},{"title":"Will you receive Jesus into your heart now?","body":["Jesus is knocking on the door of your heart even now.","The prayer below is only an example. What matters is not the exact words but a sincere heart. If this prayer expresses your heart, pray it to God now."],"verses":[{"ref":"Revelation 3:20","say":"Revelation chapter 3, verse 20","text":"Behold, I stand at the door and knock. If anyone hears my voice and opens the door, I will come in to him and eat with him, and he with me."}],"prayer":"Father God, I admit that I am a sinner and cannot come to You on my own. I believe that Jesus died on the cross for my sins and rose again. Right now I receive Jesus into my heart as my Savior and Lord. Thank You for forgiving my sins and making me Your child. Please lead my life from now on. In Jesus’ name I pray. Amen."},{"title":"To you, now a child of God","body":["Everyone who has received Jesus has eternal life. This assurance rests not on feelings but on God’s unchanging promise."],"verses":[{"ref":"1 John 5:12-13","say":"First John chapter 5, verses 12 and 13","text":"Whoever has the Son has life; whoever does not have the Son of God does not have life. I write these things to you who believe in the name of the Son of God, that you may know that you have eternal life."}],"list":["Talk with God in prayer every day.","Read the Bible every day. Start with the Gospel of John.","Join a church and worship with your family of faith.","Share this good news with others."]}]},"ja":{"meta":{"code":"ja","name":"Japanese","nativeName":"日本語","tts":"ja-JP","dir":"ltr","bible":"口語訳","version":2},"ui":{"appName":"いのちの架け橋","tagline":"神さまへの道","start":"はじめる","prev":"もどる","next":"つぎへ","listen":"聞く","pause":"一時停止","language":"言語","installed":"使う言語","addLang":"言語を追加","catalog":"オンライン言語リスト","catalogHint":"サーバーにある言語ファイルをダウンロードして、すぐに使えます。","fromFile":"端末の言語ファイルを開く (.json)","fromUrl":"URLから言語ファイルを取得","urlPh":"https://…/lang/fr.json","load":"取得","get":"取得","installedBadge":"追加済み","builtinBadge":"標準","remove":"削除","newLang":"新しい言語をつくる","newLangHint":"現在の言語ファイルを保存して翻訳し、meta.code を新しい言語コードに変えてから「言語ファイルを開く」で追加してください。","exportBtn":"現在の言語ファイルを保存","copyBtn":"内容をコピー","settings":"設定","speed":"読み上げの速さ","voice":"音声","voiceAuto":"自動","autoNext":"聞き終えたら次のステップへ進む","textSize":"文字の大きさ","noVoice":"この端末には{lang}の音声がありません。端末の「テキスト読み上げ(TTS)」設定で音声をダウンロードすると聞けます。","noTTS":"このブラウザは読み上げに対応していません。","invalid":"言語ファイルを読み込めませんでした: {reason}","loaded":"{lang}を追加しました。","removed":"削除しました。","saved":"ファイルを保存しました。","copied":"コピーしました。","netError":"取得できませんでした。接続とURLを確認してください。","restart":"最初から","prayer":"イエスさまを受け入れる祈り","growth":"新しいいのちの中で成長するために","close":"閉じる","bible":"聖書: {v}","swipeHint":"左右にスワイプするか「つぎへ」を押して進んでください","home":"最初へ","back":"戻る","steps":"ステップ一覧","cover":"表紙","voiceEngine":"読み上げの声","voiceAutoDesc":"この端末で一番良い声を自動で選びます","aiBadge":"AI高品質","packBadge":"AI音声パック","preview":"試聴","voiceCatalog":"AI音声パックを取得","voiceCatalogHint":"AIで事前に録音した高品質な音声です。一度取得すれば、インターネットなしで再生できます。","noVoicePacks":"この言語のAI音声パックはまだサーバーにありません。","downloading":"取得中 {n}/{total}","packFiles":"音声パックのファイルを開く(pack.jsonと音声ファイルを一緒に選択)","packUrl":"URLから音声パックを取得(pack.json)","packAdded":"AI音声「{name}」を追加しました。","packOtherLang":"この音声パックは{lang}用です。言語を切り替えると選べます。","guideTitle":"スマホに無料のAI音声を追加する","guideIOS":"iPhone: 設定 › アクセシビリティ › 読み上げコンテンツ › 声 › 言語を選択 › 「拡張」または「プレミアム」の声をダウンロード","guideAndroid":"Android: 設定 › 一般管理 › テキスト読み上げ › エンジンをGoogleに › ⚙ › 音声データのインストール › 言語と声を選択","guideAfter":"ダウンロード後、この画面を開き直すと「AI高品質」の表示付きで一覧に出ます。"},"labels":{"me":"私","god":"神","sin":"罪","sinner":"罪人","death":"死","judgment":"さばき","works":"善行","religion":"宗教","morality":"道徳","education":"教育","jesus":"イエス・キリスト","eternal":"永遠のいのち","forgiven":"赦し","child":"神の子ども","knock":"トントン","abundant":"豊かないのち"},"steps":[{"title":"いのちの架け橋","body":["神さまがあなたのために備えてくださった、いのちへの道を一緒に見ていきましょう。一つずつゆっくり読んだり、聞いたりしてください。"],"verses":[{"ref":"ヨハネ 14:6","say":"ヨハネによる福音書 14章6節","text":"イエスは彼に言われた、「わたしは道であり、真理であり、命である。だれでもわたしによらないでは、父のみもとに行くことはできない。」"}]},{"title":"神さまはあなたが豊かないのちを持つことを望んでおられます","body":["あなたの人生で一番大切なものは何ですか。全世界を手に入れても、いのちを失えば何の意味もありません。","神さまは愛をもって人を造り、神さまと共に生きる豊かで永遠のいのちを喜ぶように計画されました。","それなのに、なぜ多くの人がこのいのちを知らず、むなしさの中で生きているのでしょうか。"],"verses":[{"ref":"マルコ 8:36","say":"マルコによる福音書 8章36節","text":"人が全世界をもうけても、自分の命を損したら、なんの得になろうか。"},{"ref":"ヨハネ 10:10","say":"ヨハネによる福音書 10章10節","text":"わたしがきたのは、羊に命を得させ、豊かに得させるためである。"}]},{"title":"罪が神さまと私たちを引き離しました","body":["神さまは聖く正しい方です。しかし人は神さまから離れ、自分の思いのままに生きてきました。","聖書はこれを罪と呼びます。罪とは、心と言葉と行いによって神さまのみこころに背くことです。","その結果、神さまと人との間に深い谷ができてしまいました。"],"verses":[{"ref":"ローマ 3:23","say":"ローマ人への手紙 3章23節","text":"すなわち、すべての人は罪を犯したため、神の栄光を受けられなくなっており、"}]},{"title":"罪の結果は死とさばきです","body":["罪の報いは死、つまりいのちの源である神さまから永遠に離れることです。","人は一度死に、その後、神さまの前でさばきを受けます。","これは人生で最も大切で、だれも避けることのできない問題です。"],"verses":[{"ref":"ローマ 6:23","say":"ローマ人への手紙 6章23節","text":"罪の支払う報酬は死である。しかし神の賜物は、わたしたちの主キリスト・イエスにおける永遠のいのちである。"},{"ref":"ヘブル 9:27","say":"ヘブル人への手紙 9章27節","text":"そして、一度だけ死ぬことと、死んだ後さばきを受けることとが、人間に定まっているように、"}]},{"title":"人の努力では渡ることができません","body":["多くの人が、善い行い、道徳、宗教、教育によってこの谷を渡ろうと努力します。","そうした努力にも価値はありますが、聖い神さまに届くにはまったく足りません。","救いは私たちの行いによって得るものではなく、神さまが無償で与えてくださる贈り物です。"],"verses":[{"ref":"イザヤ 64:6","say":"イザヤ書 64章6節","text":"われわれはみな汚れた人のようになり、われわれの正しい行いは、ことごとく汚れた衣のようである。"},{"ref":"エペソ 2:8-9","say":"エペソ人への手紙 2章8節から9節","text":"あなたがたの救われたのは、実に、恵みにより、信仰によるのである。それは、あなたがた自身から出たものではなく、神の賜物である。決して行いによるのではない。それは、だれも誇ることがないためなのである。"}]},{"title":"神さまはイエス・キリストによって橋を架けてくださいました","body":["神さまは私たちを深く愛し、ひとり子イエス・キリストをこの世に送ってくださいました。","罪のないイエスさまが私たちの罪を身代わりに負って十字架で死なれ、葬られ、三日目によみがえられました。","イエスさまの十字架こそ、神さまのもとへ行くただ一つの橋です。"],"verses":[{"ref":"ローマ 5:8","say":"ローマ人への手紙 5章8節","text":"しかし、まだ罪人であった時、わたしたちのためにキリストが死んで下さったことによって、神はわたしたちに対する愛を示されたのである。"},{"ref":"Iコリント 15:3-4","say":"コリント人への第一の手紙 15章3節から4節","text":"すなわちキリストが、聖書に書いてあるとおり、わたしたちの罪のために死んだこと、そして葬られたこと、聖書に書いてあるとおり、三日目によみがえったこと、"}]},{"title":"イエスさまを信じて受け入れるなら、いのちを得ます","body":["橋が架かっていても、渡らなければ向こう側には行けません。","信仰とは、イエスさまについて知るだけではありません。イエスさまを自分の救い主、主として心にお迎えし、人生をゆだねることです。","イエスさまを信じる人はさばかれることがなく、死からいのちに移っています。"],"verses":[{"ref":"ヨハネ 1:12","say":"ヨハネによる福音書 1章12節","text":"しかし、彼を受けいれた者、すなわち、その名を信じた人々には、彼は神の子となる力を与えたのである。"},{"ref":"ヨハネ 5:24","say":"ヨハネによる福音書 5章24節","text":"よくよくあなたがたに言っておく。わたしの言葉を聞いて、わたしをつかわされたかたを信じる者は、永遠の命を受け、またさばかれることがなく、死から命に移っているのである。"}]},{"title":"今、イエスさまを心にお迎えしませんか","body":["イエスさまは今も、あなたの心の戸をたたいておられます。","下の祈りは一つの例です。大切なのは正確な言葉ではなく、真実な心です。この祈りがあなたの思いであれば、今、神さまに祈ってみてください。"],"verses":[{"ref":"黙示録 3:20","say":"ヨハネの黙示録 3章20節","text":"見よ、わたしは戸の外に立って、たたいている。だれでもわたしの声を聞いて戸をあけるなら、わたしはその中にはいって彼と食を共にし、彼もまたわたしと食を共にするであろう。"}],"prayer":"父なる神さま、私は罪人で、自分の力ではあなたのもとに行けないことを認めます。イエスさまが私の罪のために十字架で死に、よみがえられたことを信じます。今、イエスさまを私の救い主、私の主として心にお迎えします。私の罪を赦し、神さまの子どもとしてくださったことを感謝します。これからの私の人生を導いてください。イエスさまのお名前によってお祈りします。アーメン。"},{"title":"神さまの子どもとなったあなたへ","body":["イエスさまを受け入れた人には永遠のいのちがあります。この確信は感情ではなく、変わることのない神さまの約束に基づいています。"],"verses":[{"ref":"Iヨハネ 5:12-13","say":"ヨハネの第一の手紙 5章12節から13節","text":"御子を持つ者はいのちを持ち、神の御子を持たない者はいのちを持っていない。神の子の御名を信じるあなたがたに、これを書きおくるのは、永遠のいのちを持っていることを、悟らせるためである。"}],"list":["毎日、神さまに祈りましょう。","毎日、聖書を読みましょう。ヨハネの福音書から始めてみてください。","教会に行き、信仰の家族と共に礼拝しましょう。","この良い知らせを、ほかの人にも伝えましょう。"]}]},"zh-CN":{"meta":{"code":"zh-CN","name":"Chinese (Simplified)","nativeName":"简体中文","tts":"zh-CN","dir":"ltr","bible":"和合本","version":2},"ui":{"appName":"生命之桥","tagline":"通往神的道路","start":"开始","prev":"上一步","next":"下一步","listen":"收听","pause":"暂停","language":"语言","installed":"使用的语言","addLang":"添加语言","catalog":"在线语言列表","catalogHint":"从服务器下载语言文件，即可立即使用。","fromFile":"打开本机的语言文件 (.json)","fromUrl":"从网址下载语言文件","urlPh":"https://…/lang/fr.json","load":"下载","get":"下载","installedBadge":"已添加","builtinBadge":"内置","remove":"删除","newLang":"制作新语言","newLangHint":"保存当前语言文件并翻译，把 meta.code 改为新的语言代码，再用“打开语言文件”添加。","exportBtn":"保存当前语言文件","copyBtn":"复制内容","settings":"设置","speed":"语速","voice":"语音","voiceAuto":"自动","autoNext":"听完后自动进入下一步","textSize":"字体大小","noVoice":"此设备没有{lang}语音。请在设备的“文字转语音(TTS)”设置中下载语音后再收听。","noTTS":"此浏览器不支持语音收听。","invalid":"无法读取语言文件：{reason}","loaded":"已添加{lang}。","removed":"已删除。","saved":"文件已保存。","copied":"已复制。","netError":"下载失败。请检查网络连接和网址。","restart":"从头开始","prayer":"接受耶稣的祷告","growth":"在新生命中成长","close":"关闭","bible":"圣经译本：{v}","swipeHint":"左右滑动或点击“下一步”继续","home":"回到开头","back":"返回","steps":"步骤列表","cover":"封面","voiceEngine":"朗读声音","voiceAutoDesc":"自动选择本设备上最好的声音","aiBadge":"AI高品质","packBadge":"AI语音包","preview":"试听","voiceCatalog":"下载AI语音包","voiceCatalogHint":"用AI预先录制的高品质语音。下载一次后，无需联网即可播放。","noVoicePacks":"服务器上暂时还没有此语言的AI语音包。","downloading":"正在下载 {n}/{total}","packFiles":"打开语音包文件（同时选择 pack.json 和音频文件）","packUrl":"从网址下载语音包（pack.json）","packAdded":"已添加AI语音“{name}”。","packOtherLang":"此语音包用于{lang}。切换语言后即可选择。","guideTitle":"为手机添加免费的AI语音","guideIOS":"iPhone：设置 › 辅助功能 › 朗读内容 › 声音 › 选择语言 › 下载“增强”或“高级”声音","guideAndroid":"Android：设置 › 常规管理 › 文字转语音 › 引擎选 Google › ⚙ › 安装语音数据 › 选择语言和声音","guideAfter":"下载后重新打开此页面，声音会带着“AI高品质”标记出现在列表中。"},"labels":{"me":"我","god":"神","sin":"罪","sinner":"罪人","death":"死亡","judgment":"审判","works":"行善","religion":"宗教","morality":"道德","education":"教育","jesus":"耶稣基督","eternal":"永生","forgiven":"赦免","child":"神的儿女","knock":"叩叩","abundant":"丰盛的生命"},"steps":[{"title":"生命之桥","body":["让我们一起来看神为你预备的生命之路。请一步一步慢慢阅读或聆听。"],"verses":[{"ref":"约翰福音 14:6","say":"约翰福音十四章六节","text":"耶稣说：“我就是道路、真理、生命；若不藉着我，没有人能到父那里去。”"}]},{"title":"神希望你拥有丰盛的生命","body":["在你的人生中，什么是最宝贵的？即使赚得全世界，若失去生命，也毫无益处。","神出于爱创造了人，计划让我们与祂同在，享受丰盛而永恒的生命。","那么，为什么许多人没有得着这生命，反而活在空虚之中呢？"],"verses":[{"ref":"马可福音 8:36","say":"马可福音八章三十六节","text":"人就是赚得全世界，赔上自己的生命，有什么益处呢？"},{"ref":"约翰福音 10:10","say":"约翰福音十章十节","text":"我来了，是要叫羊得生命，并且得的更丰盛。"}]},{"title":"罪使我们与神隔绝","body":["神是圣洁公义的。然而人离开了神，随着自己的意思生活。","圣经称之为罪。罪就是在思想、言语和行为上违背神的旨意。","结果，在神与人之间出现了一道深深的鸿沟。"],"verses":[{"ref":"罗马书 3:23","say":"罗马书三章二十三节","text":"因为世人都犯了罪，亏缺了神的荣耀。"}]},{"title":"罪的结果是死亡和审判","body":["罪的代价是死，就是与生命的源头，也就是神，永远隔绝。","人人都有一死，死后要在神面前受审判。","这是人生中最重要、也是无人能逃避的问题。"],"verses":[{"ref":"罗马书 6:23","say":"罗马书六章二十三节","text":"因为罪的工价乃是死；惟有神的恩赐，在我们的主基督耶稣里，乃是永生。"},{"ref":"希伯来书 9:27","say":"希伯来书九章二十七节","text":"按着定命，人人都有一死，死后且有审判。"}]},{"title":"人的努力无法跨越这鸿沟","body":["许多人想靠行善、道德、宗教或教育跨越这道鸿沟。","这些努力虽有价值，却远远不能到达圣洁的神那里。","救恩不是靠我们的行为赚来的，而是神白白赐下的礼物。"],"verses":[{"ref":"以赛亚书 64:6","say":"以赛亚书六十四章六节","text":"我们都像不洁净的人；所有的义都像污秽的衣服。"},{"ref":"以弗所书 2:8-9","say":"以弗所书二章八至九节","text":"你们得救是本乎恩，也因着信；这并不是出于自己，乃是神所赐的；也不是出于行为，免得有人自夸。"}]},{"title":"神借着耶稣基督架起了桥梁","body":["神深爱我们，差祂的儿子耶稣基督来到世上。","无罪的耶稣替我们担当罪孽，死在十字架上，被埋葬，第三天复活了。","耶稣的十字架是通往神唯一的桥梁。"],"verses":[{"ref":"罗马书 5:8","say":"罗马书五章八节","text":"惟有基督在我们还作罪人的时候为我们死，神的爱就在此向我们显明了。"},{"ref":"哥林多前书 15:3-4","say":"哥林多前书十五章三至四节","text":"就是基督照圣经所说，为我们的罪死了，而且埋葬了，又照圣经所说，第三天复活了。"}]},{"title":"相信并接受耶稣，就得着生命","body":["桥虽已架好，若不走过去，就无法到达对岸。","信心不只是知道关于耶稣的事，而是接受祂作你的救主和主，把一生交托给祂。","信耶稣的人不至于定罪，是已经出死入生了。"],"verses":[{"ref":"约翰福音 1:12","say":"约翰福音一章十二节","text":"凡接待他的，就是信他名的人，他就赐他们权柄，作神的儿女。"},{"ref":"约翰福音 5:24","say":"约翰福音五章二十四节","text":"我实实在在地告诉你们，那听我话、又信差我来者的，就有永生；不至于定罪，是已经出死入生了。"}]},{"title":"你愿意现在接受耶稣进入你心里吗？","body":["耶稣现在仍在叩你的心门。","下面的祷告只是一个例子。重要的不是准确的字句，而是真诚的心。如果这个祷告表达了你的心意，现在就向神祷告吧。"],"verses":[{"ref":"启示录 3:20","say":"启示录三章二十节","text":"看哪，我站在门外叩门，若有听见我声音就开门的，我要进到他那里去，我与他，他与我一同坐席。"}],"prayer":"天父，我承认我是罪人，靠自己无法来到你面前。我相信耶稣为我的罪死在十字架上，并且复活了。现在我接受耶稣进入我心里，作我的救主和我的主。感谢你赦免我的罪，使我成为你的儿女。求你从今以后引导我的人生。奉耶稣的名祷告，阿们。"},{"title":"致已成为神儿女的你","body":["凡接受耶稣的人都有永生。这确据不是建立在感觉上，而是建立在神永不改变的应许上。"],"verses":[{"ref":"约翰一书 5:12-13","say":"约翰一书五章十二至十三节","text":"人有了神的儿子就有生命；没有神的儿子就没有生命。我将这些话写给你们信奉神儿子之名的人，要叫你们知道自己有永生。"}],"list":["每天向神祷告。","每天读圣经，可以从约翰福音开始。","到教会与信仰的家人一同敬拜。","把这个好消息告诉别人。"]}]},"id":{"meta":{"code":"id","name":"Indonesian","nativeName":"Bahasa Indonesia","tts":"id-ID","dir":"ltr","bible":"Terjemahan Baru (TB)","version":2},"ui":{"appName":"Jembatan Kehidupan","tagline":"Jalan menuju Allah","start":"Mulai","prev":"Kembali","next":"Lanjut","listen":"Dengar","pause":"Jeda","language":"Bahasa","installed":"Bahasa","addLang":"Tambah bahasa","catalog":"Daftar bahasa online","catalogHint":"Unduh file bahasa dari server dan langsung gunakan.","fromFile":"Buka file bahasa di perangkat ini (.json)","fromUrl":"Unduh file bahasa dari URL","urlPh":"https://…/lang/fr.json","load":"Unduh","get":"Unduh","installedBadge":"Terpasang","builtinBadge":"Bawaan","remove":"Hapus","newLang":"Buat bahasa baru","newLangHint":"Simpan file bahasa saat ini, terjemahkan, ubah meta.code menjadi kode bahasa baru, lalu tambahkan dengan “Buka file bahasa”.","exportBtn":"Simpan file bahasa saat ini","copyBtn":"Salin isi","settings":"Pengaturan","speed":"Kecepatan bicara","voice":"Suara","voiceAuto":"Otomatis","autoNext":"Lanjut ke langkah berikutnya setelah selesai mendengar","textSize":"Ukuran teks","noVoice":"Perangkat ini tidak memiliki suara {lang}. Unduh suara di pengaturan teks-ke-ucapan (TTS) perangkat Anda untuk mendengarkan.","noTTS":"Browser ini tidak mendukung fitur dengar.","invalid":"File bahasa tidak dapat dibaca: {reason}","loaded":"{lang} telah ditambahkan.","removed":"Telah dihapus.","saved":"File tersimpan.","copied":"Tersalin.","netError":"Gagal mengunduh. Periksa koneksi dan alamatnya.","restart":"Ulangi dari awal","prayer":"Doa menerima Yesus","growth":"Bertumbuh dalam hidup baru","close":"Tutup","bible":"Alkitab: {v}","swipeHint":"Geser atau ketuk “Lanjut” untuk melanjutkan","home":"Awal","back":"Kembali","steps":"Daftar langkah","cover":"Sampul","voiceEngine":"Suara pembaca","voiceAutoDesc":"Memilih suara terbaik di perangkat ini","aiBadge":"Kualitas AI","packBadge":"Paket suara AI","preview":"Coba dengar","voiceCatalog":"Unduh paket suara AI","voiceCatalogHint":"Suara berkualitas tinggi yang direkam lebih dulu dengan AI. Setelah diunduh, dapat diputar tanpa internet.","noVoicePacks":"Belum ada paket suara AI untuk bahasa ini di server.","downloading":"Mengunduh {n}/{total}","packFiles":"Buka file paket suara (pilih pack.json bersama file audio)","packUrl":"Unduh paket suara dari URL (pack.json)","packAdded":"Suara AI “{name}” telah ditambahkan.","packOtherLang":"Paket suara ini untuk {lang}. Ganti bahasa untuk memilihnya.","guideTitle":"Tambahkan suara AI gratis ke ponsel","guideIOS":"iPhone: Pengaturan › Aksesibilitas › Konten Lisan › Suara › pilih bahasa › unduh suara “Ditingkatkan” atau “Premium”","guideAndroid":"Android: Pengaturan › Manajemen umum › Teks-ke-ucapan › pilih mesin Google › ⚙ › Instal data suara › pilih bahasa dan suara","guideAfter":"Setelah diunduh, buka lagi layar ini dan suara akan muncul dengan tanda “Kualitas AI”."},"labels":{"me":"Saya","god":"Allah","sin":"DOSA","sinner":"Berdosa","death":"Maut","judgment":"Penghakiman","works":"Perbuatan baik","religion":"Agama","morality":"Moral","education":"Pendidikan","jesus":"YESUS KRISTUS","eternal":"Hidup kekal","forgiven":"Diampuni","child":"Anak Allah","knock":"Tok tok","abundant":"Hidup berkelimpahan"},"steps":[{"title":"Jembatan Kehidupan","body":["Mari kita lihat bersama jalan kehidupan yang telah Allah sediakan bagi Anda. Bacalah atau dengarkan selangkah demi selangkah."],"verses":[{"ref":"Yohanes 14:6","say":"Yohanes pasal 14 ayat 6","text":"Kata Yesus kepadanya: “Akulah jalan dan kebenaran dan hidup. Tidak ada seorang pun yang datang kepada Bapa, kalau tidak melalui Aku.”"}]},{"title":"Allah ingin Anda memiliki hidup yang berkelimpahan","body":["Apa yang paling berharga dalam hidup Anda? Memperoleh seluruh dunia tidak ada gunanya jika kehilangan nyawa.","Allah menciptakan manusia karena kasih, dan merencanakan agar kita menikmati hidup yang berkelimpahan dan kekal bersama-Nya.","Lalu mengapa banyak orang hidup dalam kekosongan dan tidak mengalami hidup ini?"],"verses":[{"ref":"Markus 8:36","say":"Markus pasal 8 ayat 36","text":"Apa gunanya seorang memperoleh seluruh dunia, tetapi ia kehilangan nyawanya."},{"ref":"Yohanes 10:10","say":"Yohanes pasal 10 ayat 10","text":"Aku datang, supaya mereka mempunyai hidup, dan mempunyainya dalam segala kelimpahan."}]},{"title":"Dosa memisahkan kita dari Allah","body":["Allah itu kudus dan benar. Tetapi manusia telah meninggalkan Allah dan hidup menurut kehendaknya sendiri.","Alkitab menyebut hal ini dosa. Dosa adalah melawan kehendak Allah dalam pikiran, perkataan, dan perbuatan.","Akibatnya, ada jurang yang dalam di antara Allah dan manusia."],"verses":[{"ref":"Roma 3:23","say":"Roma pasal 3 ayat 23","text":"Karena semua orang telah berbuat dosa dan telah kehilangan kemuliaan Allah."}]},{"title":"Akibat dosa adalah maut dan penghakiman","body":["Upah dosa adalah maut, yaitu terpisah selamanya dari Allah, sumber kehidupan.","Setiap orang akan mati satu kali, dan sesudah itu dihakimi di hadapan Allah.","Inilah persoalan terpenting dalam hidup, dan tidak seorang pun dapat menghindarinya."],"verses":[{"ref":"Roma 6:23","say":"Roma pasal 6 ayat 23","text":"Sebab upah dosa ialah maut; tetapi karunia Allah ialah hidup yang kekal dalam Kristus Yesus, Tuhan kita."},{"ref":"Ibrani 9:27","say":"Ibrani pasal 9 ayat 27","text":"Dan sama seperti manusia ditetapkan untuk mati hanya satu kali saja, dan sesudah itu dihakimi."}]},{"title":"Usaha manusia tidak dapat menyeberangi jurang itu","body":["Banyak orang berusaha menyeberangi jurang ini dengan perbuatan baik, moral, agama, atau pendidikan.","Usaha-usaha itu memang berharga, tetapi jauh dari cukup untuk mencapai Allah yang kudus.","Keselamatan bukan hasil perbuatan kita, melainkan pemberian Allah yang cuma-cuma."],"verses":[{"ref":"Yesaya 64:6","say":"Yesaya pasal 64 ayat 6","text":"Demikianlah kami sekalian seperti seorang najis dan segala kesalehan kami seperti kain kotor."},{"ref":"Efesus 2:8-9","say":"Efesus pasal 2 ayat 8 sampai 9","text":"Sebab karena kasih karunia kamu diselamatkan oleh iman; itu bukan hasil usahamu, tetapi pemberian Allah, itu bukan hasil pekerjaanmu: jangan ada orang yang memegahkan diri."}]},{"title":"Allah membangun jembatan melalui Yesus Kristus","body":["Allah begitu mengasihi kita sehingga Ia mengutus Anak-Nya, Yesus Kristus, ke dalam dunia.","Yesus yang tidak berdosa menanggung dosa kita dan mati di kayu salib. Ia dikuburkan, dan pada hari ketiga Ia bangkit kembali.","Salib Yesus adalah satu-satunya jembatan menuju Allah."],"verses":[{"ref":"Roma 5:8","say":"Roma pasal 5 ayat 8","text":"Akan tetapi Allah menunjukkan kasih-Nya kepada kita, oleh karena Kristus telah mati untuk kita, ketika kita masih berdosa."},{"ref":"1 Korintus 15:3-4","say":"Satu Korintus pasal 15 ayat 3 sampai 4","text":"Kristus telah mati karena dosa-dosa kita, sesuai dengan Kitab Suci, bahwa Ia telah dikuburkan, dan bahwa Ia telah dibangkitkan, pada hari yang ketiga, sesuai dengan Kitab Suci."}]},{"title":"Percaya dan terimalah Yesus, maka Anda memperoleh hidup","body":["Jembatan tidak berguna jika kita tidak menyeberanginya.","Iman bukan sekadar mengetahui tentang Yesus, tetapi menerima Dia sebagai Juruselamat dan Tuhan, serta menyerahkan hidup kepada-Nya.","Siapa yang percaya kepada Yesus tidak turut dihukum, sebab ia sudah pindah dari maut ke dalam hidup."],"verses":[{"ref":"Yohanes 1:12","say":"Yohanes pasal 1 ayat 12","text":"Tetapi semua orang yang menerima-Nya diberi-Nya kuasa supaya menjadi anak-anak Allah, yaitu mereka yang percaya dalam nama-Nya."},{"ref":"Yohanes 5:24","say":"Yohanes pasal 5 ayat 24","text":"Aku berkata kepadamu: Sesungguhnya barangsiapa mendengar perkataan-Ku dan percaya kepada Dia yang mengutus Aku, ia mempunyai hidup yang kekal dan tidak turut dihukum, sebab ia sudah pindah dari dalam maut ke dalam hidup."}]},{"title":"Maukah Anda menerima Yesus di dalam hati sekarang?","body":["Yesus sedang mengetuk pintu hati Anda saat ini.","Doa di bawah ini hanyalah contoh. Yang penting bukan kata-kata yang tepat, melainkan hati yang tulus. Jika doa ini mengungkapkan isi hati Anda, berdoalah kepada Allah sekarang."],"verses":[{"ref":"Wahyu 3:20","say":"Wahyu pasal 3 ayat 20","text":"Lihat, Aku berdiri di muka pintu dan mengetok; jikalau ada orang yang mendengar suara-Ku dan membukakan pintu, Aku akan masuk mendapatkannya dan Aku makan bersama-sama dengan dia, dan ia bersama-sama dengan Aku."}],"prayer":"Bapa di surga, aku mengaku bahwa aku orang berdosa dan tidak dapat datang kepada-Mu dengan kekuatanku sendiri. Aku percaya Yesus telah mati di kayu salib karena dosa-dosaku dan telah bangkit kembali. Sekarang aku menerima Yesus di dalam hatiku sebagai Juruselamat dan Tuhanku. Terima kasih karena Engkau mengampuni dosaku dan menjadikan aku anak-Mu. Pimpinlah hidupku mulai sekarang. Dalam nama Yesus aku berdoa. Amin."},{"title":"Untuk Anda yang kini menjadi anak Allah","body":["Setiap orang yang menerima Yesus memiliki hidup yang kekal. Keyakinan ini tidak berdasar pada perasaan, tetapi pada janji Allah yang tidak berubah."],"verses":[{"ref":"1 Yohanes 5:12-13","say":"Satu Yohanes pasal 5 ayat 12 sampai 13","text":"Barangsiapa memiliki Anak, ia memiliki hidup; barangsiapa tidak memiliki Anak, ia tidak memiliki hidup. Semuanya itu kutuliskan kepada kamu, supaya kamu yang percaya kepada nama Anak Allah, tahu, bahwa kamu memiliki hidup yang kekal."}],"list":["Berdoalah kepada Allah setiap hari.","Bacalah Alkitab setiap hari. Mulailah dari Injil Yohanes.","Bergabunglah dengan gereja dan beribadahlah bersama keluarga seiman.","Bagikan kabar baik ini kepada orang lain."]}]}}</script>
+
+<script>
+(function(){
+'use strict';
+var BUILTIN = JSON.parse(document.getElementById('builtin-packs').textContent);
+var BUILTIN_CODES = Object.keys(BUILTIN);
+var FALLBACK = BUILTIN.en;
+var STEP_COUNT = FALLBACK.steps.length;
+var LAST = STEP_COUNT - 1;
+
+/* ---------- storage ---------- */
+var store = {
+  get: function(k, d){ try{ var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
+  set: function(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+};
+var custom = store.get('bridge.packs', {}) || {};
+var settings = Object.assign({ lang:null, rate:1, voices:{}, autoNext:false, size:1, step:0 }, store.get('bridge.settings', {}) || {});
+if(!settings.voices || typeof settings.voices !== 'object') settings.voices = {};
+function saveSettings(){ store.set('bridge.settings', settings); }
+function saveCustom(){ store.set('bridge.packs', custom); }
+
+/* ---------- language packs ---------- */
+function packs(){ var o = {}, k; for(k in BUILTIN) o[k] = BUILTIN[k]; for(k in custom){ if(!o[k] || (custom[k].meta.version || 1) >= (o[k].meta.version || 1)) o[k] = custom[k]; } return o; }
+function normalize(p){
+  if(!p || typeof p !== 'object' || Array.isArray(p)) throw 'not a JSON object';
+  if(!p.meta || typeof p.meta.code !== 'string') throw 'meta.code is missing';
+  var code = p.meta.code.trim();
+  if(!/^[A-Za-z]{2,3}(-[A-Za-z0-9]{2,8})*$/.test(code)) throw 'meta.code "' + code + '" is not a language code (e.g. fr, pt-BR)';
+  if(!Array.isArray(p.steps) || p.steps.length !== STEP_COUNT) throw 'steps must contain ' + STEP_COUNT + ' items';
+  var steps = p.steps.map(function(s, i){
+    if(!s || typeof s.title !== 'string' || !s.title.trim()) throw 'steps[' + i + '].title is missing';
+    var out = { title: String(s.title), body: Array.isArray(s.body) ? s.body.map(String) : (s.body ? [String(s.body)] : []),
+      verses: Array.isArray(s.verses) ? s.verses.filter(function(v){ return v && v.text; }).map(function(v){ return { ref:String(v.ref||''), say:String(v.say||v.ref||''), text:String(v.text) }; }) : [] };
+    if(s.prayer) out.prayer = String(s.prayer);
+    if(Array.isArray(s.list)) out.list = s.list.map(String);
+    return out;
+  });
+  var ui = {}, labels = {}, k;
+  for(k in FALLBACK.ui) ui[k] = (p.ui && typeof p.ui[k] === 'string') ? p.ui[k] : FALLBACK.ui[k];
+  for(k in FALLBACK.labels) labels[k] = (p.labels && typeof p.labels[k] === 'string') ? p.labels[k] : FALLBACK.labels[k];
+  var m = p.meta;
+  return { meta:{ code:code, name:String(m.name||code), nativeName:String(m.nativeName||m.name||code), tts:String(m.tts||code),
+      dir: m.dir === 'rtl' ? 'rtl' : 'ltr', bible:String(m.bible||''), version: Number(m.version)||1, translator: m.translator ? String(m.translator) : '' },
+    ui:ui, labels:labels, steps:steps };
+}
+BUILTIN_CODES.forEach(function(c){ BUILTIN[c] = normalize(BUILTIN[c]); });
+Object.keys(custom).forEach(function(c){ try{ custom[c] = normalize(custom[c]); }catch(e){ delete custom[c]; } });
+
+function pickInitialLang(){
+  var all = packs();
+  if(settings.lang && all[settings.lang]) return settings.lang;
+  var prefs = (navigator.languages || [navigator.language || 'ko']).map(String);
+  for(var i=0;i<prefs.length;i++){
+    var l = prefs[i]; if(all[l]) return l;
+    var base = l.split('-')[0];
+    if(base === 'zh' && all['zh-CN']) return 'zh-CN';
+    if(all[base]) return base;
+  }
+  return 'ko';
+}
+var lang = pickInitialLang();
+function P(){ return packs()[lang] || BUILTIN.ko; }
+function t(key, vars){ var s = P().ui[key] || FALLBACK.ui[key] || key; if(vars) for(var k in vars) s = s.split('{' + k + '}').join(vars[k]); return s; }
+
+/* ---------- elements ---------- */
+var $ = function(id){ return document.getElementById(id); };
+var scene = $('scene'), content = $('content'), main = $('main');
+var cur = Math.min(Math.max(settings.step|0, 0), LAST);
+var trail = [];   // visited steps, for the Back button
+function el(tag, cls, text){ var e = document.createElement(tag); if(cls) e.className = cls; if(text != null) e.textContent = text; return e; }
+function svgIcon(path, size){ var s = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); s.setAttribute('width', size||16); s.setAttribute('height', size||16); s.setAttribute('viewBox', '0 0 24 24'); s.setAttribute('aria-hidden', 'true'); s.innerHTML = path; return s; }
+var SPROUT_ICON = '<path d="M12 21v-8.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12.3 13.2c1.2-4.3 5-5.5 8-4.6-.9 3.6-4.5 5.6-8 4.6zM11.8 15.2c-2.2-3.2-5.6-3.4-7.8-2.3 1.5 3.1 5 4 7.8 2.3z" fill="currentColor"/>';
+
+/* ---------- scene labels ---------- */
+function fitText(node, max){
+  node.removeAttribute('textLength'); node.removeAttribute('lengthAdjust');
+  var w = 0; try{ w = node.getComputedTextLength(); }catch(e){}
+  if(max && w > max){ node.setAttribute('textLength', max); node.setAttribute('lengthAdjust', 'spacingAndGlyphs'); w = max; }
+  return w;
+}
+function applyLabels(){
+  var L = P().labels;
+  scene.querySelectorAll('[data-l]').forEach(function(n){
+    var v = L[n.getAttribute('data-l')]; var max = Number(n.getAttribute('data-max')) || 0;
+    if(n.classList.contains('tag')){
+      var tx = n.querySelector('text'), r = n.querySelector('rect');
+      if(v != null) tx.textContent = v;
+      var w = fitText(tx, max) || 30, pw = w + 16;
+      r.setAttribute('x', -pw / 2); r.setAttribute('width', pw);
+    } else { if(v != null) n.textContent = v; fitText(n, max); }
+  });
+}
+function setScene(n, replay){
+  var base = 'scene s' + n;
+  if(replay){ scene.setAttribute('class', base); void scene.getBoundingClientRect(); requestAnimationFrame(function(){ scene.setAttribute('class', base + ' play-anim'); }); }
+  else scene.setAttribute('class', base + ' play-anim');
+  scene.setAttribute('aria-label', P().steps[n].title);
+}
+
+/* ---------- content ---------- */
+var sayItems = [];
+function addSay(node, text){ node.classList.add('say'); sayItems.push({ el:node, text:text }); }
+function render(){
+  var p = P(), s = p.steps[cur];
+  document.documentElement.lang = p.meta.code;
+  content.dir = p.meta.dir;
+  content.innerHTML = '';
+  sayItems = [];
+  content.classList.toggle('cover', cur === 0);
+
+  var eb = el('div', 'eyebrow');
+  var lb = el('button', 'list-btn'); lb.type = 'button'; lb.setAttribute('aria-haspopup', 'dialog');
+  lb.appendChild(svgIcon('<path d="M4 6h16M4 12h16M4 18h10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>', 15));
+  lb.appendChild(el('span', null, (cur === 0 ? p.ui.cover : cur + ' / ' + LAST) + ' · ' + p.ui.steps));
+  lb.onclick = function(){ openSheet('steps'); };
+  eb.appendChild(lb); eb.appendChild(el('i')); content.appendChild(eb);
+
+  var h = el('h1', 'title', s.title); addSay(h, s.title); content.appendChild(h);
+  if(cur === 0) content.appendChild(el('p', 'tagline', p.ui.tagline));
+  s.verses.forEach(function(v){
+    var b = el('blockquote', 'verse'); b.appendChild(el('p', null, v.text)); b.appendChild(el('cite', null, v.ref));
+    addSay(b, v.text + ' ' + v.say); content.appendChild(b);
+  });
+  var body = el('div', 'body');
+  s.body.forEach(function(par){ var e = el('p', null, par); addSay(e, par); body.appendChild(e); });
+  content.appendChild(body);
+  if(s.prayer){
+    var pr = el('section', 'prayer'); pr.appendChild(el('h2', null, p.ui.prayer));
+    var pp = el('p', null, s.prayer); addSay(pp, s.prayer); pr.appendChild(pp); content.appendChild(pr);
+  }
+  if(s.list && s.list.length){
+    var g = el('section', 'growth'); var gh = el('h2', null, p.ui.growth); addSay(gh, p.ui.growth); g.appendChild(gh);
+    var ol = el('ol'); s.list.forEach(function(it){ var li = el('li'); li.appendChild(el('span', null, it)); addSay(li, it); ol.appendChild(li); });
+    g.appendChild(ol); content.appendChild(g);
+  }
+  if(cur === 0){
+    var st = el('button', 'start-btn', p.ui.start); st.type = 'button'; st.onclick = function(){ go(1); };
+    content.appendChild(st); content.appendChild(el('p', 'hint', p.ui.swipeHint));
+  }
+  if(cur === LAST){
+    var rs = el('button', 'ghost-btn'); rs.type = 'button';
+    rs.appendChild(svgIcon('<path d="M3 11l9-7 9 7M5 10v10h5v-6h4v6h5V10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>', 18));
+    rs.appendChild(el('span', null, p.ui.home)); rs.onclick = function(){ go(0); };
+    content.appendChild(rs);
+  }
+  if(p.meta.bible) content.appendChild(el('p', 'meta-line', t('bible', { v:p.meta.bible }) + (p.meta.translator ? ' · ' + p.meta.translator : '')));
+
+  $('brandName').textContent = p.ui.appName;
+  document.title = p.ui.appName;
+  $('langName').textContent = p.meta.nativeName;
+  $('langBtn').setAttribute('aria-label', p.ui.language + ': ' + p.meta.nativeName);
+  $('setBtn').setAttribute('aria-label', p.ui.settings);
+  $('homeBtn').setAttribute('aria-label', p.ui.home); $('homeBtn').title = p.ui.home;
+  $('backBtn').setAttribute('aria-label', p.ui.back); $('backBtn').title = p.ui.back;
+  $('backBtn').disabled = trail.length === 0;
+  $('homeBtn').disabled = cur === 0;
+  $('prevTxt').textContent = p.ui.prev; $('nextTxt').textContent = p.ui.next;
+  $('prevBtn').disabled = cur === 0; $('nextBtn').disabled = cur === LAST;
+  renderStrip();
+  updatePlayBtn();
+}
+function renderStrip(){
+  var strip = $('steps'), p = P();
+  if(!strip.children.length){
+    for(var i=0;i<STEP_COUNT;i++){
+      (function(i){
+        var b = el('button'); b.type = 'button';
+        if(i === 0) b.appendChild(svgIcon(SPROUT_ICON, 18));
+        else b.textContent = i;
+        b.onclick = function(){ go(i, { keepPlaying:true }); };
+        strip.appendChild(b);
+      })(i);
+    }
+  }
+  Array.prototype.forEach.call(strip.children, function(b, i){
+    b.className = i === cur ? 'cur' : (i < cur ? 'done' : '');
+    b.setAttribute('aria-label', (i === 0 ? p.ui.cover + ': ' : i + '. ') + p.steps[i].title);
+    b.title = p.steps[i].title;
+    if(i === cur) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current');
+  });
+  $('nav').setAttribute('aria-label', p.ui.steps);
+}
+
+/* ---------- navigation ---------- */
+var PWA = !!window.__PWA__;
+function go(n, opts){
+  opts = opts || {};
+  n = Math.min(Math.max(n, 0), LAST);
+  var continuing = speech.on && (opts.auto || opts.keepPlaying);
+  stopSpeech(true);
+  var replay = n === cur;
+  if(!replay && !opts.fromBack){ trail.push(cur); if(trail.length > 50) trail.shift(); if(PWA) try{ history.pushState({ step:n }, ''); }catch(e){} }
+  cur = n; settings.step = n; saveSettings();
+  render(); setScene(n, replay);
+  main.scrollTo({ top:0, behavior:'auto' });
+  if(continuing) setTimeout(startSpeech, 900);
+}
+function doBack(){ if(!trail.length) return; var n = trail.pop(); go(n, { fromBack:true, keepPlaying:true }); }
+$('backBtn').onclick = function(){ if(!trail.length) return; if(PWA && history.state && typeof history.state.step === 'number' && !history.state.root) history.back(); else doBack(); };
+if(PWA){ try{ history.replaceState({ step:cur, root:true }, ''); }catch(e){} window.addEventListener('popstate', function(){ if(trail.length) doBack(); }); }
+$('homeBtn').onclick = function(){ go(0); };
+$('prevBtn').onclick = function(){ go(cur - 1, { keepPlaying:true }); };
+$('nextBtn').onclick = function(){ go(cur + 1, { keepPlaying:true }); };
+document.addEventListener('keydown', function(e){
+  if($('sheetRoot').firstChild){ if(e.key === 'Escape') closeSheet(); return; }
+  if(e.target && /INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+  if(e.key === 'ArrowRight') go(cur + 1, { keepPlaying:true });
+  else if(e.key === 'ArrowLeft') go(cur - 1, { keepPlaying:true });
+  else if(e.key === 'Home') go(0);
+  else if(e.key === 'Backspace'){ e.preventDefault(); doBack(); }
+  else if(e.key === ' ' && e.target === document.body){ e.preventDefault(); togglePlay(); }
+});
+(function swipe(){
+  var x0 = null, y0 = 0, t0 = 0;
+  main.addEventListener('touchstart', function(e){ var p = e.touches[0]; x0 = p.clientX; y0 = p.clientY; t0 = Date.now(); }, { passive:true });
+  main.addEventListener('touchend', function(e){
+    if(x0 == null) return; var p = e.changedTouches[0]; var dx = p.clientX - x0, dy = p.clientY - y0; x0 = null;
+    if(Math.abs(dx) > 60 && Math.abs(dy) < 45 && Date.now() - t0 < 700){
+      var rtl = P().meta.dir === 'rtl';
+      go(cur + ((dx < 0) !== rtl ? 1 : -1), { keepPlaying:true });
+    }
+  }, { passive:true });
+})();
+
+/* ---------- AI voice packs (pre-recorded audio, kept on this device) ---------- */
+var voicePacks = {};   // id -> {id, lang, name, desc, engine, version, files:{ "step-item": Blob }}
+var vdb = {
+  open: function(){ return new Promise(function(res, rej){ try{ var r = indexedDB.open('bridge-voices', 1); r.onupgradeneeded = function(){ r.result.createObjectStore('packs', { keyPath:'id' }); }; r.onsuccess = function(){ res(r.result); }; r.onerror = function(){ rej(r.error); }; }catch(e){ rej(e); } }); },
+  run: function(mode, fn){ return vdb.open().then(function(db){ return new Promise(function(res, rej){ var tx = db.transaction('packs', mode); fn(tx.objectStore('packs')); tx.oncomplete = function(){ res(); }; tx.onerror = function(){ rej(tx.error); }; }); }); },
+  all: function(){ return vdb.open().then(function(db){ return new Promise(function(res, rej){ var q = db.transaction('packs').objectStore('packs').getAll(); q.onsuccess = function(){ res(q.result || []); }; q.onerror = function(){ rej(q.error); }; }); }); },
+  put: function(p){ return vdb.run('readwrite', function(st){ st.put(p); }); },
+  del: function(id){ return vdb.run('readwrite', function(st){ st.delete(id); }); }
+};
+vdb.all().then(function(list){ list.forEach(function(p){ voicePacks[p.id] = p; }); if(sheetKind === 'settings') renderSettings(); }).catch(function(){});
+function packMetaCheck(j){
+  if(!j || typeof j !== 'object') throw 'pack.json is not a JSON object';
+  if(!j.id || !/^[\w.\-]{1,60}$/.test(j.id)) throw 'pack.json: id is missing';
+  if(!j.lang) throw 'pack.json: lang is missing';
+  if(!j.files || typeof j.files !== 'object') throw 'pack.json: files is missing';
+  return j;
+}
+function savePack(meta, files){
+  var p = { id:meta.id, lang:meta.lang, name:String(meta.name || meta.id), desc:String(meta.desc || ''), engine:String(meta.engine || ''), version:Number(meta.version) || 1, files:files };
+  voicePacks[p.id] = p;
+  settings.voices[p.lang] = 'pack:' + p.id; saveSettings();
+  vdb.put(p).catch(function(){});
+  toast(t('packAdded', { name:p.name }));
+  return p;
+}
+function downloadPack(url, onProgress){
+  var abs = new URL(url, location.href).href;
+  return fetch(abs, { cache:'no-store' }).then(function(r){ if(!r.ok) throw 0; return r.json(); }).then(function(j){
+    packMetaCheck(j);
+    var keys = Object.keys(j.files), files = {}, done = 0, i = 0;
+    onProgress && onProgress(0, keys.length);
+    function worker(){
+      if(i >= keys.length) return Promise.resolve();
+      var k = keys[i++];
+      return fetch(new URL(j.files[k], abs).href).then(function(r){ if(!r.ok) throw 0; return r.blob(); })
+        .then(function(b){ files[k] = b; done++; onProgress && onProgress(done, keys.length); return worker(); });
+    }
+    return Promise.all([worker(), worker(), worker(), worker()]).then(function(){ return savePack(j, files); });
+  });
+}
+function importPackFiles(fileList){
+  var arr = Array.prototype.slice.call(fileList || []);
+  var pj = arr.filter(function(f){ return /(^|\/)pack\.json$/i.test(f.name); })[0];
+  if(!pj) return Promise.reject('pack.json is not among the selected files');
+  var byName = {}; arr.forEach(function(f){ byName[f.name.split('/').pop()] = f; });
+  return pj.text().then(function(txt){
+    var j = packMetaCheck(JSON.parse(txt)), files = {};
+    Object.keys(j.files).forEach(function(k){ var f = byName[String(j.files[k]).split('/').pop()]; if(f) files[k] = f; });
+    if(!Object.keys(files).length) throw 'no audio files matched pack.json';
+    return savePack(j, files);
+  });
+}
+function activePack(){
+  var sel = settings.voices[lang] || '';
+  if(sel.indexOf('pack:') !== 0) return null;
+  var p = voicePacks[sel.slice(5)];
+  return p && p.lang === P().meta.code ? p : null;
+}
+
+/* ---------- listening ---------- */
+var synth = window.speechSynthesis || null;
+var speech = { on:false, i:0, units:[], token:0, utter:null, audio:null };
+var voicesCache = [];
+function loadVoices(){ try{ voicesCache = synth ? synth.getVoices() : []; }catch(e){ voicesCache = []; } }
+if(synth){ loadVoices(); if('onvoiceschanged' in synth) synth.onvoiceschanged = function(){ loadVoices(); if(sheetKind === 'settings') renderSettings(); }; }
+var AI_RE = /premium|enhanced|neural|natural|wavenet|studio|siri|online|고품질|향상|プレミアム|拡張|增强|高级/i;
+function isAI(v){ return AI_RE.test(v.name) || (v.localService === false && /google/i.test(v.name)); }
+function normLang(s){ return String(s||'').replace('_', '-').toLowerCase(); }
+function voicesFor(tag){
+  var want = normLang(tag), base = want.split('-')[0];
+  var exact = voicesCache.filter(function(v){ return normLang(v.lang) === want; });
+  var loose = voicesCache.filter(function(v){ var l = normLang(v.lang); return l !== want && l.split('-')[0] === base; });
+  var all = exact.concat(loose);
+  return all.filter(isAI).concat(all.filter(function(v){ return !isAI(v); }));
+}
+function chosenVoice(){
+  var p = P(), list = voicesFor(p.meta.tts), uri = settings.voices[p.meta.code];
+  if(uri && uri.indexOf('pack:') !== 0){ for(var i=0;i<list.length;i++) if(list[i].voiceURI === uri) return list[i]; }
+  return list[0] || null;
+}
+function splitText(text){
+  var parts = String(text).match(/[^.!?。！？]+[.!?。！？”"」』)]*\s*/g) || [text];
+  var out = [], buf = '';
+  parts.forEach(function(s){
+    if((buf + s).length > 170 && buf){ out.push(buf.trim()); buf = ''; }
+    if(s.length > 170){ s.replace(/([,，、;；:])\s*/g, '$1\u0000').split('\u0000').forEach(function(x){ if((buf + x).length > 170 && buf){ out.push(buf.trim()); buf = ''; } buf += x; }); }
+    else buf += s;
+  });
+  if(buf.trim()) out.push(buf.trim());
+  return out;
+}
+function buildUnits(){
+  var pack = activePack(), out = [];
+  sayItems.forEach(function(it, idx){
+    var blob = pack && pack.files[cur + '-' + idx];
+    if(blob) out.push({ el:it.el, blob:blob });
+    else splitText(it.text).forEach(function(c){ out.push({ el:it.el, text:c }); });
+  });
+  return out;
+}
+function mark(node){
+  content.querySelectorAll('.say.speaking').forEach(function(n){ if(n !== node) n.classList.remove('speaking'); });
+  if(node && !node.classList.contains('speaking')){
+    node.classList.add('speaking');
+    try{ node.scrollIntoView({ block:'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); }catch(e){}
+  }
+}
+function updatePlayBtn(){
+  var b = $('playBtn');
+  b.classList.toggle('on', speech.on);
+  b.setAttribute('aria-pressed', speech.on ? 'true' : 'false');
+  $('icPlay').hidden = speech.on; $('icPause').hidden = !speech.on;
+  $('playTxt').textContent = speech.on ? t('pause') : t('listen');
+  b.setAttribute('aria-label', speech.on ? t('pause') : t('listen'));
+}
+function stopSpeech(reset){
+  speech.token++;
+  speech.on = false;
+  try{ if(synth) synth.cancel(); }catch(e){}
+  if(speech.audio){ try{ speech.audio.pause(); URL.revokeObjectURL(speech.audio.src); }catch(e){} speech.audio = null; }
+  if(reset){ speech.i = 0; speech.units = []; }
+  mark(null); updatePlayBtn();
+}
+function stepFinished(){
+  speech.i = 0; speech.units = [];
+  if(settings.autoNext && cur < LAST){ go(cur + 1, { auto:true }); }
+  else stopSpeech(true);
+}
+var warnedNoVoice = {};
+function startSpeech(){
+  if(!speech.units.length){ speech.units = buildUnits(); speech.i = 0; }
+  var needsTTS = speech.units.some(function(u){ return !u.blob; });
+  if(needsTTS && (!synth || typeof SpeechSynthesisUtterance === 'undefined')){ toast(t('noTTS')); stopSpeech(true); return; }
+  speech.on = true; updatePlayBtn();
+  loadVoices();
+  var p = P(), v = chosenVoice();
+  if(needsTTS && !v && voicesCache.length && !warnedNoVoice[p.meta.code]){ warnedNoVoice[p.meta.code] = 1; toast(t('noVoice', { lang:p.meta.nativeName }), 7000); }
+  var tok = ++speech.token;
+  try{ if(synth) synth.cancel(); }catch(e){}
+  function advance(){ if(tok !== speech.token) return; speech.i++; setTimeout(next, 120); }
+  function next(){
+    if(tok !== speech.token || !speech.on) return;
+    if(speech.i >= speech.units.length){ stepFinished(); return; }
+    var u = speech.units[speech.i];
+    mark(u.el);
+    if(u.blob){
+      var a = new Audio(URL.createObjectURL(u.blob)); speech.audio = a;
+      a.playbackRate = settings.rate;
+      a.onended = function(){ try{ URL.revokeObjectURL(a.src); }catch(e){} speech.audio = null; advance(); };
+      a.onerror = function(){ speech.audio = null; advance(); };
+      a.play().catch(function(){ if(tok === speech.token) stopSpeech(false); });
+      return;
+    }
+    var ut = new SpeechSynthesisUtterance(u.text);
+    ut.lang = p.meta.tts; if(v) ut.voice = v;
+    ut.rate = settings.rate; ut.pitch = 1;
+    var done = false;
+    ut.onend = function(){ if(done) return; done = true; advance(); };
+    ut.onerror = function(e){ if(done) return; done = true; if(tok !== speech.token) return;
+      if(e && (e.error === 'interrupted' || e.error === 'canceled')) return;
+      if(e && (e.error === 'language-unavailable' || e.error === 'voice-unavailable')){ toast(t('noVoice', { lang:p.meta.nativeName }), 7000); stopSpeech(false); return; }
+      advance(); };
+    speech.utter = ut;
+    synth.speak(ut);
+  }
+  next();
+}
+function togglePlay(){ if(speech.on) stopSpeech(false); else startSpeech(); }
+$('playBtn').onclick = togglePlay;
+function previewVoice(v){
+  stopSpeech(true);
+  try{ synth.cancel(); var s0 = P().steps[0]; var u = new SpeechSynthesisUtterance(s0.verses[0] ? s0.verses[0].text : s0.title); u.lang = P().meta.tts; u.voice = v; u.rate = settings.rate; synth.speak(u); }catch(e){}
+}
+function previewPack(pk){
+  stopSpeech(true);
+  var b = pk.files['0-1'] || pk.files['0-0'] || pk.files[Object.keys(pk.files)[0]]; if(!b) return;
+  var a = new Audio(URL.createObjectURL(b)); a.playbackRate = settings.rate; speech.audio = a; a.play().catch(function(){});
+}
+
+/* ---------- toast ---------- */
+var toastTimer = null;
+function toast(msg, ms){
+  var r = $('toastRoot'); r.innerHTML = '';
+  var d = el('div', 'toast', msg); d.setAttribute('role', 'status'); r.appendChild(d);
+  clearTimeout(toastTimer); toastTimer = setTimeout(function(){ r.innerHTML = ''; }, ms || 3200);
+}
+
+/* ---------- sheets ---------- */
+var sheetKind = null, lastFocus = null;
+function openSheet(kind){
+  lastFocus = document.activeElement; sheetKind = kind;
+  var root = $('sheetRoot'); root.innerHTML = '';
+  var veil = el('div', 'veil'); veil.onclick = function(e){ if(e.target === veil) closeSheet(); };
+  var sh = el('div', 'sheet'); sh.setAttribute('role', 'dialog'); sh.setAttribute('aria-modal', 'true'); sh.id = 'sheet';
+  veil.appendChild(sh); root.appendChild(veil);
+  if(kind === 'lang') renderLang(); else if(kind === 'steps') renderStepsSheet(); else renderSettings();
+  var f = sh.querySelector('.row.sel') || sh.querySelector('button,input,select'); if(f) f.focus();
+}
+function closeSheet(){ $('sheetRoot').innerHTML = ''; sheetKind = null; if(lastFocus && lastFocus.focus && document.body.contains(lastFocus)) lastFocus.focus(); }
+function head(sh, title){
+  sh.appendChild(el('div', 'grab'));
+  var h = el('div', 'sheet-head'); h.appendChild(el('h2', null, title));
+  var c = el('button', 'sm-btn', t('close')); c.type = 'button'; c.onclick = closeSheet; h.appendChild(c);
+  sh.appendChild(h); sh.setAttribute('aria-label', title);
+}
+$('langBtn').onclick = function(){ openSheet('lang'); };
+$('setBtn').onclick = function(){ openSheet('settings'); };
+
+function renderStepsSheet(){
+  var sh = $('sheet'); if(!sh) return; sh.innerHTML = '';
+  head(sh, t('steps'));
+  var list = el('div', 'list');
+  P().steps.forEach(function(s, i){
+    var row = el('button', 'row' + (i === cur ? ' sel' : '')); row.type = 'button';
+    var n = el('span', 'num', i === 0 ? null : String(i));
+    if(i === 0) n.appendChild(svgIcon(SPROUT_ICON, 17));
+    row.appendChild(n);
+    var tx = el('span', 'txt'); tx.appendChild(el('b', null, s.title));
+    if(s.verses[0]) tx.appendChild(el('small', null, s.verses.map(function(v){ return v.ref; }).join(' · ')));
+    row.appendChild(tx);
+    row.onclick = function(){ closeSheet(); go(i, { keepPlaying:true }); };
+    list.appendChild(row);
+  });
+  var s1 = el('div', 'sec'); s1.style.marginTop = '6px'; s1.appendChild(list); sh.appendChild(s1);
+}
+
+function setLang(code){
+  if(!packs()[code]) return;
+  stopSpeech(true);
+  lang = code; settings.lang = code; saveSettings();
+  applyLabels(); render(); setScene(cur, false);
+}
+
+var catalog = null, catalogState = 'idle';
+function loadCatalog(){
+  catalogState = 'loading';
+  fetch('lang/index.json', { cache:'no-store' }).then(function(r){ if(!r.ok) throw 0; return r.json(); })
+    .then(function(j){ catalog = Array.isArray(j.languages) ? j.languages : []; catalogState = 'ok'; if(sheetKind === 'lang') renderLang(); })
+    .catch(function(){ catalogState = 'error'; if(sheetKind === 'lang') renderLang(); });
+}
+function installPack(raw, silent){
+  var p = normalize(raw);
+  custom[p.meta.code] = p; saveCustom();
+  if(!silent) toast(t('loaded', { lang:p.meta.nativeName }));
+  return p;
+}
+function renderLang(){
+  var sh = $('sheet'); if(!sh) return; var keepScroll = sh.scrollTop; sh.innerHTML = '';
+  head(sh, t('language'));
+  var all = packs();
+
+  var s1 = el('div', 'sec'); s1.appendChild(el('h3', null, t('installed')));
+  var list = el('div', 'list');
+  var codes = BUILTIN_CODES.concat(Object.keys(custom).filter(function(c){ return BUILTIN_CODES.indexOf(c) < 0; }));
+  codes.forEach(function(code){
+    var p = all[code];
+    var row = el('label', 'row' + (code === lang ? ' sel' : ''));
+    var r = el('input'); r.type = 'radio'; r.name = 'lang'; r.id = 'lang-' + code; r.checked = code === lang;
+    r.onchange = function(){ setLang(code); renderLang(); };
+    row.appendChild(r);
+    var tx = el('span', 'txt'); tx.appendChild(el('b', null, p.meta.nativeName));
+    tx.appendChild(el('small', null, p.meta.name + (p.meta.bible ? ' · ' + p.meta.bible : '')));
+    row.appendChild(tx);
+    if(BUILTIN_CODES.indexOf(code) >= 0 && !custom[code]) row.appendChild(el('span', 'badge', t('builtinBadge')));
+    if(custom[code]){
+      var del = el('button', 'sm-btn warn', t('remove')); del.type = 'button';
+      del.onclick = function(e){ e.preventDefault(); delete custom[code]; saveCustom(); if(!packs()[lang]) setLang('ko'); else { applyLabels(); render(); } toast(t('removed')); renderLang(); };
+      row.appendChild(del);
+    }
+    list.appendChild(row);
+  });
+  s1.appendChild(list); sh.appendChild(s1);
+
+  var s2 = el('div', 'sec'); s2.appendChild(el('h3', null, t('catalog')));
+  s2.appendChild(el('p', 'small', t('catalogHint')));
+  var cl = el('div', 'list');
+  if(catalogState === 'idle') loadCatalog();
+  if(catalogState === 'loading' || catalogState === 'idle'){ var lr = el('div', 'row'); lr.appendChild(el('span', 'txt', '…')); cl.appendChild(lr); }
+  else if(catalogState === 'error'){ var er = el('div', 'row'); er.appendChild(el('span', 'txt', t('netError'))); var rb = el('button', 'sm-btn', '↻'); rb.type = 'button'; rb.setAttribute('aria-label', 'retry'); rb.onclick = function(){ loadCatalog(); renderLang(); }; er.appendChild(rb); cl.appendChild(er); }
+  else (catalog || []).forEach(function(item){
+    if(!item || !item.code || !item.file) return;
+    var row = el('div', 'row');
+    var tx = el('span', 'txt'); tx.appendChild(el('b', null, item.nativeName || item.code)); tx.appendChild(el('small', null, (item.name || '') + ' · v' + (item.version || 1)));
+    row.appendChild(tx);
+    var have = all[item.code];
+    var newer = have && (Number(item.version) || 1) > (have.meta.version || 1);
+    if(have && !newer){ row.appendChild(el('span', 'badge', BUILTIN_CODES.indexOf(item.code) >= 0 && !custom[item.code] ? t('builtinBadge') : t('installedBadge'))); }
+    else {
+      var b = el('button', 'sm-btn pri', newer ? '↑ ' + t('get') : t('get')); b.type = 'button';
+      b.onclick = function(){
+        b.disabled = true; b.textContent = '…';
+        fetch('lang/' + item.file, { cache:'no-store' }).then(function(r){ if(!r.ok) throw 0; return r.json(); })
+          .then(function(j){ installPack(j); renderLang(); })
+          .catch(function(e){ toast(typeof e === 'string' ? t('invalid', { reason:e }) : t('netError')); renderLang(); });
+      };
+      row.appendChild(b);
+    }
+    cl.appendChild(row);
+  });
+  s2.appendChild(cl); sh.appendChild(s2);
+
+  var s3 = el('div', 'sec'); s3.appendChild(el('h3', null, t('addLang')));
+  var fl = el('label', 'filebtn'); fl.appendChild(el('span', null, t('fromFile')));
+  var fi = el('input'); fi.type = 'file'; fi.accept = '.json,application/json'; fi.id = 'langFile';
+  fi.onchange = function(){
+    var f = fi.files && fi.files[0]; if(!f) return;
+    var rd = new FileReader();
+    rd.onload = function(){ try{ var p = installPack(JSON.parse(rd.result)); setLang(p.meta.code); renderLang(); }catch(e){ toast(t('invalid', { reason: typeof e === 'string' ? e : 'JSON syntax error' }), 6000); } };
+    rd.readAsText(f);
+  };
+  fl.appendChild(fi); s3.appendChild(fl);
+  var lbl = el('p', 'small', t('fromUrl')); lbl.style.margin = '12px 0 6px'; s3.appendChild(lbl);
+  var urlBox = el('div', 'field');
+  var ui = el('input'); ui.type = 'url'; ui.id = 'langUrl'; ui.placeholder = t('urlPh'); ui.setAttribute('aria-label', t('fromUrl'));
+  var ub = el('button', 'sm-btn pri', t('load')); ub.type = 'button'; ub.style.height = '42px';
+  ub.onclick = function(){
+    var u = ui.value.trim(); if(!u){ ui.focus(); return; }
+    ub.disabled = true;
+    fetch(u, { cache:'no-store' }).then(function(r){ if(!r.ok) throw 0; return r.json(); })
+      .then(function(j){ var p = installPack(j); setLang(p.meta.code); renderLang(); })
+      .catch(function(e){ ub.disabled = false; toast(typeof e === 'string' ? t('invalid', { reason:e }) : t('netError'), 6000); });
+  };
+  urlBox.appendChild(ui); urlBox.appendChild(ub); s3.appendChild(urlBox);
+  sh.appendChild(s3);
+
+  var s4 = el('div', 'sec'); s4.appendChild(el('h3', null, t('newLang')));
+  s4.appendChild(el('p', 'small', t('newLangHint')));
+  var eb = el('button', 'ghost-btn', t('exportBtn')); eb.type = 'button'; eb.style.marginTop = '0'; eb.onclick = exportPack;
+  var cb = el('button', 'ghost-btn', t('copyBtn')); cb.type = 'button'; cb.onclick = function(){ copyPack(s4); };
+  s4.appendChild(eb); s4.appendChild(cb);
+  sh.appendChild(s4);
+  sh.scrollTop = keepScroll;
+}
+function packJSON(){ return JSON.stringify(P(), null, 2) + '\n'; }
+function exportPack(){
+  var name = 'bridge-' + P().meta.code + '.json', data = packJSON();
+  var viaClaude = window.claude && typeof window.claude.use === 'function' ? window.claude.use('downloads') : Promise.resolve(null);
+  viaClaude.then(function(dl){
+    if(dl){ return dl.save({ filename:name, data:data }).then(function(){ toast(t('saved')); }, function(e){ if(e && e.code === 'declined') return; fallbackSave(name, data); }); }
+    fallbackSave(name, data);
+  });
+}
+function fallbackSave(name, data){
+  try{
+    var b = new Blob([data], { type:'application/json' }); var u = URL.createObjectURL(b);
+    var a = document.createElement('a'); a.href = u; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(u); }, 4000);
+  }catch(e){ copyPack(); }
+}
+function copyPack(host){
+  var data = packJSON();
+  var show = function(){ if(!host) return; var ta = host.querySelector('textarea') || el('textarea', 'dump'); ta.value = data; ta.readOnly = true; ta.id = 'packDump'; host.appendChild(ta); ta.focus(); ta.select(); };
+  try{ navigator.clipboard.writeText(data).then(function(){ toast(t('copied')); }, show); }catch(e){ show(); }
+}
+
+var voiceCatalog = null, voiceCatState = 'idle', packProgress = {};
+function loadVoiceCatalog(){
+  voiceCatState = 'loading';
+  fetch('voice/index.json', { cache:'no-store' }).then(function(r){ if(!r.ok) throw 0; return r.json(); })
+    .then(function(j){ voiceCatalog = Array.isArray(j.voices) ? j.voices : []; voiceCatState = 'ok'; if(sheetKind === 'settings') renderSettings(); })
+    .catch(function(){ voiceCatalog = []; voiceCatState = 'error'; if(sheetKind === 'settings') renderSettings(); });
+}
+var playIcon = '<path d="M8 5v14l11-7z" fill="currentColor"/>';
+function renderSettings(){
+  var sh = $('sheet'); if(!sh) return; var keepScroll = sh.scrollTop; sh.innerHTML = '';
+  head(sh, t('settings'));
+  var p = P(), code = p.meta.code, sel = settings.voices[code] || '';
+
+  var s0 = el('div', 'sec'); s0.appendChild(el('h3', null, t('voiceEngine') + ' · ' + p.meta.nativeName));
+  var vl = el('div', 'list');
+  function voiceRow(id, title, sub, badge, badgeCls, onPreview, onRemove){
+    var row = el('label', 'row' + (sel === id ? ' sel' : ''));
+    var r = el('input'); r.type = 'radio'; r.name = 'voice'; r.id = 'v-' + (id || 'auto').replace(/[^\w-]/g, '_').slice(0, 60); r.checked = sel === id;
+    r.onchange = function(){ settings.voices[code] = id; saveSettings(); if(speech.on){ stopSpeech(true); startSpeech(); } renderSettings(); };
+    row.appendChild(r);
+    var tx = el('span', 'txt'); tx.appendChild(el('b', null, title)); if(sub) tx.appendChild(el('small', null, sub)); row.appendChild(tx);
+    if(badge) row.appendChild(el('span', 'badge ' + (badgeCls || ''), badge));
+    if(onPreview){ var pb = el('button', 'sm-btn round'); pb.type = 'button'; pb.setAttribute('aria-label', t('preview') + ': ' + title); pb.appendChild(svgIcon(playIcon, 14)); pb.onclick = function(e){ e.preventDefault(); onPreview(); }; row.appendChild(pb); }
+    if(onRemove){ var rb = el('button', 'sm-btn warn', t('remove')); rb.type = 'button'; rb.onclick = function(e){ e.preventDefault(); onRemove(); }; row.appendChild(rb); }
+    vl.appendChild(row);
+  }
+  voiceRow('', t('voiceAuto'), t('voiceAutoDesc'));
+  Object.keys(voicePacks).forEach(function(id){
+    var pk = voicePacks[id]; if(pk.lang !== code) return;
+    voiceRow('pack:' + id, pk.name, pk.desc || pk.engine, t('packBadge'), 'pack', function(){ previewPack(pk); },
+      function(){ delete voicePacks[id]; vdb.del(id).catch(function(){}); if(settings.voices[code] === 'pack:' + id){ settings.voices[code] = ''; saveSettings(); } toast(t('removed')); renderSettings(); });
+  });
+  var vs = voicesFor(p.meta.tts);
+  vs.forEach(function(v){ voiceRow(v.voiceURI, v.name, v.lang, isAI(v) ? t('aiBadge') : '', 'ai', function(){ previewVoice(v); }); });
+  s0.appendChild(vl);
+  if(!synth){ var nt = el('p', 'small', t('noTTS')); nt.style.marginTop = '8px'; s0.appendChild(nt); }
+  else if(!vs.length){ var nv = el('p', 'small', t('noVoice', { lang:p.meta.nativeName })); nv.style.marginTop = '8px'; s0.appendChild(nv); }
+  var others = Object.keys(voicePacks).filter(function(id){ return voicePacks[id].lang !== code; });
+  if(others.length){ var op = el('p', 'small', others.map(function(id){ var pk = voicePacks[id]; var lp = packs()[pk.lang]; return pk.name + ': ' + t('packOtherLang', { lang: lp ? lp.meta.nativeName : pk.lang }); }).join('\n')); op.style.marginTop = '8px'; op.style.whiteSpace = 'pre-line'; s0.appendChild(op); }
+  sh.appendChild(s0);
+
+  var g = el('div', 'sec'); var gd = el('div', 'guide');
+  gd.appendChild(el('b', null, t('guideTitle')));
+  gd.appendChild(el('p', null, t('guideIOS'))); gd.appendChild(el('p', null, t('guideAndroid'))); gd.appendChild(el('p', null, t('guideAfter')));
+  g.appendChild(gd); sh.appendChild(g);
+
+  var s1 = el('div', 'sec'); s1.appendChild(el('h3', null, t('voiceCatalog')));
+  s1.appendChild(el('p', 'small', t('voiceCatalogHint')));
+  if(voiceCatState === 'idle') loadVoiceCatalog();
+  var mine = (voiceCatalog || []).filter(function(v){ return v && v.lang === code && v.pack; });
+  var cl = el('div', 'list');
+  if(voiceCatState === 'loading' || voiceCatState === 'idle'){ var lr = el('div', 'row'); lr.appendChild(el('span', 'txt', '…')); cl.appendChild(lr); }
+  else if(!mine.length){ var er = el('div', 'row'); er.appendChild(el('span', 'txt', t('noVoicePacks'))); cl.appendChild(er); }
+  else mine.forEach(function(item){
+    var row = el('div', 'row');
+    var tx = el('span', 'txt'); tx.appendChild(el('b', null, item.name || item.id)); tx.appendChild(el('small', null, [item.desc, item.size].filter(Boolean).join(' · '))); row.appendChild(tx);
+    var have = voicePacks[item.id] && (voicePacks[item.id].version || 1) >= (Number(item.version) || 1);
+    if(have) row.appendChild(el('span', 'badge pack', t('installedBadge')));
+    else if(packProgress[item.id]) row.appendChild(el('span', 'badge', packProgress[item.id]));
+    else {
+      var b = el('button', 'sm-btn pri', t('get')); b.type = 'button';
+      b.onclick = function(){
+        packProgress[item.id] = '…'; renderSettings();
+        downloadPack('voice/' + item.pack, function(n, total){ packProgress[item.id] = t('downloading', { n:n, total:total }); if(sheetKind === 'settings') renderSettings(); })
+          .then(function(){ delete packProgress[item.id]; renderSettings(); })
+          .catch(function(e){ delete packProgress[item.id]; toast(typeof e === 'string' ? t('invalid', { reason:e }) : t('netError'), 6000); renderSettings(); });
+      };
+      row.appendChild(b);
+    }
+    cl.appendChild(row);
+  });
+  s1.appendChild(cl);
+  var fl = el('label', 'filebtn'); fl.style.marginTop = '10px'; fl.appendChild(el('span', null, t('packFiles')));
+  var fi = el('input'); fi.type = 'file'; fi.multiple = true; fi.accept = '.json,.m4a,.mp3,.aac,.ogg,.wav,audio/*'; fi.id = 'packFiles';
+  fi.onchange = function(){ importPackFiles(fi.files).then(function(){ renderSettings(); }).catch(function(e){ toast(t('invalid', { reason: typeof e === 'string' ? e : 'pack.json' }), 6000); }); };
+  fl.appendChild(fi); s1.appendChild(fl);
+  var lbl = el('p', 'small', t('packUrl')); lbl.style.margin = '12px 0 6px'; s1.appendChild(lbl);
+  var ub = el('div', 'field');
+  var ui = el('input'); ui.type = 'url'; ui.id = 'packUrl'; ui.placeholder = 'https://…/voice/ko-yuna/pack.json'; ui.setAttribute('aria-label', t('packUrl'));
+  var ubt = el('button', 'sm-btn pri', t('load')); ubt.type = 'button'; ubt.style.height = '42px';
+  ubt.onclick = function(){
+    var u = ui.value.trim(); if(!u){ ui.focus(); return; }
+    ubt.disabled = true;
+    downloadPack(u, function(n, total){ ubt.textContent = n + '/' + total; })
+      .then(function(){ renderSettings(); })
+      .catch(function(e){ ubt.disabled = false; ubt.textContent = t('load'); toast(typeof e === 'string' ? t('invalid', { reason:e }) : t('netError'), 6000); });
+  };
+  ub.appendChild(ui); ub.appendChild(ubt); s1.appendChild(ub);
+  sh.appendChild(s1);
+
+  var s2 = el('div', 'sec'); s2.appendChild(el('h3', null, t('speed')));
+  var seg = el('div', 'seg'); seg.setAttribute('role', 'group'); seg.setAttribute('aria-label', t('speed'));
+  [0.75, 0.9, 1, 1.15, 1.3].forEach(function(r){
+    var b = el('button', settings.rate === r ? 'on' : '', String(r) + '×'); b.type = 'button';
+    b.setAttribute('aria-pressed', settings.rate === r);
+    b.onclick = function(){ settings.rate = r; saveSettings(); renderSettings(); if(speech.on){ stopSpeech(false); startSpeech(); } };
+    seg.appendChild(b);
+  });
+  s2.appendChild(seg); sh.appendChild(s2);
+  var s3 = el('div', 'sec');
+  var ck = el('label', 'check'); var cbx = el('input'); cbx.type = 'checkbox'; cbx.id = 'autoNext'; cbx.checked = !!settings.autoNext;
+  cbx.onchange = function(){ settings.autoNext = cbx.checked; saveSettings(); };
+  ck.appendChild(cbx); ck.appendChild(el('span', null, t('autoNext'))); s3.appendChild(ck); sh.appendChild(s3);
+  var s4 = el('div', 'sec'); s4.appendChild(el('h3', null, t('textSize')));
+  var seg2 = el('div', 'seg');
+  [[0.9, 14], [1, 17], [1.15, 20], [1.3, 23]].forEach(function(z){
+    var b = el('button', settings.size === z[0] ? 'on' : '', 'A'); b.type = 'button'; b.style.fontSize = z[1] + 'px';
+    b.setAttribute('aria-pressed', settings.size === z[0]); b.setAttribute('aria-label', t('textSize') + ' ' + Math.round(z[0] * 100) + '%');
+    b.onclick = function(){ settings.size = z[0]; saveSettings(); applySize(); renderSettings(); };
+    seg2.appendChild(b);
+  });
+  s4.appendChild(seg2); sh.appendChild(s4);
+  sh.scrollTop = keepScroll;
+}
+function applySize(){ document.documentElement.style.setProperty('--fs', settings.size); }
+
+/* ---------- boot ---------- */
+applySize();
+applyLabels();
+render();
+setScene(cur, false);
+if(document.fonts && document.fonts.ready) document.fonts.ready.then(applyLabels);
+if(PWA && 'serviceWorker' in navigator){ try{ navigator.serviceWorker.register('sw.js').catch(function(){}); }catch(e){} }
+})();
+</script>
+
+</body>
+</html>

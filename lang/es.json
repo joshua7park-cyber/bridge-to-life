@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "code": "es",
+    "name": "Spanish",
+    "nativeName": "Español",
+    "tts": "es-ES",
+    "dir": "ltr",
+    "bible": "Reina-Valera 1960",
+    "version": 2
+  },
+  "ui": {
+    "appName": "Puente a la Vida",
+    "tagline": "El camino hacia Dios",
+    "start": "Comenzar",
+    "prev": "Atrás",
+    "next": "Siguiente",
+    "listen": "Escuchar",
+    "pause": "Pausa",
+    "language": "Idioma",
+    "installed": "Idiomas",
+    "addLang": "Agregar idioma",
+    "catalog": "Lista de idiomas en línea",
+    "catalogHint": "Descarga un archivo de idioma del servidor y úsalo de inmediato.",
+    "fromFile": "Abrir un archivo de idioma del dispositivo (.json)",
+    "fromUrl": "Descargar un archivo de idioma desde una URL",
+    "urlPh": "https://…/lang/fr.json",
+    "load": "Descargar",
+    "get": "Descargar",
+    "installedBadge": "Instalado",
+    "builtinBadge": "Incluido",
+    "remove": "Eliminar",
+    "newLang": "Crear un idioma nuevo",
+    "newLangHint": "Guarda el archivo de idioma actual, tradúcelo, cambia meta.code por el nuevo código de idioma y agrégalo con “Abrir un archivo de idioma”.",
+    "exportBtn": "Guardar archivo de idioma actual",
+    "copyBtn": "Copiar contenido",
+    "settings": "Ajustes",
+    "speed": "Velocidad de voz",
+    "voice": "Voz",
+    "voiceAuto": "Automática",
+    "autoNext": "Pasar al siguiente paso al terminar de escuchar",
+    "textSize": "Tamaño del texto",
+    "noVoice": "Este dispositivo no tiene voz en {lang}. Descarga una en los ajustes de texto a voz (TTS) del dispositivo para escuchar.",
+    "noTTS": "Este navegador no permite escuchar.",
+    "invalid": "No se pudo leer el archivo de idioma: {reason}",
+    "loaded": "Se agregó {lang}.",
+    "removed": "Eliminado.",
+    "saved": "Archivo guardado.",
+    "copied": "Copiado.",
+    "netError": "No se pudo descargar. Revisa la conexión y la dirección.",
+    "restart": "Volver al inicio",
+    "prayer": "Oración para recibir a Jesús",
+    "growth": "Crecer en tu nueva vida",
+    "close": "Cerrar",
+    "bible": "Biblia: {v}",
+    "swipeHint": "Desliza o toca “Siguiente” para continuar",
+    "home": "Inicio",
+    "back": "Atrás",
+    "steps": "Lista de pasos",
+    "cover": "Portada",
+    "voiceEngine": "Voz de lectura",
+    "voiceAutoDesc": "Elige la mejor voz de este dispositivo",
+    "aiBadge": "Calidad IA",
+    "packBadge": "Paquete de voz IA",
+    "preview": "Escuchar",
+    "voiceCatalog": "Descargar paquetes de voz IA",
+    "voiceCatalogHint": "Voces de alta calidad grabadas con IA. Una vez descargadas, se reproducen sin internet.",
+    "noVoicePacks": "Todavía no hay paquetes de voz IA para este idioma en el servidor.",
+    "downloading": "Descargando {n}/{total}",
+    "packFiles": "Abrir archivos de un paquete de voz (selecciona pack.json junto con los audios)",
+    "packUrl": "Descargar un paquete de voz desde una URL (pack.json)",
+    "packAdded": "Se agregó la voz IA “{name}”.",
+    "packOtherLang": "Este paquete de voz es para {lang}. Cambia el idioma para elegirlo.",
+    "guideTitle": "Agrega voces IA gratuitas a tu teléfono",
+    "guideIOS": "iPhone: Ajustes › Accesibilidad › Contenido leído › Voces › elige un idioma › descarga una voz “Mejorada” o “Premium”",
+    "guideAndroid": "Android: Ajustes › Administración general › Texto a voz › motor de Google › ⚙ › Instalar datos de voz › elige idioma y voz",
+    "guideAfter": "Después de descargarla, vuelve a abrir esta pantalla y la voz aparecerá con la marca “Calidad IA”."
+  },
+  "labels": {
+    "me": "Yo",
+    "god": "Dios",
+    "sin": "PECADO",
+    "sinner": "Pecador",
+    "death": "Muerte",
+    "judgment": "Juicio",
+    "works": "Buenas obras",
+    "religion": "Religión",
+    "morality": "Moral",
+    "education": "Educación",
+    "jesus": "JESUCRISTO",
+    "eternal": "Vida eterna",
+    "forgiven": "Perdonado",
+    "child": "Hijo de Dios",
+    "knock": "Toc toc",
+    "abundant": "Vida abundante"
+  },
+  "steps": [
+    {
+      "title": "Puente a la Vida",
+      "body": [
+        "Veamos juntos el camino de vida que Dios ha preparado para ti. Lee o escucha paso a paso."
+      ],
+      "verses": [
+        {
+          "ref": "Juan 14:6",
+          "say": "Juan capítulo 14, versículo 6",
+          "text": "Jesús le dijo: Yo soy el camino, y la verdad, y la vida; nadie viene al Padre, sino por mí."
+        }
+      ]
+    },
+    {
+      "title": "Dios quiere que tengas vida en abundancia",
+      "body": [
+        "¿Qué es lo más valioso en tu vida? Ganar el mundo entero no sirve de nada si pierdes tu vida.",
+        "Dios creó al ser humano por amor y planeó que disfrutáramos de una vida abundante y eterna con Él.",
+        "Entonces, ¿por qué tantas personas viven con un vacío en lugar de esta vida?"
+      ],
+      "verses": [
+        {
+          "ref": "Marcos 8:36",
+          "say": "Marcos capítulo 8, versículo 36",
+          "text": "Porque ¿qué aprovechará al hombre si ganare todo el mundo, y perdiere su alma?"
+        },
+        {
+          "ref": "Juan 10:10",
+          "say": "Juan capítulo 10, versículo 10",
+          "text": "Yo he venido para que tengan vida, y para que la tengan en abundancia."
+        }
+      ]
+    },
+    {
+      "title": "El pecado nos separó de Dios",
+      "body": [
+        "Dios es santo y justo. Pero el ser humano se apartó de Dios y vivió a su manera.",
+        "La Biblia llama a esto pecado. Pecar es ir contra la voluntad de Dios en pensamientos, palabras y acciones.",
+        "Como resultado, hay un abismo profundo entre Dios y las personas."
+      ],
+      "verses": [
+        {
+          "ref": "Romanos 3:23",
+          "say": "Romanos capítulo 3, versículo 23",
+          "text": "Por cuanto todos pecaron, y están destituidos de la gloria de Dios."
+        }
+      ]
+    },
+    {
+      "title": "El resultado del pecado es muerte y juicio",
+      "body": [
+        "El precio del pecado es la muerte: estar separados para siempre de Dios, la fuente de la vida.",
+        "Toda persona muere una vez, y después enfrenta el juicio delante de Dios.",
+        "Esta es la pregunta más importante de la vida, y nadie puede evitarla."
+      ],
+      "verses": [
+        {
+          "ref": "Romanos 6:23",
+          "say": "Romanos capítulo 6, versículo 23",
+          "text": "Porque la paga del pecado es muerte, mas la dádiva de Dios es vida eterna en Cristo Jesús Señor nuestro."
+        },
+        {
+          "ref": "Hebreos 9:27",
+          "say": "Hebreos capítulo 9, versículo 27",
+          "text": "Y de la manera que está establecido para los hombres que mueran una sola vez, y después de esto el juicio."
+        }
+      ]
+    },
+    {
+      "title": "El esfuerzo humano no puede cruzar el abismo",
+      "body": [
+        "Muchos intentan cruzar este abismo con buenas obras, moral, religión o educación.",
+        "Esos esfuerzos tienen valor, pero no alcanzan para llegar a un Dios santo.",
+        "La salvación no se gana con lo que hacemos. Es un regalo gratuito de Dios."
+      ],
+      "verses": [
+        {
+          "ref": "Isaías 64:6",
+          "say": "Isaías capítulo 64, versículo 6",
+          "text": "Si bien todos nosotros somos como suciedad, y todas nuestras justicias como trapo de inmundicia."
+        },
+        {
+          "ref": "Efesios 2:8-9",
+          "say": "Efesios capítulo 2, versículos 8 y 9",
+          "text": "Porque por gracia sois salvos por medio de la fe; y esto no de vosotros, pues es don de Dios; no por obras, para que nadie se gloríe."
+        }
+      ]
+    },
+    {
+      "title": "Dios construyó el puente por medio de Jesucristo",
+      "body": [
+        "Dios nos amó tanto que envió a su Hijo, Jesucristo, al mundo.",
+        "Jesús, que no tenía pecado, cargó con nuestros pecados y murió en la cruz. Fue sepultado, y al tercer día resucitó.",
+        "La cruz de Jesús es el único puente hacia Dios."
+      ],
+      "verses": [
+        {
+          "ref": "Romanos 5:8",
+          "say": "Romanos capítulo 5, versículo 8",
+          "text": "Mas Dios muestra su amor para con nosotros, en que siendo aún pecadores, Cristo murió por nosotros."
+        },
+        {
+          "ref": "1 Corintios 15:3-4",
+          "say": "Primera de Corintios capítulo 15, versículos 3 y 4",
+          "text": "Que Cristo murió por nuestros pecados, conforme a las Escrituras; y que fue sepultado, y que resucitó al tercer día, conforme a las Escrituras."
+        }
+      ]
+    },
+    {
+      "title": "Cree en Jesús y recíbelo, y tendrás vida",
+      "body": [
+        "Un puente no sirve de nada si no lo cruzas.",
+        "La fe es más que saber acerca de Jesús. Es recibirlo como tu Salvador y Señor y confiarle tu vida.",
+        "Quien cree en Jesús no vendrá a condenación, sino que ha pasado de muerte a vida."
+      ],
+      "verses": [
+        {
+          "ref": "Juan 1:12",
+          "say": "Juan capítulo 1, versículo 12",
+          "text": "Mas a todos los que le recibieron, a los que creen en su nombre, les dio potestad de ser hechos hijos de Dios."
+        },
+        {
+          "ref": "Juan 5:24",
+          "say": "Juan capítulo 5, versículo 24",
+          "text": "De cierto, de cierto os digo: El que oye mi palabra, y cree al que me envió, tiene vida eterna; y no vendrá a condenación, mas ha pasado de muerte a vida."
+        }
+      ]
+    },
+    {
+      "title": "¿Quieres recibir a Jesús en tu corazón ahora?",
+      "body": [
+        "Jesús está llamando a la puerta de tu corazón ahora mismo.",
+        "La oración de abajo es solo un ejemplo. Lo importante no son las palabras exactas, sino un corazón sincero. Si esta oración expresa lo que sientes, dísela a Dios ahora."
+      ],
+      "verses": [
+        {
+          "ref": "Apocalipsis 3:20",
+          "say": "Apocalipsis capítulo 3, versículo 20",
+          "text": "He aquí, yo estoy a la puerta y llamo; si alguno oye mi voz y abre la puerta, entraré a él, y cenaré con él, y él conmigo."
+        }
+      ],
+      "prayer": "Padre Dios, reconozco que soy pecador y que no puedo llegar a ti por mis propias fuerzas. Creo que Jesús murió en la cruz por mis pecados y resucitó. Ahora recibo a Jesús en mi corazón como mi Salvador y mi Señor. Gracias por perdonar mis pecados y hacerme tu hijo. Guía mi vida desde hoy. En el nombre de Jesús, amén."
+    },
+    {
+      "title": "Para ti, que ahora eres hijo de Dios",
+      "body": [
+        "Todo el que ha recibido a Jesús tiene vida eterna. Esta seguridad no depende de los sentimientos, sino de la promesa inmutable de Dios."
+      ],
+      "verses": [
+        {
+          "ref": "1 Juan 5:12-13",
+          "say": "Primera de Juan capítulo 5, versículos 12 y 13",
+          "text": "El que tiene al Hijo, tiene la vida; el que no tiene al Hijo de Dios no tiene la vida. Estas cosas os he escrito a vosotros que creéis en el nombre del Hijo de Dios, para que sepáis que tenéis vida eterna."
+        }
+      ],
+      "list": [
+        "Habla con Dios en oración cada día.",
+        "Lee la Biblia cada día. Empieza por el Evangelio de Juan.",
+        "Únete a una iglesia y adora junto a tu familia de fe.",
+        "Comparte estas buenas noticias con otros."
+      ]
+    }
+  ]
+}

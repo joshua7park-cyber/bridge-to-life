@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "code": "id",
+    "name": "Indonesian",
+    "nativeName": "Bahasa Indonesia",
+    "tts": "id-ID",
+    "dir": "ltr",
+    "bible": "Terjemahan Baru (TB)",
+    "version": 2
+  },
+  "ui": {
+    "appName": "Jembatan Kehidupan",
+    "tagline": "Jalan menuju Allah",
+    "start": "Mulai",
+    "prev": "Kembali",
+    "next": "Lanjut",
+    "listen": "Dengar",
+    "pause": "Jeda",
+    "language": "Bahasa",
+    "installed": "Bahasa",
+    "addLang": "Tambah bahasa",
+    "catalog": "Daftar bahasa online",
+    "catalogHint": "Unduh file bahasa dari server dan langsung gunakan.",
+    "fromFile": "Buka file bahasa di perangkat ini (.json)",
+    "fromUrl": "Unduh file bahasa dari URL",
+    "urlPh": "https://…/lang/fr.json",
+    "load": "Unduh",
+    "get": "Unduh",
+    "installedBadge": "Terpasang",
+    "builtinBadge": "Bawaan",
+    "remove": "Hapus",
+    "newLang": "Buat bahasa baru",
+    "newLangHint": "Simpan file bahasa saat ini, terjemahkan, ubah meta.code menjadi kode bahasa baru, lalu tambahkan dengan “Buka file bahasa”.",
+    "exportBtn": "Simpan file bahasa saat ini",
+    "copyBtn": "Salin isi",
+    "settings": "Pengaturan",
+    "speed": "Kecepatan bicara",
+    "voice": "Suara",
+    "voiceAuto": "Otomatis",
+    "autoNext": "Lanjut ke langkah berikutnya setelah selesai mendengar",
+    "textSize": "Ukuran teks",
+    "noVoice": "Perangkat ini tidak memiliki suara {lang}. Unduh suara di pengaturan teks-ke-ucapan (TTS) perangkat Anda untuk mendengarkan.",
+    "noTTS": "Browser ini tidak mendukung fitur dengar.",
+    "invalid": "File bahasa tidak dapat dibaca: {reason}",
+    "loaded": "{lang} telah ditambahkan.",
+    "removed": "Telah dihapus.",
+    "saved": "File tersimpan.",
+    "copied": "Tersalin.",
+    "netError": "Gagal mengunduh. Periksa koneksi dan alamatnya.",
+    "restart": "Ulangi dari awal",
+    "prayer": "Doa menerima Yesus",
+    "growth": "Bertumbuh dalam hidup baru",
+    "close": "Tutup",
+    "bible": "Alkitab: {v}",
+    "swipeHint": "Geser atau ketuk “Lanjut” untuk melanjutkan",
+    "home": "Awal",
+    "back": "Kembali",
+    "steps": "Daftar langkah",
+    "cover": "Sampul",
+    "voiceEngine": "Suara pembaca",
+    "voiceAutoDesc": "Memilih suara terbaik di perangkat ini",
+    "aiBadge": "Kualitas AI",
+    "packBadge": "Paket suara AI",
+    "preview": "Coba dengar",
+    "voiceCatalog": "Unduh paket suara AI",
+    "voiceCatalogHint": "Suara berkualitas tinggi yang direkam lebih dulu dengan AI. Setelah diunduh, dapat diputar tanpa internet.",
+    "noVoicePacks": "Belum ada paket suara AI untuk bahasa ini di server.",
+    "downloading": "Mengunduh {n}/{total}",
+    "packFiles": "Buka file paket suara (pilih pack.json bersama file audio)",
+    "packUrl": "Unduh paket suara dari URL (pack.json)",
+    "packAdded": "Suara AI “{name}” telah ditambahkan.",
+    "packOtherLang": "Paket suara ini untuk {lang}. Ganti bahasa untuk memilihnya.",
+    "guideTitle": "Tambahkan suara AI gratis ke ponsel",
+    "guideIOS": "iPhone: Pengaturan › Aksesibilitas › Konten Lisan › Suara › pilih bahasa › unduh suara “Ditingkatkan” atau “Premium”",
+    "guideAndroid": "Android: Pengaturan › Manajemen umum › Teks-ke-ucapan › pilih mesin Google › ⚙ › Instal data suara › pilih bahasa dan suara",
+    "guideAfter": "Setelah diunduh, buka lagi layar ini dan suara akan muncul dengan tanda “Kualitas AI”."
+  },
+  "labels": {
+    "me": "Saya",
+    "god": "Allah",
+    "sin": "DOSA",
+    "sinner": "Berdosa",
+    "death": "Maut",
+    "judgment": "Penghakiman",
+    "works": "Perbuatan baik",
+    "religion": "Agama",
+    "morality": "Moral",
+    "education": "Pendidikan",
+    "jesus": "YESUS KRISTUS",
+    "eternal": "Hidup kekal",
+    "forgiven": "Diampuni",
+    "child": "Anak Allah",
+    "knock": "Tok tok",
+    "abundant": "Hidup berkelimpahan"
+  },
+  "steps": [
+    {
+      "title": "Jembatan Kehidupan",
+      "body": [
+        "Mari kita lihat bersama jalan kehidupan yang telah Allah sediakan bagi Anda. Bacalah atau dengarkan selangkah demi selangkah."
+      ],
+      "verses": [
+        {
+          "ref": "Yohanes 14:6",
+          "say": "Yohanes pasal 14 ayat 6",
+          "text": "Kata Yesus kepadanya: “Akulah jalan dan kebenaran dan hidup. Tidak ada seorang pun yang datang kepada Bapa, kalau tidak melalui Aku.”"
+        }
+      ]
+    },
+    {
+      "title": "Allah ingin Anda memiliki hidup yang berkelimpahan",
+      "body": [
+        "Apa yang paling berharga dalam hidup Anda? Memperoleh seluruh dunia tidak ada gunanya jika kehilangan nyawa.",
+        "Allah menciptakan manusia karena kasih, dan merencanakan agar kita menikmati hidup yang berkelimpahan dan kekal bersama-Nya.",
+        "Lalu mengapa banyak orang hidup dalam kekosongan dan tidak mengalami hidup ini?"
+      ],
+      "verses": [
+        {
+          "ref": "Markus 8:36",
+          "say": "Markus pasal 8 ayat 36",
+          "text": "Apa gunanya seorang memperoleh seluruh dunia, tetapi ia kehilangan nyawanya."
+        },
+        {
+          "ref": "Yohanes 10:10",
+          "say": "Yohanes pasal 10 ayat 10",
+          "text": "Aku datang, supaya mereka mempunyai hidup, dan mempunyainya dalam segala kelimpahan."
+        }
+      ]
+    },
+    {
+      "title": "Dosa memisahkan kita dari Allah",
+      "body": [
+        "Allah itu kudus dan benar. Tetapi manusia telah meninggalkan Allah dan hidup menurut kehendaknya sendiri.",
+        "Alkitab menyebut hal ini dosa. Dosa adalah melawan kehendak Allah dalam pikiran, perkataan, dan perbuatan.",
+        "Akibatnya, ada jurang yang dalam di antara Allah dan manusia."
+      ],
+      "verses": [
+        {
+          "ref": "Roma 3:23",
+          "say": "Roma pasal 3 ayat 23",
+          "text": "Karena semua orang telah berbuat dosa dan telah kehilangan kemuliaan Allah."
+        }
+      ]
+    },
+    {
+      "title": "Akibat dosa adalah maut dan penghakiman",
+      "body": [
+        "Upah dosa adalah maut, yaitu terpisah selamanya dari Allah, sumber kehidupan.",
+        "Setiap orang akan mati satu kali, dan sesudah itu dihakimi di hadapan Allah.",
+        "Inilah persoalan terpenting dalam hidup, dan tidak seorang pun dapat menghindarinya."
+      ],
+      "verses": [
+        {
+          "ref": "Roma 6:23",
+          "say": "Roma pasal 6 ayat 23",
+          "text": "Sebab upah dosa ialah maut; tetapi karunia Allah ialah hidup yang kekal dalam Kristus Yesus, Tuhan kita."
+        },
+        {
+          "ref": "Ibrani 9:27",
+          "say": "Ibrani pasal 9 ayat 27",
+          "text": "Dan sama seperti manusia ditetapkan untuk mati hanya satu kali saja, dan sesudah itu dihakimi."
+        }
+      ]
+    },
+    {
+      "title": "Usaha manusia tidak dapat menyeberangi jurang itu",
+      "body": [
+        "Banyak orang berusaha menyeberangi jurang ini dengan perbuatan baik, moral, agama, atau pendidikan.",
+        "Usaha-usaha itu memang berharga, tetapi jauh dari cukup untuk mencapai Allah yang kudus.",
+        "Keselamatan bukan hasil perbuatan kita, melainkan pemberian Allah yang cuma-cuma."
+      ],
+      "verses": [
+        {
+          "ref": "Yesaya 64:6",
+          "say": "Yesaya pasal 64 ayat 6",
+          "text": "Demikianlah kami sekalian seperti seorang najis dan segala kesalehan kami seperti kain kotor."
+        },
+        {
+          "ref": "Efesus 2:8-9",
+          "say": "Efesus pasal 2 ayat 8 sampai 9",
+          "text": "Sebab karena kasih karunia kamu diselamatkan oleh iman; itu bukan hasil usahamu, tetapi pemberian Allah, itu bukan hasil pekerjaanmu: jangan ada orang yang memegahkan diri."
+        }
+      ]
+    },
+    {
+      "title": "Allah membangun jembatan melalui Yesus Kristus",
+      "body": [
+        "Allah begitu mengasihi kita sehingga Ia mengutus Anak-Nya, Yesus Kristus, ke dalam dunia.",
+        "Yesus yang tidak berdosa menanggung dosa kita dan mati di kayu salib. Ia dikuburkan, dan pada hari ketiga Ia bangkit kembali.",
+        "Salib Yesus adalah satu-satunya jembatan menuju Allah."
+      ],
+      "verses": [
+        {
+          "ref": "Roma 5:8",
+          "say": "Roma pasal 5 ayat 8",
+          "text": "Akan tetapi Allah menunjukkan kasih-Nya kepada kita, oleh karena Kristus telah mati untuk kita, ketika kita masih berdosa."
+        },
+        {
+          "ref": "1 Korintus 15:3-4",
+          "say": "Satu Korintus pasal 15 ayat 3 sampai 4",
+          "text": "Kristus telah mati karena dosa-dosa kita, sesuai dengan Kitab Suci, bahwa Ia telah dikuburkan, dan bahwa Ia telah dibangkitkan, pada hari yang ketiga, sesuai dengan Kitab Suci."
+        }
+      ]
+    },
+    {
+      "title": "Percaya dan terimalah Yesus, maka Anda memperoleh hidup",
+      "body": [
+        "Jembatan tidak berguna jika kita tidak menyeberanginya.",
+        "Iman bukan sekadar mengetahui tentang Yesus, tetapi menerima Dia sebagai Juruselamat dan Tuhan, serta menyerahkan hidup kepada-Nya.",
+        "Siapa yang percaya kepada Yesus tidak turut dihukum, sebab ia sudah pindah dari maut ke dalam hidup."
+      ],
+      "verses": [
+        {
+          "ref": "Yohanes 1:12",
+          "say": "Yohanes pasal 1 ayat 12",
+          "text": "Tetapi semua orang yang menerima-Nya diberi-Nya kuasa supaya menjadi anak-anak Allah, yaitu mereka yang percaya dalam nama-Nya."
+        },
+        {
+          "ref": "Yohanes 5:24",
+          "say": "Yohanes pasal 5 ayat 24",
+          "text": "Aku berkata kepadamu: Sesungguhnya barangsiapa mendengar perkataan-Ku dan percaya kepada Dia yang mengutus Aku, ia mempunyai hidup yang kekal dan tidak turut dihukum, sebab ia sudah pindah dari dalam maut ke dalam hidup."
+        }
+      ]
+    },
+    {
+      "title": "Maukah Anda menerima Yesus di dalam hati sekarang?",
+      "body": [
+        "Yesus sedang mengetuk pintu hati Anda saat ini.",
+        "Doa di bawah ini hanyalah contoh. Yang penting bukan kata-kata yang tepat, melainkan hati yang tulus. Jika doa ini mengungkapkan isi hati Anda, berdoalah kepada Allah sekarang."
+      ],
+      "verses": [
+        {
+          "ref": "Wahyu 3:20",
+          "say": "Wahyu pasal 3 ayat 20",
+          "text": "Lihat, Aku berdiri di muka pintu dan mengetok; jikalau ada orang yang mendengar suara-Ku dan membukakan pintu, Aku akan masuk mendapatkannya dan Aku makan bersama-sama dengan dia, dan ia bersama-sama dengan Aku."
+        }
+      ],
+      "prayer": "Bapa di surga, aku mengaku bahwa aku orang berdosa dan tidak dapat datang kepada-Mu dengan kekuatanku sendiri. Aku percaya Yesus telah mati di kayu salib karena dosa-dosaku dan telah bangkit kembali. Sekarang aku menerima Yesus di dalam hatiku sebagai Juruselamat dan Tuhanku. Terima kasih karena Engkau mengampuni dosaku dan menjadikan aku anak-Mu. Pimpinlah hidupku mulai sekarang. Dalam nama Yesus aku berdoa. Amin."
+    },
+    {
+      "title": "Untuk Anda yang kini menjadi anak Allah",
+      "body": [
+        "Setiap orang yang menerima Yesus memiliki hidup yang kekal. Keyakinan ini tidak berdasar pada perasaan, tetapi pada janji Allah yang tidak berubah."
+      ],
+      "verses": [
+        {
+          "ref": "1 Yohanes 5:12-13",
+          "say": "Satu Yohanes pasal 5 ayat 12 sampai 13",
+          "text": "Barangsiapa memiliki Anak, ia memiliki hidup; barangsiapa tidak memiliki Anak, ia tidak memiliki hidup. Semuanya itu kutuliskan kepada kamu, supaya kamu yang percaya kepada nama Anak Allah, tahu, bahwa kamu memiliki hidup yang kekal."
+        }
+      ],
+      "list": [
+        "Berdoalah kepada Allah setiap hari.",
+        "Bacalah Alkitab setiap hari. Mulailah dari Injil Yohanes.",
+        "Bergabunglah dengan gereja dan beribadahlah bersama keluarga seiman.",
+        "Bagikan kabar baik ini kepada orang lain."
+      ]
+    }
+  ]
+}
