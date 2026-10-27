@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "code": "fil",
+    "name": "Filipino (Tagalog)",
+    "nativeName": "Filipino",
+    "tts": "fil-PH",
+    "dir": "ltr",
+    "bible": "Ang Biblia 1905",
+    "version": 1,
+    "review": "recommended"
+  },
+  "ui": {
+    "appName": "Tulay sa Buhay",
+    "tagline": "Ang daan patungo sa Dios",
+    "start": "Magsimula",
+    "prev": "Bumalik",
+    "next": "Susunod",
+    "listen": "Pakinggan",
+    "pause": "I-pause",
+    "language": "Wika",
+    "installed": "Mga wika",
+    "addLang": "Magdagdag ng wika",
+    "catalog": "Listahan ng wika online",
+    "catalogHint": "Mag-download ng file ng wika mula sa server at gamitin agad.",
+    "fromFile": "Buksan ang file ng wika sa device na ito (.json)",
+    "fromUrl": "Mag-download ng file ng wika mula sa URL",
+    "load": "I-download",
+    "get": "I-download",
+    "installedBadge": "Naka-install",
+    "builtinBadge": "Kasama na",
+    "remove": "Alisin",
+    "newLang": "Gumawa ng bagong wika",
+    "exportBtn": "I-save ang kasalukuyang file ng wika",
+    "copyBtn": "Kopyahin ang nilalaman",
+    "settings": "Mga setting",
+    "speed": "Bilis ng pagbasa",
+    "voice": "Boses",
+    "voiceAuto": "Awtomatiko",
+    "autoNext": "Pumunta sa susunod na hakbang pagkatapos makinig",
+    "textSize": "Laki ng letra",
+    "noVoice": "Walang boses na {lang} sa device na ito. Mag-download ng boses sa text-to-speech (TTS) settings.",
+    "noTTS": "Hindi sinusuportahan ng browser na ito ang pakikinig.",
+    "invalid": "Hindi mabasa ang file ng wika: {reason}",
+    "loaded": "Naidagdag ang {lang}.",
+    "removed": "Inalis na.",
+    "saved": "Na-save ang file.",
+    "copied": "Nakopya.",
+    "netError": "Hindi na-download. Suriin ang koneksyon at ang address.",
+    "restart": "Magsimula muli",
+    "prayer": "Panalangin para tanggapin si Jesus",
+    "growth": "Paglago sa bagong buhay",
+    "close": "Isara",
+    "bible": "Biblia: {v}",
+    "swipeHint": "Mag-swipe o i-tap ang “Susunod”",
+    "home": "Simula",
+    "back": "Bumalik",
+    "steps": "Mga hakbang",
+    "cover": "Pabalat",
+    "voiceEngine": "Boses na nagbabasa",
+    "voiceAutoDesc": "Pinipili ang pinakamagandang boses sa device",
+    "aiBadge": "Kalidad AI",
+    "packBadge": "AI voice pack",
+    "preview": "Subukang pakinggan",
+    "voiceCatalog": "Mag-download ng AI voice pack",
+    "voiceCatalogHint": "Mataas na kalidad na boses na ni-record nang maaga gamit ang AI. Kapag na-download, gumagana kahit walang internet.",
+    "noVoicePacks": "Wala pang AI voice pack para sa wikang ito sa server.",
+    "downloading": "Nagda-download {n}/{total}",
+    "packAdded": "Naidagdag ang AI na boses na “{name}”.",
+    "guideTitle": "Magdagdag ng libreng AI na boses sa telepono"
+  },
+  "labels": {
+    "me": "Ako",
+    "god": "Dios",
+    "sin": "KASALANAN",
+    "sinner": "Makasalanan",
+    "death": "Kamatayan",
+    "judgment": "Paghuhukom",
+    "works": "Mabubuting gawa",
+    "religion": "Relihiyon",
+    "morality": "Moralidad",
+    "education": "Edukasyon",
+    "jesus": "JESU-CRISTO",
+    "eternal": "Buhay na walang hanggan",
+    "forgiven": "Pinatawad",
+    "child": "Anak ng Dios",
+    "knock": "Tok tok",
+    "abundant": "Masaganang buhay"
+  },
+  "steps": [
+    {
+      "title": "Tulay sa Buhay",
+      "body": [
+        "Tingnan natin nang sama-sama ang daan ng buhay na inihanda ng Dios para sa iyo. Basahin o pakinggan nang isa-isang hakbang."
+      ],
+      "verses": [
+        {
+          "ref": "Juan 14:6",
+          "say": "Juan, kabanata 14, talata 6",
+          "text": "Sinabi sa kaniya ni Jesus, Ako ang daan, at ang katotohanan, at ang buhay: sinoman ay di makaparoroon sa Ama, kundi sa pamamagitan ko."
+        }
+      ]
+    },
+    {
+      "title": "Nais ng Dios na magkaroon ka ng masaganang buhay",
+      "body": [
+        "Ano ang pinakamahalaga sa buhay mo? Walang pakinabang na makamtan ang buong mundo kung mawawala naman ang iyong buhay.",
+        "Nilikha ng Dios ang tao dahil sa pag-ibig, at nais Niyang mabuhay tayo kasama Niya sa masagana at walang hanggang buhay.",
+        "Kung gayon, bakit maraming tao ang namumuhay sa kahungkagan sa halip na sa buhay na ito?"
+      ],
+      "verses": [
+        {
+          "ref": "Marcos 8:36",
+          "say": "Marcos, kabanata 8, talata 36",
+          "text": "Sapagka’t ano ang pakikinabangin ng tao, kung makamtan niya ang buong sanglibutan, at mawawalan siya ng kaniyang buhay?"
+        },
+        {
+          "ref": "Juan 10:10",
+          "say": "Juan, kabanata 10, talata 10",
+          "text": "Ako’y naparito upang sila’y magkaroon ng buhay, at magkaroon nito ng lalong sagana."
+        }
+      ]
+    },
+    {
+      "title": "Inihiwalay tayo ng kasalanan sa Dios",
+      "body": [
+        "Banal at matuwid ang Dios. Ngunit tumalikod ang tao sa Dios at namuhay ayon sa sariling kalooban.",
+        "Tinatawag ito ng Biblia na kasalanan. Ang kasalanan ay ang pagsalungat sa kalooban ng Dios sa isip, salita, at gawa.",
+        "Dahil dito, may malalim na bangin sa pagitan ng Dios at ng tao."
+      ],
+      "verses": [
+        {
+          "ref": "Roma 3:23",
+          "say": "Roma, kabanata 3, talata 23",
+          "text": "Sapagka’t ang lahat ay nangagkasala, at hindi nangakaabot sa kaluwalhatian ng Dios."
+        }
+      ]
+    },
+    {
+      "title": "Ang bunga ng kasalanan ay kamatayan at paghuhukom",
+      "body": [
+        "Ang kabayaran ng kasalanan ay kamatayan: ang mahiwalay magpakailanman sa Dios na pinagmumulan ng buhay.",
+        "Ang bawat tao ay mamamatay nang minsan, at pagkatapos nito ay haharap sa paghuhukom ng Dios.",
+        "Ito ang pinakamahalagang tanong sa buhay, at walang makaiiwas dito."
+      ],
+      "verses": [
+        {
+          "ref": "Roma 6:23",
+          "say": "Roma, kabanata 6, talata 23",
+          "text": "Sapagka’t ang kabayaran ng kasalanan ay kamatayan; datapuwa’t ang kaloob na walang bayad ng Dios ay buhay na walang hanggan kay Cristo Jesus na Panginoon natin."
+        },
+        {
+          "ref": "Hebreo 9:27",
+          "say": "Hebreo, kabanata 9, talata 27",
+          "text": "At kung paanong itinakda sa mga tao ang mamatay na minsan, at pagkatapos nito ay ang paghuhukom."
+        }
+      ]
+    },
+    {
+      "title": "Hindi kayang tawirin ng sariling pagsisikap ang bangin",
+      "body": [
+        "Maraming tao ang nagsisikap tawirin ang banging ito sa pamamagitan ng mabubuting gawa, moralidad, relihiyon, o edukasyon.",
+        "May halaga ang mga pagsisikap na ito, ngunit kulang na kulang ang mga ito para marating ang banal na Dios.",
+        "Ang kaligtasan ay hindi nakukuha sa ating mga gawa. Ito ay libreng kaloob ng Dios."
+      ],
+      "verses": [
+        {
+          "ref": "Isaias 64:6",
+          "say": "Isaias, kabanata 64, talata 6",
+          "text": "Sapagka’t kaming lahat ay naging parang marumi, at ang lahat naming katuwiran ay naging parang basahang marumi."
+        },
+        {
+          "ref": "Efeso 2:8-9",
+          "say": "Efeso, kabanata 2, talata 8 hanggang 9",
+          "text": "Sapagka’t sa biyaya kayo’y nangaligtas sa pamamagitan ng pananampalataya; at ito’y hindi sa inyong sarili, ito’y kaloob ng Dios; hindi sa pamamagitan ng mga gawa, upang ang sinoman ay huwag magmapuri."
+        }
+      ]
+    },
+    {
+      "title": "Gumawa ang Dios ng tulay sa pamamagitan ni Jesu-Cristo",
+      "body": [
+        "Labis tayong inibig ng Dios kaya isinugo Niya sa mundo ang Kanyang Anak na si Jesu-Cristo.",
+        "Si Jesus, na walang kasalanan, ang nagpasan ng ating mga kasalanan at namatay sa krus. Siya ay inilibing, at sa ikatlong araw ay muling nabuhay.",
+        "Ang krus ni Jesus ang tanging tulay patungo sa Dios."
+      ],
+      "verses": [
+        {
+          "ref": "Roma 5:8",
+          "say": "Roma, kabanata 5, talata 8",
+          "text": "Datapuwa’t ipinagtatagubilin ng Dios ang kaniyang pagibig sa atin, na nang tayo’y makasalanan pa, ay namatay si Cristo dahil sa atin."
+        },
+        {
+          "ref": "1 Corinto 15:3-4",
+          "say": "1 Corinto, kabanata 15, talata 3 hanggang 4",
+          "text": "Na si Cristo ay namatay dahil sa ating mga kasalanan ayon sa mga kasulatan; at siya’y inilibing; at siya’y muling binuhay nang ikatlong araw ayon sa mga kasulatan."
+        }
+      ]
+    },
+    {
+      "title": "Sumampalataya at tanggapin si Jesus, at magkakaroon ka ng buhay",
+      "body": [
+        "Walang silbi ang tulay kung hindi mo ito tatawirin.",
+        "Ang pananampalataya ay higit pa sa pagkakilala tungkol kay Jesus. Ito ay ang pagtanggap sa Kanya bilang iyong Tagapagligtas at Panginoon, at ang pagtitiwala sa Kanya ng iyong buhay.",
+        "Ang sumasampalataya kay Jesus ay hindi mapapasa paghatol, kundi lumipat na mula sa kamatayan tungo sa buhay."
+      ],
+      "verses": [
+        {
+          "ref": "Juan 1:12",
+          "say": "Juan, kabanata 1, talata 12",
+          "text": "Datapuwa’t ang lahat ng sa kaniya’y nagsitanggap, ay pinagkalooban niya ng karapatang maging mga anak ng Dios, sa makatuwid baga’y sa mga nagsisisampalataya sa kaniyang pangalan."
+        },
+        {
+          "ref": "Juan 5:24",
+          "say": "Juan, kabanata 5, talata 24",
+          "text": "Katotohanan, katotohanang sinasabi ko sa inyo, Ang dumirinig ng aking salita, at sumasampalataya sa kaniya na nagsugo sa akin, ay may buhay na walang hanggan, at hindi mapapasa paghatol, kundi lumipat na sa kabuhayan mula sa kamatayan."
+        }
+      ]
+    },
+    {
+      "title": "Nais mo bang tanggapin si Jesus sa iyong puso ngayon?",
+      "body": [
+        "Kumakatok si Jesus sa pintuan ng iyong puso ngayon.",
+        "Ang panalangin sa ibaba ay halimbawa lamang. Ang mahalaga ay hindi ang eksaktong mga salita kundi ang tapat na puso. Kung ipinapahayag ng panalanging ito ang iyong puso, manalangin ka na ngayon sa Dios."
+      ],
+      "verses": [
+        {
+          "ref": "Apocalipsis 3:20",
+          "say": "Apocalipsis, kabanata 3, talata 20",
+          "text": "Narito, ako’y nakatayo sa pintuan at tumutuktok: kung ang sinoman ay duminig ng aking tinig at magbukas ng pinto, ay papasukin ko siya, at hahapong kasalo niya, at siya’y kasalo ko."
+        }
+      ],
+      "prayer": "Ama naming nasa langit, inaamin ko na ako ay makasalanan at hindi ako makalalapit sa Iyo sa sarili kong lakas. Naniniwala ako na si Jesus ay namatay sa krus dahil sa aking mga kasalanan at muling nabuhay. Ngayon, tinatanggap ko si Jesus sa aking puso bilang aking Tagapagligtas at Panginoon. Salamat sa pagpapatawad Mo sa aking mga kasalanan at sa paggawa sa akin na Iyong anak. Gabayan Mo ang aking buhay mula ngayon. Sa pangalan ni Jesus ako nananalangin. Amen."
+    },
+    {
+      "title": "Para sa iyo na ngayon ay anak na ng Dios",
+      "body": [
+        "Ang bawat tumanggap kay Jesus ay may buhay na walang hanggan. Ang katiyakang ito ay hindi nakasalalay sa damdamin kundi sa hindi nagbabagong pangako ng Dios."
+      ],
+      "verses": [
+        {
+          "ref": "1 Juan 5:12-13",
+          "say": "1 Juan, kabanata 5, talata 12 hanggang 13",
+          "text": "Ang kinaroroonan ng Anak ay kinaroroonan ng buhay; ang hindi kinaroroonan ng Anak ng Dios ay hindi kinaroroonan ng buhay. Ang mga bagay na ito ay isinulat ko sa inyo, upang inyong maalaman na kayo’y may buhay na walang hanggan, sa makatuwid baga’y sa inyo na nagsisisampalataya sa pangalan ng Anak ng Dios."
+        }
+      ],
+      "list": [
+        "Makipag-usap sa Dios sa panalangin araw-araw.",
+        "Basahin ang Biblia araw-araw. Magsimula sa Ebanghelyo ni Juan.",
+        "Sumama sa isang iglesya at sumamba kasama ng iyong pamilya sa pananampalataya.",
+        "Ibahagi ang mabuting balitang ito sa iba."
+      ]
+    }
+  ]
+}

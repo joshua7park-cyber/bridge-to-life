@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "code": "pt-BR",
+    "name": "Portuguese (Brazil)",
+    "nativeName": "Português (Brasil)",
+    "tts": "pt-BR",
+    "dir": "ltr",
+    "bible": "Almeida Revista e Corrigida",
+    "version": 1,
+    "review": "recommended"
+  },
+  "ui": {
+    "appName": "Ponte para a Vida",
+    "tagline": "O caminho para Deus",
+    "start": "Começar",
+    "prev": "Voltar",
+    "next": "Próximo",
+    "listen": "Ouvir",
+    "pause": "Pausar",
+    "language": "Idioma",
+    "installed": "Idiomas",
+    "addLang": "Adicionar idioma",
+    "catalog": "Lista de idiomas online",
+    "catalogHint": "Baixe um arquivo de idioma do servidor e use na hora.",
+    "fromFile": "Abrir um arquivo de idioma deste aparelho (.json)",
+    "fromUrl": "Baixar um arquivo de idioma de uma URL",
+    "load": "Baixar",
+    "get": "Baixar",
+    "installedBadge": "Instalado",
+    "builtinBadge": "Incluído",
+    "remove": "Remover",
+    "newLang": "Criar um novo idioma",
+    "exportBtn": "Salvar o arquivo de idioma atual",
+    "copyBtn": "Copiar conteúdo",
+    "settings": "Configurações",
+    "speed": "Velocidade da fala",
+    "voice": "Voz",
+    "voiceAuto": "Automática",
+    "autoNext": "Ir para a próxima etapa depois de ouvir",
+    "textSize": "Tamanho do texto",
+    "noVoice": "Este aparelho não tem voz em {lang}. Baixe uma nas configurações de texto para fala (TTS).",
+    "noTTS": "Este navegador não permite ouvir.",
+    "invalid": "Não foi possível ler o arquivo de idioma: {reason}",
+    "loaded": "{lang} adicionado.",
+    "removed": "Removido.",
+    "saved": "Arquivo salvo.",
+    "copied": "Copiado.",
+    "netError": "Falha ao baixar. Verifique a conexão e o endereço.",
+    "restart": "Começar de novo",
+    "prayer": "Oração para receber Jesus",
+    "growth": "Crescendo na nova vida",
+    "close": "Fechar",
+    "bible": "Bíblia: {v}",
+    "swipeHint": "Deslize ou toque em “Próximo” para continuar",
+    "home": "Início",
+    "back": "Voltar",
+    "steps": "Etapas",
+    "cover": "Capa",
+    "voiceEngine": "Voz de leitura",
+    "voiceAutoDesc": "Escolhe a melhor voz deste aparelho",
+    "aiBadge": "Qualidade IA",
+    "packBadge": "Pacote de voz IA",
+    "preview": "Ouvir amostra",
+    "voiceCatalog": "Baixar pacotes de voz IA",
+    "voiceCatalogHint": "Vozes de alta qualidade gravadas antes com IA. Depois de baixadas, tocam sem internet.",
+    "noVoicePacks": "Ainda não há pacote de voz IA para este idioma no servidor.",
+    "downloading": "Baixando {n}/{total}",
+    "packAdded": "Voz IA “{name}” adicionada.",
+    "guideTitle": "Adicione vozes IA gratuitas ao celular"
+  },
+  "labels": {
+    "me": "Eu",
+    "god": "Deus",
+    "sin": "PECADO",
+    "sinner": "Pecador",
+    "death": "Morte",
+    "judgment": "Juízo",
+    "works": "Boas obras",
+    "religion": "Religião",
+    "morality": "Moral",
+    "education": "Educação",
+    "jesus": "JESUS CRISTO",
+    "eternal": "Vida eterna",
+    "forgiven": "Perdoado",
+    "child": "Filho de Deus",
+    "knock": "Toc toc",
+    "abundant": "Vida abundante"
+  },
+  "steps": [
+    {
+      "title": "Ponte para a Vida",
+      "body": [
+        "Vamos ver juntos o caminho da vida que Deus preparou para você. Leia ou ouça uma etapa de cada vez."
+      ],
+      "verses": [
+        {
+          "ref": "João 14:6",
+          "say": "João, capítulo 14, versículo 6",
+          "text": "Disse-lhe Jesus: Eu sou o caminho, e a verdade, e a vida. Ninguém vem ao Pai senão por mim."
+        }
+      ]
+    },
+    {
+      "title": "Deus quer que você tenha vida em abundância",
+      "body": [
+        "O que é mais precioso na sua vida? Ganhar o mundo inteiro não adianta nada se você perder a sua vida.",
+        "Deus criou o ser humano por amor e planejou que vivêssemos com ele uma vida abundante e eterna.",
+        "Então por que tantas pessoas vivem com um vazio em vez dessa vida?"
+      ],
+      "verses": [
+        {
+          "ref": "Marcos 8:36",
+          "say": "Marcos, capítulo 8, versículo 36",
+          "text": "Pois que aproveitaria ao homem ganhar todo o mundo e perder a sua alma?"
+        },
+        {
+          "ref": "João 10:10",
+          "say": "João, capítulo 10, versículo 10",
+          "text": "Eu vim para que tenham vida e a tenham com abundância."
+        }
+      ]
+    },
+    {
+      "title": "O pecado nos separou de Deus",
+      "body": [
+        "Deus é santo e justo. Mas o ser humano se afastou de Deus e viveu do seu próprio jeito.",
+        "A Bíblia chama isso de pecado. Pecar é ir contra a vontade de Deus em pensamentos, palavras e ações.",
+        "Por isso existe um abismo profundo entre Deus e as pessoas."
+      ],
+      "verses": [
+        {
+          "ref": "Romanos 3:23",
+          "say": "Romanos, capítulo 3, versículo 23",
+          "text": "Porque todos pecaram e destituídos estão da glória de Deus."
+        }
+      ]
+    },
+    {
+      "title": "O resultado do pecado é morte e juízo",
+      "body": [
+        "O preço do pecado é a morte: ficar separado para sempre de Deus, a fonte da vida.",
+        "Toda pessoa morre uma vez e, depois disso, enfrenta o juízo diante de Deus.",
+        "Esta é a pergunta mais importante da vida, e ninguém pode evitá-la."
+      ],
+      "verses": [
+        {
+          "ref": "Romanos 6:23",
+          "say": "Romanos, capítulo 6, versículo 23",
+          "text": "Porque o salário do pecado é a morte, mas o dom gratuito de Deus é a vida eterna, por Cristo Jesus, nosso Senhor."
+        },
+        {
+          "ref": "Hebreus 9:27",
+          "say": "Hebreus, capítulo 9, versículo 27",
+          "text": "E, como aos homens está ordenado morrerem uma vez, vindo, depois disso, o juízo."
+        }
+      ]
+    },
+    {
+      "title": "O esforço humano não atravessa o abismo",
+      "body": [
+        "Muitos tentam atravessar esse abismo com boas obras, moral, religião ou educação.",
+        "Esses esforços têm valor, mas estão longe de alcançar um Deus santo.",
+        "A salvação não é conquistada pelo que fazemos. É um presente gratuito de Deus."
+      ],
+      "verses": [
+        {
+          "ref": "Isaías 64:6",
+          "say": "Isaías, capítulo 64, versículo 6",
+          "text": "Mas todos nós somos como o imundo, e todas as nossas justiças, como trapo da imundícia."
+        },
+        {
+          "ref": "Efésios 2:8-9",
+          "say": "Efésios, capítulo 2, versículos 8 e 9",
+          "text": "Porque pela graça sois salvos, por meio da fé; e isso não vem de vós; é dom de Deus. Não vem das obras, para que ninguém se glorie."
+        }
+      ]
+    },
+    {
+      "title": "Deus construiu a ponte por meio de Jesus Cristo",
+      "body": [
+        "Deus nos amou tanto que enviou seu Filho, Jesus Cristo, ao mundo.",
+        "Jesus, que não tinha pecado, levou sobre si os nossos pecados e morreu na cruz. Foi sepultado e, no terceiro dia, ressuscitou.",
+        "A cruz de Jesus é a única ponte para Deus."
+      ],
+      "verses": [
+        {
+          "ref": "Romanos 5:8",
+          "say": "Romanos, capítulo 5, versículo 8",
+          "text": "Mas Deus prova o seu amor para conosco em que Cristo morreu por nós, sendo nós ainda pecadores."
+        },
+        {
+          "ref": "1 Coríntios 15:3-4",
+          "say": "1 Coríntios, capítulo 15, versículos 3 e 4",
+          "text": "Que Cristo morreu por nossos pecados, segundo as Escrituras, e que foi sepultado, e que ressuscitou ao terceiro dia, segundo as Escrituras."
+        }
+      ]
+    },
+    {
+      "title": "Creia em Jesus e receba-o, e você terá vida",
+      "body": [
+        "Uma ponte não adianta nada se você não atravessá-la.",
+        "Fé é mais do que saber sobre Jesus. É recebê-lo como seu Salvador e Senhor e confiar a ele a sua vida.",
+        "Quem crê em Jesus não entra em condenação, mas passou da morte para a vida."
+      ],
+      "verses": [
+        {
+          "ref": "João 1:12",
+          "say": "João, capítulo 1, versículo 12",
+          "text": "Mas a todos quantos o receberam deu-lhes o poder de serem feitos filhos de Deus: aos que creem no seu nome."
+        },
+        {
+          "ref": "João 5:24",
+          "say": "João, capítulo 5, versículo 24",
+          "text": "Na verdade, na verdade vos digo que quem ouve a minha palavra e crê naquele que me enviou tem a vida eterna e não entrará em condenação, mas passou da morte para a vida."
+        }
+      ]
+    },
+    {
+      "title": "Você quer receber Jesus no seu coração agora?",
+      "body": [
+        "Jesus está batendo à porta do seu coração agora mesmo.",
+        "A oração abaixo é só um exemplo. O que importa não são as palavras exatas, mas um coração sincero. Se esta oração expressa o que você sente, ore a Deus agora."
+      ],
+      "verses": [
+        {
+          "ref": "Apocalipse 3:20",
+          "say": "Apocalipse, capítulo 3, versículo 20",
+          "text": "Eis que estou à porta e bato; se alguém ouvir a minha voz e abrir a porta, entrarei em sua casa e com ele cearei, e ele, comigo."
+        }
+      ],
+      "prayer": "Pai do céu, eu reconheço que sou pecador e que não posso chegar a ti pelas minhas próprias forças. Eu creio que Jesus morreu na cruz pelos meus pecados e ressuscitou. Agora recebo Jesus no meu coração como meu Salvador e meu Senhor. Obrigado por perdoar os meus pecados e me fazer teu filho. Guia a minha vida a partir de hoje. Em nome de Jesus eu oro. Amém."
+    },
+    {
+      "title": "Para você, que agora é filho de Deus",
+      "body": [
+        "Todo aquele que recebeu Jesus tem a vida eterna. Essa certeza não depende de sentimentos, mas da promessa imutável de Deus."
+      ],
+      "verses": [
+        {
+          "ref": "1 João 5:12-13",
+          "say": "1 João, capítulo 5, versículos 12 e 13",
+          "text": "Quem tem o Filho tem a vida; quem não tem o Filho de Deus não tem a vida. Estas coisas vos escrevi, para que saibais que tendes a vida eterna e para que creiais no nome do Filho de Deus."
+        }
+      ],
+      "list": [
+        "Converse com Deus em oração todos os dias.",
+        "Leia a Bíblia todos os dias. Comece pelo Evangelho de João.",
+        "Participe de uma igreja e adore a Deus com sua família na fé.",
+        "Compartilhe estas boas notícias com outras pessoas."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "code": "de",
+    "name": "German",
+    "nativeName": "Deutsch",
+    "tts": "de-DE",
+    "dir": "ltr",
+    "bible": "Lutherbibel 1912",
+    "version": 1,
+    "review": "recommended"
+  },
+  "ui": {
+    "appName": "Brücke zum Leben",
+    "tagline": "Der Weg zu Gott",
+    "start": "Beginnen",
+    "prev": "Zurück",
+    "next": "Weiter",
+    "listen": "Anhören",
+    "pause": "Pause",
+    "language": "Sprache",
+    "installed": "Sprachen",
+    "addLang": "Sprache hinzufügen",
+    "catalog": "Online-Sprachliste",
+    "catalogHint": "Eine Sprachdatei vom Server laden und sofort verwenden.",
+    "fromFile": "Sprachdatei auf diesem Gerät öffnen (.json)",
+    "fromUrl": "Sprachdatei von einer URL laden",
+    "load": "Laden",
+    "get": "Laden",
+    "installedBadge": "Installiert",
+    "builtinBadge": "Integriert",
+    "remove": "Entfernen",
+    "newLang": "Neue Sprache erstellen",
+    "exportBtn": "Aktuelle Sprachdatei speichern",
+    "copyBtn": "Inhalt kopieren",
+    "settings": "Einstellungen",
+    "speed": "Sprechgeschwindigkeit",
+    "voice": "Stimme",
+    "voiceAuto": "Automatisch",
+    "autoNext": "Nach dem Anhören zum nächsten Schritt",
+    "textSize": "Textgröße",
+    "noVoice": "Auf diesem Gerät gibt es keine Stimme für {lang}. Laden Sie eine in den Sprachausgabe-Einstellungen (TTS) herunter.",
+    "noTTS": "Dieser Browser unterstützt keine Sprachausgabe.",
+    "invalid": "Die Sprachdatei konnte nicht gelesen werden: {reason}",
+    "loaded": "{lang} hinzugefügt.",
+    "removed": "Entfernt.",
+    "saved": "Datei gespeichert.",
+    "copied": "Kopiert.",
+    "netError": "Laden fehlgeschlagen. Prüfen Sie die Verbindung und die Adresse.",
+    "restart": "Von vorn beginnen",
+    "prayer": "Gebet, um Jesus aufzunehmen",
+    "growth": "Im neuen Leben wachsen",
+    "close": "Schließen",
+    "bible": "Bibel: {v}",
+    "swipeHint": "Wischen oder auf „Weiter“ tippen",
+    "home": "Zum Anfang",
+    "back": "Zurück",
+    "steps": "Schritte",
+    "cover": "Titel",
+    "voiceEngine": "Vorlesestimme",
+    "voiceAutoDesc": "Wählt die beste Stimme auf diesem Gerät",
+    "aiBadge": "KI-Qualität",
+    "packBadge": "KI-Sprachpaket",
+    "preview": "Probehören",
+    "voiceCatalog": "KI-Sprachpakete laden",
+    "voiceCatalogHint": "Mit KI vorab aufgenommene Stimmen. Einmal geladen, laufen sie ohne Internet.",
+    "noVoicePacks": "Für diese Sprache gibt es noch kein KI-Sprachpaket auf dem Server.",
+    "downloading": "Wird geladen {n}/{total}",
+    "packAdded": "KI-Stimme „{name}“ hinzugefügt.",
+    "guideTitle": "Kostenlose KI-Stimmen auf das Handy laden"
+  },
+  "labels": {
+    "me": "Ich",
+    "god": "Gott",
+    "sin": "SÜNDE",
+    "sinner": "Sünder",
+    "death": "Tod",
+    "judgment": "Gericht",
+    "works": "Gute Taten",
+    "religion": "Religion",
+    "morality": "Moral",
+    "education": "Bildung",
+    "jesus": "JESUS CHRISTUS",
+    "eternal": "Ewiges Leben",
+    "forgiven": "Vergeben",
+    "child": "Kind Gottes",
+    "knock": "Klopf, klopf",
+    "abundant": "Leben in Fülle"
+  },
+  "steps": [
+    {
+      "title": "Brücke zum Leben",
+      "body": [
+        "Lass uns gemeinsam den Weg des Lebens ansehen, den Gott für dich vorbereitet hat. Lies oder höre Schritt für Schritt."
+      ],
+      "verses": [
+        {
+          "ref": "Johannes 14,6",
+          "say": "Johannes, Kapitel 14, Vers 6",
+          "text": "Jesus spricht zu ihm: Ich bin der Weg und die Wahrheit und das Leben; niemand kommt zum Vater denn durch mich."
+        }
+      ]
+    },
+    {
+      "title": "Gott möchte, dass du Leben in Fülle hast",
+      "body": [
+        "Was ist das Wertvollste in deinem Leben? Die ganze Welt zu gewinnen nützt nichts, wenn man sein Leben verliert.",
+        "Gott hat den Menschen aus Liebe geschaffen. Er wollte, dass wir mit ihm ein erfülltes, ewiges Leben haben.",
+        "Warum leben dann so viele Menschen in Leere statt in diesem Leben?"
+      ],
+      "verses": [
+        {
+          "ref": "Markus 8,36",
+          "say": "Markus, Kapitel 8, Vers 36",
+          "text": "Was hülfe es dem Menschen, wenn er die ganze Welt gewönne, und nähme an seiner Seele Schaden?"
+        },
+        {
+          "ref": "Johannes 10,10",
+          "say": "Johannes, Kapitel 10, Vers 10",
+          "text": "Ich bin gekommen, daß sie das Leben und volle Genüge haben sollen."
+        }
+      ]
+    },
+    {
+      "title": "Die Sünde hat uns von Gott getrennt",
+      "body": [
+        "Gott ist heilig und gerecht. Aber die Menschen haben sich von Gott abgewandt und leben nach ihrem eigenen Willen.",
+        "Die Bibel nennt das Sünde. Sünde heißt, in Gedanken, Worten und Taten gegen Gottes Willen zu handeln.",
+        "Dadurch ist eine tiefe Kluft zwischen Gott und den Menschen entstanden."
+      ],
+      "verses": [
+        {
+          "ref": "Römer 3,23",
+          "say": "Römer, Kapitel 3, Vers 23",
+          "text": "Sie sind allzumal Sünder und mangeln des Ruhmes, den sie bei Gott haben sollten."
+        }
+      ]
+    },
+    {
+      "title": "Die Folge der Sünde sind Tod und Gericht",
+      "body": [
+        "Der Preis der Sünde ist der Tod: für immer getrennt zu sein von Gott, der Quelle des Lebens.",
+        "Jeder Mensch stirbt einmal, und danach steht er vor Gottes Gericht.",
+        "Das ist die wichtigste Frage des Lebens, und niemand kann ihr ausweichen."
+      ],
+      "verses": [
+        {
+          "ref": "Römer 6,23",
+          "say": "Römer, Kapitel 6, Vers 23",
+          "text": "Denn der Tod ist der Sünde Sold; aber die Gabe Gottes ist das ewige Leben in Christo Jesu, unserm HERRN."
+        },
+        {
+          "ref": "Hebräer 9,27",
+          "say": "Hebräer, Kapitel 9, Vers 27",
+          "text": "Und wie den Menschen gesetzt ist, einmal zu sterben, darnach aber das Gericht."
+        }
+      ]
+    },
+    {
+      "title": "Menschliche Mühe kann die Kluft nicht überwinden",
+      "body": [
+        "Viele versuchen, diese Kluft durch gute Taten, Moral, Religion oder Bildung zu überwinden.",
+        "Diese Bemühungen haben ihren Wert, aber sie reichen bei weitem nicht aus, um den heiligen Gott zu erreichen.",
+        "Rettung verdienen wir nicht durch unser Tun. Sie ist ein freies Geschenk Gottes."
+      ],
+      "verses": [
+        {
+          "ref": "Jesaja 64,5",
+          "say": "Jesaja, Kapitel 64, Vers 5",
+          "text": "Aber nun sind wir allesamt wie die Unreinen, und alle unsre Gerechtigkeit ist wie ein unflätig Kleid."
+        },
+        {
+          "ref": "Epheser 2,8-9",
+          "say": "Epheser, Kapitel 2, Vers 8 bis 9",
+          "text": "Denn aus Gnade seid ihr selig geworden durch den Glauben, und dasselbe nicht aus euch, Gottes Gabe ist es, nicht aus den Werken, auf daß sich nicht jemand rühme."
+        }
+      ]
+    },
+    {
+      "title": "Gott hat durch Jesus Christus die Brücke gebaut",
+      "body": [
+        "Gott hat uns so sehr geliebt, dass er seinen Sohn Jesus Christus in die Welt gesandt hat.",
+        "Jesus, der ohne Sünde war, nahm unsere Sünden auf sich und starb am Kreuz. Er wurde begraben und ist am dritten Tag auferstanden.",
+        "Das Kreuz von Jesus ist die einzige Brücke zu Gott."
+      ],
+      "verses": [
+        {
+          "ref": "Römer 5,8",
+          "say": "Römer, Kapitel 5, Vers 8",
+          "text": "Darum preiset Gott seine Liebe gegen uns, daß Christus für uns gestorben ist, da wir noch Sünder waren."
+        },
+        {
+          "ref": "1. Korinther 15,3-4",
+          "say": "1. Korinther, Kapitel 15, Vers 3 bis 4",
+          "text": "Daß Christus gestorben sei für unsre Sünden nach der Schrift, und daß er begraben sei, und daß er auferstanden sei am dritten Tage nach der Schrift."
+        }
+      ]
+    },
+    {
+      "title": "Glaube an Jesus und nimm ihn auf, dann hast du Leben",
+      "body": [
+        "Eine Brücke nützt nichts, wenn man nicht hinübergeht.",
+        "Glaube ist mehr als Wissen über Jesus. Glaube heißt, ihn als Retter und Herrn aufzunehmen und ihm dein Leben anzuvertrauen.",
+        "Wer an Jesus glaubt, kommt nicht ins Gericht, sondern ist vom Tod ins Leben hinübergegangen."
+      ],
+      "verses": [
+        {
+          "ref": "Johannes 1,12",
+          "say": "Johannes, Kapitel 1, Vers 12",
+          "text": "Wie viele ihn aber aufnahmen, denen gab er Macht, Gottes Kinder zu werden, die an seinen Namen glauben."
+        },
+        {
+          "ref": "Johannes 5,24",
+          "say": "Johannes, Kapitel 5, Vers 24",
+          "text": "Wahrlich, wahrlich ich sage euch: Wer mein Wort hört und glaubt dem, der mich gesandt hat, der hat das ewige Leben und kommt nicht in das Gericht, sondern er ist vom Tode zum Leben hindurchgedrungen."
+        }
+      ]
+    },
+    {
+      "title": "Willst du Jesus jetzt in dein Herz aufnehmen?",
+      "body": [
+        "Jesus klopft gerade jetzt an die Tür deines Herzens.",
+        "Das folgende Gebet ist nur ein Beispiel. Wichtig sind nicht die genauen Worte, sondern ein aufrichtiges Herz. Wenn dieses Gebet ausdrückt, was du empfindest, dann bete es jetzt zu Gott."
+      ],
+      "verses": [
+        {
+          "ref": "Offenbarung 3,20",
+          "say": "Offenbarung, Kapitel 3, Vers 20",
+          "text": "Siehe, ich stehe vor der Tür und klopfe an. So jemand meine Stimme hören wird und die Tür auftun, zu dem werde ich eingehen und das Abendmahl mit ihm halten und er mit mir."
+        }
+      ],
+      "prayer": "Vater im Himmel, ich bekenne, dass ich ein Sünder bin und aus eigener Kraft nicht zu dir kommen kann. Ich glaube, dass Jesus für meine Sünden am Kreuz gestorben und auferstanden ist. Jetzt nehme ich Jesus als meinen Retter und Herrn in mein Herz auf. Danke, dass du mir meine Sünden vergibst und mich zu deinem Kind machst. Bitte führe mein Leben von heute an. Im Namen Jesu bete ich. Amen."
+    },
+    {
+      "title": "An dich, der du jetzt ein Kind Gottes bist",
+      "body": [
+        "Jeder, der Jesus aufgenommen hat, hat das ewige Leben. Diese Gewissheit beruht nicht auf Gefühlen, sondern auf Gottes unveränderlicher Zusage."
+      ],
+      "verses": [
+        {
+          "ref": "1. Johannes 5,12-13",
+          "say": "1. Johannes, Kapitel 5, Vers 12 bis 13",
+          "text": "Wer den Sohn Gottes hat, der hat das Leben; wer den Sohn Gottes nicht hat, der hat das Leben nicht. Solches habe ich euch geschrieben, die ihr glaubet an den Namen des Sohnes Gottes, auf daß ihr wisset, daß ihr das ewige Leben habt."
+        }
+      ],
+      "list": [
+        "Sprich jeden Tag im Gebet mit Gott.",
+        "Lies jeden Tag in der Bibel. Beginne mit dem Johannesevangelium.",
+        "Schließe dich einer Gemeinde an und feiere Gottesdienst mit deiner Glaubensfamilie.",
+        "Erzähle anderen diese gute Nachricht."
+      ]
+    }
+  ]
+}

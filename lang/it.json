@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "code": "it",
+    "name": "Italian",
+    "nativeName": "Italiano",
+    "tts": "it-IT",
+    "dir": "ltr",
+    "bible": "Riveduta 1927",
+    "version": 1,
+    "review": "recommended"
+  },
+  "ui": {
+    "appName": "Ponte verso la vita",
+    "tagline": "La via verso Dio",
+    "start": "Inizia",
+    "prev": "Indietro",
+    "next": "Avanti",
+    "listen": "Ascolta",
+    "pause": "Pausa",
+    "language": "Lingua",
+    "installed": "Lingue",
+    "addLang": "Aggiungi una lingua",
+    "catalog": "Elenco lingue online",
+    "catalogHint": "Scarica un file di lingua dal server e usalo subito.",
+    "fromFile": "Apri un file di lingua su questo dispositivo (.json)",
+    "fromUrl": "Scarica un file di lingua da un URL",
+    "load": "Scarica",
+    "get": "Scarica",
+    "installedBadge": "Installata",
+    "builtinBadge": "Inclusa",
+    "remove": "Rimuovi",
+    "newLang": "Crea una nuova lingua",
+    "exportBtn": "Salva il file di lingua attuale",
+    "copyBtn": "Copia il contenuto",
+    "settings": "Impostazioni",
+    "speed": "Velocità di lettura",
+    "voice": "Voce",
+    "voiceAuto": "Automatica",
+    "autoNext": "Vai al passo successivo dopo l’ascolto",
+    "textSize": "Dimensione del testo",
+    "noVoice": "Questo dispositivo non ha una voce in {lang}. Scaricala nelle impostazioni di sintesi vocale (TTS).",
+    "noTTS": "Questo browser non supporta l’ascolto.",
+    "invalid": "Impossibile leggere il file di lingua: {reason}",
+    "loaded": "{lang} aggiunta.",
+    "removed": "Rimossa.",
+    "saved": "File salvato.",
+    "copied": "Copiato.",
+    "netError": "Download non riuscito. Controlla la connessione e l’indirizzo.",
+    "restart": "Ricomincia",
+    "prayer": "Preghiera per ricevere Gesù",
+    "growth": "Crescere nella nuova vita",
+    "close": "Chiudi",
+    "bible": "Bibbia: {v}",
+    "swipeHint": "Scorri o tocca «Avanti» per continuare",
+    "home": "Inizio",
+    "back": "Indietro",
+    "steps": "Passi",
+    "cover": "Copertina",
+    "voiceEngine": "Voce di lettura",
+    "voiceAutoDesc": "Sceglie la voce migliore di questo dispositivo",
+    "aiBadge": "Qualità IA",
+    "packBadge": "Pacchetto voce IA",
+    "preview": "Ascolta prova",
+    "voiceCatalog": "Scarica pacchetti voce IA",
+    "voiceCatalogHint": "Voci di alta qualità registrate in anticipo con l’IA. Una volta scaricate, funzionano senza internet.",
+    "noVoicePacks": "Non c’è ancora un pacchetto voce IA per questa lingua sul server.",
+    "downloading": "Download {n}/{total}",
+    "packAdded": "Voce IA «{name}» aggiunta.",
+    "guideTitle": "Aggiungi voci IA gratuite al telefono"
+  },
+  "labels": {
+    "me": "Io",
+    "god": "Dio",
+    "sin": "PECCATO",
+    "sinner": "Peccatore",
+    "death": "Morte",
+    "judgment": "Giudizio",
+    "works": "Buone opere",
+    "religion": "Religione",
+    "morality": "Morale",
+    "education": "Istruzione",
+    "jesus": "GESÙ CRISTO",
+    "eternal": "Vita eterna",
+    "forgiven": "Perdonato",
+    "child": "Figlio di Dio",
+    "knock": "Toc toc",
+    "abundant": "Vita abbondante"
+  },
+  "steps": [
+    {
+      "title": "Ponte verso la vita",
+      "body": [
+        "Scopriamo insieme la via della vita che Dio ha preparato per te. Leggi o ascolta un passo alla volta."
+      ],
+      "verses": [
+        {
+          "ref": "Giovanni 14:6",
+          "say": "Giovanni, capitolo 14, versione 6",
+          "text": "Gesù gli disse: Io sono la via, la verità e la vita; nessuno viene al Padre se non per mezzo di me."
+        }
+      ]
+    },
+    {
+      "title": "Dio vuole che tu abbia vita in abbondanza",
+      "body": [
+        "Qual è la cosa più preziosa della tua vita? Guadagnare il mondo intero non serve a nulla se si perde la propria vita.",
+        "Dio ha creato l’uomo per amore e ha voluto che vivessimo con lui una vita piena ed eterna.",
+        "Perché allora tante persone vivono nel vuoto invece di conoscere questa vita?"
+      ],
+      "verses": [
+        {
+          "ref": "Marco 8:36",
+          "say": "Marco, capitolo 8, versione 36",
+          "text": "E che giova egli all’uomo se guadagna tutto il mondo e perde l’anima sua?"
+        },
+        {
+          "ref": "Giovanni 10:10",
+          "say": "Giovanni, capitolo 10, versione 10",
+          "text": "Io son venuto perché abbian la vita e l’abbiano ad esuberanza."
+        }
+      ]
+    },
+    {
+      "title": "Il peccato ci ha separati da Dio",
+      "body": [
+        "Dio è santo e giusto. Ma l’uomo si è allontanato da Dio e ha vissuto a modo suo.",
+        "La Bibbia chiama questo peccato. Peccare significa andare contro la volontà di Dio con pensieri, parole e azioni.",
+        "Per questo tra Dio e l’uomo si è aperto un profondo abisso."
+      ],
+      "verses": [
+        {
+          "ref": "Romani 3:23",
+          "say": "Romani, capitolo 3, versione 23",
+          "text": "Difatti, tutti hanno peccato e son privi della gloria di Dio."
+        }
+      ]
+    },
+    {
+      "title": "Il peccato porta alla morte e al giudizio",
+      "body": [
+        "Il prezzo del peccato è la morte: essere separati per sempre da Dio, la sorgente della vita.",
+        "Ogni persona muore una volta, e dopo viene il giudizio davanti a Dio.",
+        "È la domanda più importante della vita, e nessuno può evitarla."
+      ],
+      "verses": [
+        {
+          "ref": "Romani 6:23",
+          "say": "Romani, capitolo 6, versione 23",
+          "text": "Perché il salario del peccato è la morte; ma il dono di Dio è la vita eterna in Cristo Gesù, nostro Signore."
+        },
+        {
+          "ref": "Ebrei 9:27",
+          "say": "Ebrei, capitolo 9, versione 27",
+          "text": "E come è stabilito che gli uomini muoiano una volta sola, dopo di che viene il giudizio."
+        }
+      ]
+    },
+    {
+      "title": "Lo sforzo umano non può superare l’abisso",
+      "body": [
+        "Molti cercano di superare questo abisso con le buone opere, la morale, la religione o l’istruzione.",
+        "Questi sforzi hanno valore, ma non bastano affatto per raggiungere un Dio santo.",
+        "La salvezza non si guadagna con le nostre opere. È un dono gratuito di Dio."
+      ],
+      "verses": [
+        {
+          "ref": "Isaia 64:5",
+          "say": "Isaia, capitolo 64, versione 5",
+          "text": "Tutti quanti siamo diventati come l’uomo impuro, e tutta la nostra giustizia come un abito lordato."
+        },
+        {
+          "ref": "Efesini 2:8-9",
+          "say": "Efesini, capitolo 2, versioni 8 e 9",
+          "text": "Poiché gli è per grazia che voi siete stati salvati, mediante la fede; e ciò non vien da voi; è il dono di Dio. Non è in virtù d’opere, affinché niuno si glori."
+        }
+      ]
+    },
+    {
+      "title": "Dio ha costruito il ponte per mezzo di Gesù Cristo",
+      "body": [
+        "Dio ci ha amati così tanto che ha mandato nel mondo suo Figlio, Gesù Cristo.",
+        "Gesù, che era senza peccato, ha preso su di sé i nostri peccati ed è morto sulla croce. Fu sepolto e il terzo giorno è risorto.",
+        "La croce di Gesù è l’unico ponte verso Dio."
+      ],
+      "verses": [
+        {
+          "ref": "Romani 5:8",
+          "say": "Romani, capitolo 5, versione 8",
+          "text": "Ma Dio mostra la grandezza del proprio amore per noi, in quanto che, mentre eravamo ancora peccatori, Cristo è morto per noi."
+        },
+        {
+          "ref": "1 Corinzi 15:3-4",
+          "say": "1 Corinzi, capitolo 15, versioni 3 e 4",
+          "text": "Che Cristo è morto per i nostri peccati, secondo le Scritture; che fu seppellito; che risuscitò il terzo giorno, secondo le Scritture."
+        }
+      ]
+    },
+    {
+      "title": "Credi in Gesù e accoglilo, e avrai la vita",
+      "body": [
+        "Un ponte non serve a nulla se non lo attraversi.",
+        "La fede è più che sapere cose su Gesù. È accoglierlo come tuo Salvatore e Signore e affidargli la tua vita.",
+        "Chi crede in Gesù non viene in giudizio, ma è passato dalla morte alla vita."
+      ],
+      "verses": [
+        {
+          "ref": "Giovanni 1:12",
+          "say": "Giovanni, capitolo 1, versione 12",
+          "text": "Ma a tutti quelli che l’hanno ricevuto egli ha dato il diritto di diventar figliuoli di Dio; a quelli, cioè, che credono nel suo nome."
+        },
+        {
+          "ref": "Giovanni 5:24",
+          "say": "Giovanni, capitolo 5, versione 24",
+          "text": "In verità, in verità vi dico che chi ascolta la mia parola e crede a Colui che mi ha mandato, ha vita eterna; e non viene in giudizio, ma è passato dalla morte alla vita."
+        }
+      ]
+    },
+    {
+      "title": "Vuoi accogliere Gesù nel tuo cuore adesso?",
+      "body": [
+        "Gesù sta bussando proprio ora alla porta del tuo cuore.",
+        "La preghiera qui sotto è solo un esempio. Non contano le parole esatte, ma un cuore sincero. Se questa preghiera esprime ciò che senti, rivolgila a Dio adesso."
+      ],
+      "verses": [
+        {
+          "ref": "Apocalisse 3:20",
+          "say": "Apocalisse, capitolo 3, versione 20",
+          "text": "Ecco, io sto alla porta e picchio: se uno ode la mia voce ed apre la porta, io entrerò da lui e cenerò con lui ed egli meco."
+        }
+      ],
+      "prayer": "Padre celeste, riconosco di essere un peccatore e di non poter venire a te con le mie forze. Credo che Gesù è morto sulla croce per i miei peccati ed è risorto. Ora accolgo Gesù nel mio cuore come mio Salvatore e mio Signore. Grazie perché perdoni i miei peccati e mi rendi tuo figlio. Guida la mia vita da oggi in poi. Nel nome di Gesù prego. Amen."
+    },
+    {
+      "title": "A te, che ora sei figlio di Dio",
+      "body": [
+        "Chiunque ha accolto Gesù ha la vita eterna. Questa certezza non si basa sui sentimenti, ma sulla promessa immutabile di Dio."
+      ],
+      "verses": [
+        {
+          "ref": "1 Giovanni 5:12-13",
+          "say": "1 Giovanni, capitolo 5, versioni 12 e 13",
+          "text": "Chi ha il Figliuolo ha la vita; chi non ha il Figliuolo di Dio, non ha la vita. Io v’ho scritto queste cose affinché sappiate che avete la vita eterna, a voi che credete nel nome del Figliuol di Dio."
+        }
+      ],
+      "list": [
+        "Parla con Dio in preghiera ogni giorno.",
+        "Leggi la Bibbia ogni giorno. Comincia dal Vangelo di Giovanni.",
+        "Unisciti a una chiesa e adora Dio con la tua famiglia nella fede.",
+        "Condividi questa buona notizia con altri."
+      ]
+    }
+  ]
+}

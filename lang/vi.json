@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "code": "vi",
+    "name": "Vietnamese",
+    "nativeName": "Tiếng Việt",
+    "tts": "vi-VN",
+    "dir": "ltr",
+    "bible": "Kinh Thánh 1926 (Bản Truyền Thống)",
+    "version": 1,
+    "review": "recommended"
+  },
+  "ui": {
+    "appName": "Cây Cầu Sự Sống",
+    "tagline": "Con đường đến với Đức Chúa Trời",
+    "start": "Bắt đầu",
+    "prev": "Trước",
+    "next": "Tiếp",
+    "listen": "Nghe",
+    "pause": "Tạm dừng",
+    "language": "Ngôn ngữ",
+    "installed": "Ngôn ngữ",
+    "addLang": "Thêm ngôn ngữ",
+    "catalog": "Danh sách ngôn ngữ trực tuyến",
+    "catalogHint": "Tải tệp ngôn ngữ từ máy chủ và dùng ngay.",
+    "fromFile": "Mở tệp ngôn ngữ trên máy này (.json)",
+    "fromUrl": "Tải tệp ngôn ngữ từ địa chỉ URL",
+    "load": "Tải",
+    "get": "Tải",
+    "installedBadge": "Đã cài",
+    "builtinBadge": "Có sẵn",
+    "remove": "Xóa",
+    "newLang": "Tạo ngôn ngữ mới",
+    "exportBtn": "Lưu tệp ngôn ngữ hiện tại",
+    "copyBtn": "Sao chép nội dung",
+    "settings": "Cài đặt",
+    "speed": "Tốc độ đọc",
+    "voice": "Giọng đọc",
+    "voiceAuto": "Tự động",
+    "autoNext": "Nghe xong thì chuyển sang bước tiếp theo",
+    "textSize": "Cỡ chữ",
+    "noVoice": "Máy này chưa có giọng {lang}. Hãy tải giọng đọc trong phần cài đặt chuyển văn bản thành giọng nói (TTS).",
+    "noTTS": "Trình duyệt này không hỗ trợ nghe.",
+    "invalid": "Không đọc được tệp ngôn ngữ: {reason}",
+    "loaded": "Đã thêm {lang}.",
+    "removed": "Đã xóa.",
+    "saved": "Đã lưu tệp.",
+    "copied": "Đã sao chép.",
+    "netError": "Không tải được. Hãy kiểm tra kết nối và địa chỉ.",
+    "restart": "Bắt đầu lại",
+    "prayer": "Lời cầu nguyện tiếp nhận Chúa Giê-xu",
+    "growth": "Lớn lên trong đời sống mới",
+    "close": "Đóng",
+    "bible": "Kinh Thánh: {v}",
+    "swipeHint": "Vuốt hoặc chạm “Tiếp” để tiếp tục",
+    "home": "Về đầu",
+    "back": "Quay lại",
+    "steps": "Các bước",
+    "cover": "Trang bìa",
+    "voiceEngine": "Giọng đọc",
+    "voiceAutoDesc": "Chọn giọng tốt nhất trên máy này",
+    "aiBadge": "Chất lượng AI",
+    "packBadge": "Gói giọng AI",
+    "preview": "Nghe thử",
+    "voiceCatalog": "Tải gói giọng AI",
+    "voiceCatalogHint": "Giọng đọc chất lượng cao được AI ghi âm sẵn. Tải một lần là nghe được khi không có mạng.",
+    "noVoicePacks": "Máy chủ chưa có gói giọng AI cho ngôn ngữ này.",
+    "downloading": "Đang tải {n}/{total}",
+    "packAdded": "Đã thêm giọng AI “{name}”.",
+    "guideTitle": "Thêm giọng AI miễn phí vào điện thoại"
+  },
+  "labels": {
+    "me": "Tôi",
+    "god": "Đức Chúa Trời",
+    "sin": "TỘI LỖI",
+    "sinner": "Tội nhân",
+    "death": "Sự chết",
+    "judgment": "Sự phán xét",
+    "works": "Việc lành",
+    "religion": "Tôn giáo",
+    "morality": "Đạo đức",
+    "education": "Học vấn",
+    "jesus": "CHÚA GIÊ-XU CHRIST",
+    "eternal": "Sự sống đời đời",
+    "forgiven": "Được tha thứ",
+    "child": "Con Đức Chúa Trời",
+    "knock": "Cốc cốc",
+    "abundant": "Sự sống dư dật"
+  },
+  "steps": [
+    {
+      "title": "Cây Cầu Sự Sống",
+      "body": [
+        "Chúng ta hãy cùng xem con đường sự sống mà Đức Chúa Trời đã chuẩn bị cho bạn. Hãy đọc hoặc nghe từng bước một."
+      ],
+      "verses": [
+        {
+          "ref": "Giăng 14:6",
+          "say": "Giăng, chương 14, câu 6",
+          "text": "Đức Chúa Jêsus đáp rằng: Ta là đường đi, lẽ thật, và sự sống; chẳng bởi ta thì không ai được đến cùng Cha."
+        }
+      ]
+    },
+    {
+      "title": "Đức Chúa Trời muốn bạn có sự sống dư dật",
+      "body": [
+        "Điều gì quý giá nhất trong đời bạn? Dù được cả thế gian mà mất sự sống mình thì cũng chẳng ích gì.",
+        "Đức Chúa Trời dựng nên con người bởi tình yêu và muốn chúng ta sống với Ngài một đời sống dư dật và đời đời.",
+        "Vậy tại sao nhiều người vẫn sống trong trống rỗng mà không có sự sống ấy?"
+      ],
+      "verses": [
+        {
+          "ref": "Mác 8:36",
+          "say": "Mác, chương 8, câu 36",
+          "text": "Người nào nếu được cả thiên hạ mà mất linh hồn mình, thì có ích gì?"
+        },
+        {
+          "ref": "Giăng 10:10",
+          "say": "Giăng, chương 10, câu 10",
+          "text": "Ta đã đến, hầu cho chiên được sự sống, và được sự sống dư dật."
+        }
+      ]
+    },
+    {
+      "title": "Tội lỗi đã ngăn cách chúng ta với Đức Chúa Trời",
+      "body": [
+        "Đức Chúa Trời là Đấng thánh khiết và công chính. Nhưng con người đã lìa bỏ Ngài và sống theo ý riêng mình.",
+        "Kinh Thánh gọi điều đó là tội lỗi. Tội lỗi là đi ngược lại ý muốn Đức Chúa Trời trong tư tưởng, lời nói và việc làm.",
+        "Vì thế có một vực thẳm sâu ngăn cách giữa Đức Chúa Trời và con người."
+      ],
+      "verses": [
+        {
+          "ref": "Rô-ma 3:23",
+          "say": "Rô-ma, chương 3, câu 23",
+          "text": "Vì mọi người đều đã phạm tội, thiếu mất sự vinh hiển của Đức Chúa Trời."
+        }
+      ]
+    },
+    {
+      "title": "Hậu quả của tội lỗi là sự chết và sự phán xét",
+      "body": [
+        "Cái giá của tội lỗi là sự chết, tức là bị phân cách đời đời khỏi Đức Chúa Trời, nguồn sự sống.",
+        "Mỗi người đều chết một lần, rồi sau đó chịu phán xét trước mặt Đức Chúa Trời.",
+        "Đây là vấn đề quan trọng nhất của đời người, và không ai có thể tránh khỏi."
+      ],
+      "verses": [
+        {
+          "ref": "Rô-ma 6:23",
+          "say": "Rô-ma, chương 6, câu 23",
+          "text": "Vì tiền công của tội lỗi là sự chết; nhưng sự ban cho của Đức Chúa Trời là sự sống đời đời trong Đức Chúa Jêsus Christ, Chúa chúng ta."
+        },
+        {
+          "ref": "Hê-bơ-rơ 9:27",
+          "say": "Hê-bơ-rơ, chương 9, câu 27",
+          "text": "Theo như đã định cho loài người, phải chết một lần, rồi chịu phán xét."
+        }
+      ]
+    },
+    {
+      "title": "Nỗ lực của con người không thể vượt qua vực thẳm",
+      "body": [
+        "Nhiều người cố vượt qua vực thẳm này bằng việc lành, đạo đức, tôn giáo hay học vấn.",
+        "Những nỗ lực đó có giá trị, nhưng hoàn toàn không đủ để đến với Đức Chúa Trời thánh khiết.",
+        "Sự cứu rỗi không do việc làm của chúng ta mà có. Đó là món quà miễn phí của Đức Chúa Trời."
+      ],
+      "verses": [
+        {
+          "ref": "Ê-sai 64:6",
+          "say": "Ê-sai, chương 64, câu 6",
+          "text": "Chúng tôi hết thảy đã trở nên như vật ô uế, mọi việc công bình của chúng tôi như áo nhớp."
+        },
+        {
+          "ref": "Ê-phê-sô 2:8-9",
+          "say": "Ê-phê-sô, chương 2, câu 8 đến 9",
+          "text": "Vả, ấy là nhờ ân điển, bởi đức tin, mà anh em được cứu, điều đó không phải đến từ anh em, bèn là sự ban cho của Đức Chúa Trời. Ấy chẳng phải bởi việc làm đâu, hầu cho không ai khoe mình."
+        }
+      ]
+    },
+    {
+      "title": "Đức Chúa Trời đã bắc cầu qua Chúa Giê-xu Christ",
+      "body": [
+        "Đức Chúa Trời yêu thương chúng ta đến nỗi đã sai Con Ngài là Chúa Giê-xu Christ đến thế gian.",
+        "Chúa Giê-xu, Đấng vô tội, đã gánh lấy tội lỗi chúng ta và chết trên thập tự giá. Ngài đã được chôn, và đến ngày thứ ba Ngài sống lại.",
+        "Thập tự giá của Chúa Giê-xu là cây cầu duy nhất dẫn đến Đức Chúa Trời."
+      ],
+      "verses": [
+        {
+          "ref": "Rô-ma 5:8",
+          "say": "Rô-ma, chương 5, câu 8",
+          "text": "Nhưng Đức Chúa Trời tỏ lòng yêu thương Ngài đối với chúng ta, khi chúng ta còn là người có tội, thì Đấng Christ vì chúng ta chịu chết."
+        },
+        {
+          "ref": "I Cô-rinh-tô 15:3-4",
+          "say": "I Cô-rinh-tô, chương 15, câu 3 đến 4",
+          "text": "Ấy là Đấng Christ chịu chết vì tội chúng ta theo lời Kinh Thánh; Ngài đã bị chôn, đến ngày thứ ba, Ngài sống lại, theo lời Kinh Thánh."
+        }
+      ]
+    },
+    {
+      "title": "Hãy tin và tiếp nhận Chúa Giê-xu, bạn sẽ có sự sống",
+      "body": [
+        "Cây cầu đã bắc xong, nhưng nếu không bước qua thì chẳng thể đến bờ bên kia.",
+        "Đức tin không chỉ là biết về Chúa Giê-xu. Đức tin là tiếp nhận Ngài làm Cứu Chúa và Chúa của mình, và phó thác cuộc đời cho Ngài.",
+        "Ai tin Chúa Giê-xu thì không đến sự phán xét, nhưng đã vượt khỏi sự chết mà đến sự sống."
+      ],
+      "verses": [
+        {
+          "ref": "Giăng 1:12",
+          "say": "Giăng, chương 1, câu 12",
+          "text": "Nhưng hễ ai đã nhận Ngài, thì Ngài ban cho quyền phép trở nên con cái Đức Chúa Trời, là ban cho những kẻ tin danh Ngài."
+        },
+        {
+          "ref": "Giăng 5:24",
+          "say": "Giăng, chương 5, câu 24",
+          "text": "Quả thật, quả thật, ta nói cùng các ngươi, ai nghe lời ta mà tin Đấng đã sai ta, thì được sự sống đời đời, và không đến sự phán xét, song vượt khỏi sự chết mà đến sự sống."
+        }
+      ]
+    },
+    {
+      "title": "Bạn có muốn tiếp nhận Chúa Giê-xu vào lòng ngay bây giờ không?",
+      "body": [
+        "Ngay lúc này Chúa Giê-xu đang gõ cửa lòng bạn.",
+        "Lời cầu nguyện dưới đây chỉ là một ví dụ. Điều quan trọng không phải là lời lẽ chính xác mà là tấm lòng chân thành. Nếu lời cầu nguyện này nói lên lòng bạn, hãy cầu nguyện với Đức Chúa Trời ngay bây giờ."
+      ],
+      "verses": [
+        {
+          "ref": "Khải Huyền 3:20",
+          "say": "Khải Huyền, chương 3, câu 20",
+          "text": "Nầy, ta đứng ngoài cửa mà gõ; nếu ai nghe tiếng ta mà mở cửa cho, thì ta sẽ vào cùng người ấy, ăn bữa tối với người, và người với ta."
+        }
+      ],
+      "prayer": "Lạy Cha trên trời, con xưng nhận con là người có tội và không thể tự mình đến với Cha. Con tin Chúa Giê-xu đã chết trên thập tự giá vì tội lỗi con và đã sống lại. Ngay bây giờ con tiếp nhận Chúa Giê-xu vào lòng làm Cứu Chúa và Chúa của con. Cảm ơn Cha đã tha thứ tội lỗi con và nhận con làm con của Cha. Xin dẫn dắt cuộc đời con từ hôm nay. Con cầu nguyện trong danh Chúa Giê-xu. A-men."
+    },
+    {
+      "title": "Gửi bạn, người nay đã là con cái Đức Chúa Trời",
+      "body": [
+        "Ai đã tiếp nhận Chúa Giê-xu thì có sự sống đời đời. Sự bảo đảm này không dựa trên cảm xúc, mà dựa trên lời hứa không hề thay đổi của Đức Chúa Trời."
+      ],
+      "verses": [
+        {
+          "ref": "I Giăng 5:12-13",
+          "say": "I Giăng, chương 5, câu 12 đến 13",
+          "text": "Ai có Đức Chúa Con thì có sự sống; ai không có Con Đức Chúa Trời thì không có sự sống. Ta đã viết những điều nầy cho các con, hầu cho các con biết mình có sự sống đời đời, là kẻ nào tin đến danh Con Đức Chúa Trời."
+        }
+      ],
+      "list": [
+        "Mỗi ngày hãy trò chuyện với Đức Chúa Trời qua sự cầu nguyện.",
+        "Mỗi ngày hãy đọc Kinh Thánh. Hãy bắt đầu từ sách Phúc Âm Giăng.",
+        "Hãy tham gia một Hội Thánh và thờ phượng cùng gia đình đức tin.",
+        "Hãy chia sẻ Tin Lành này cho người khác."
+      ]
+    }
+  ]
+}

@@ -26,7 +26,7 @@
   --gold:#a8690f; --gold-ink:#ffffff; --gold-soft:#f8eedb; --night:#1b2640; --hl:#fff1c9;
   --sprout:#4f9a3c; --sprout-ink:#2f7a26;
   --sans:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Hiragino Sans","PingFang SC","Noto Sans CJK SC","Segoe UI",Roboto,system-ui,sans-serif;
-  --serif:"Gowun Batang","Noto Serif KR","Nanum Myeongjo","Hiragino Mincho ProN","Songti SC","Noto Serif CJK SC",Georgia,serif;
+  --serif:Georgia,"Noto Serif","Gowun Batang","Noto Serif KR","Nanum Myeongjo","Hiragino Mincho ProN","Songti SC","Noto Serif CJK SC",serif;
   --fs:1;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
@@ -69,9 +69,9 @@ h1.title{font-size:calc(23px * var(--fs));line-height:1.38;font-weight:800;margi
 .cover h1.title{font-family:var(--serif);font-size:calc(34px * var(--fs));font-weight:700;margin:6px 0 4px;letter-spacing:0}
 .tagline{color:var(--gold);font-weight:700;margin:0 0 14px}
 .verse{margin:0 0 12px;padding:14px 16px 12px;background:var(--gold-soft);border-radius:14px;font-family:var(--serif);font-size:calc(17.5px * var(--fs));line-height:1.8;position:relative}
-.verse::before{content:"\201C";position:absolute;left:10px;top:-6px;font-size:44px;line-height:1;color:var(--gold);opacity:.45;font-family:Georgia,serif}
-.verse p{margin:0;padding-left:14px}
-.verse cite{display:block;text-align:right;font-style:normal;font-family:var(--sans);font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.03em;margin-top:6px}
+.verse::before{content:"\201C";position:absolute;inset-inline-start:10px;top:-6px;font-size:44px;line-height:1;color:var(--gold);opacity:.45;font-family:Georgia,serif}
+.verse p{margin:0;padding-inline-start:14px}
+.verse cite{display:block;text-align:end;font-style:normal;font-family:var(--sans);font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.03em;margin-top:6px}
 .body p{margin:0 0 12px}
 .say{transition:background-color .3s,box-shadow .3s;border-radius:8px}
 .say.speaking{background:var(--hl);box-shadow:0 0 0 6px var(--hl)}
@@ -781,12 +781,16 @@ function chosenVoice(){
   return list[0] || null;
 }
 function splitText(text){
-  var parts = String(text).match(/[^.!?。！？]+[.!?。！？”"」』)]*\s*/g) || [text];
+  var parts = String(text).match(/[^.!?。！？।॥။؟።]+[.!?。！？।॥။؟።”"」』)]*\s*/g) || [text];
   var out = [], buf = '';
+  function add(x){ if((buf + x).length > 170 && buf){ out.push(buf.trim()); buf = ''; } buf += x; }
   parts.forEach(function(s){
-    if((buf + s).length > 170 && buf){ out.push(buf.trim()); buf = ''; }
-    if(s.length > 170){ s.replace(/([,，、;；:])\s*/g, '$1\u0000').split('\u0000').forEach(function(x){ if((buf + x).length > 170 && buf){ out.push(buf.trim()); buf = ''; } buf += x; }); }
-    else buf += s;
+    if(s.length <= 170){ add(s); return; }
+    var pieces = s.replace(/([,，、;；:،၊])\s*/g, '$1\u0000').split('\u0000');
+    pieces.forEach(function(x){
+      if(x.length <= 170){ add(x); return; }
+      x.split(/(\s+)/).forEach(add);   // languages without punctuation (Thai, Lao): break at spaces
+    });
   });
   if(buf.trim()) out.push(buf.trim());
   return out;

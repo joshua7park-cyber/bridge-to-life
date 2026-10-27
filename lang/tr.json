@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "code": "tr",
+    "name": "Turkish",
+    "nativeName": "Türkçe",
+    "tts": "tr-TR",
+    "dir": "ltr",
+    "bible": "Kutsal Kitap (Yeni Çeviri)",
+    "version": 1,
+    "review": "recommended"
+  },
+  "ui": {
+    "appName": "Yaşama Köprü",
+    "tagline": "Tanrı’ya giden yol",
+    "start": "Başla",
+    "prev": "Geri",
+    "next": "İleri",
+    "listen": "Dinle",
+    "pause": "Duraklat",
+    "language": "Dil",
+    "installed": "Diller",
+    "addLang": "Dil ekle",
+    "catalog": "Çevrim içi dil listesi",
+    "catalogHint": "Sunucudan bir dil dosyası indirip hemen kullanın.",
+    "fromFile": "Bu cihazdaki dil dosyasını aç (.json)",
+    "fromUrl": "Bir adresten (URL) dil dosyası indir",
+    "load": "İndir",
+    "get": "İndir",
+    "installedBadge": "Yüklü",
+    "builtinBadge": "Dahili",
+    "remove": "Kaldır",
+    "newLang": "Yeni dil oluştur",
+    "exportBtn": "Geçerli dil dosyasını kaydet",
+    "copyBtn": "İçeriği kopyala",
+    "settings": "Ayarlar",
+    "speed": "Konuşma hızı",
+    "voice": "Ses",
+    "voiceAuto": "Otomatik",
+    "autoNext": "Dinledikten sonra sonraki adıma geç",
+    "textSize": "Yazı boyutu",
+    "noVoice": "Bu cihazda {lang} sesi yok. Dinlemek için cihazın metin okuma (TTS) ayarlarından bir ses indirin.",
+    "noTTS": "Bu tarayıcı dinlemeyi desteklemiyor.",
+    "invalid": "Dil dosyası okunamadı: {reason}",
+    "loaded": "{lang} eklendi.",
+    "removed": "Kaldırıldı.",
+    "saved": "Dosya kaydedildi.",
+    "copied": "Kopyalandı.",
+    "netError": "İndirilemedi. Bağlantıyı ve adresi kontrol edin.",
+    "restart": "Baştan başla",
+    "prayer": "İsa’yı kabul etme duası",
+    "growth": "Yeni yaşamda büyümek",
+    "close": "Kapat",
+    "bible": "Kutsal Kitap: {v}",
+    "swipeHint": "Kaydırın ya da “İleri”ye dokunun",
+    "home": "Başa dön",
+    "back": "Geri",
+    "steps": "Adımlar",
+    "cover": "Kapak",
+    "voiceEngine": "Okuma sesi",
+    "voiceAutoDesc": "Bu cihazdaki en iyi sesi seçer",
+    "aiBadge": "Yapay zekâ kalitesi",
+    "packBadge": "Yapay zekâ ses paketi",
+    "preview": "Önizle",
+    "voiceCatalog": "Yapay zekâ ses paketlerini indir",
+    "voiceCatalogHint": "Yapay zekâyla önceden kaydedilmiş yüksek kaliteli sesler. Bir kez indirince internetsiz çalışır.",
+    "noVoicePacks": "Sunucuda bu dil için henüz yapay zekâ ses paketi yok.",
+    "downloading": "İndiriliyor {n}/{total}",
+    "packAdded": "“{name}” yapay zekâ sesi eklendi.",
+    "guideTitle": "Telefona ücretsiz yapay zekâ sesleri ekleyin"
+  },
+  "labels": {
+    "me": "Ben",
+    "god": "Tanrı",
+    "sin": "GÜNAH",
+    "sinner": "Günahkâr",
+    "death": "Ölüm",
+    "judgment": "Yargı",
+    "works": "İyi işler",
+    "religion": "Din",
+    "morality": "Ahlak",
+    "education": "Eğitim",
+    "jesus": "İSA MESİH",
+    "eternal": "Sonsuz yaşam",
+    "forgiven": "Bağışlandı",
+    "child": "Tanrı’nın çocuğu",
+    "knock": "Tak tak",
+    "abundant": "Bol yaşam"
+  },
+  "steps": [
+    {
+      "title": "Yaşama Köprü",
+      "body": [
+        "Tanrı’nın senin için hazırladığı yaşam yoluna birlikte bakalım. Adım adım oku ya da dinle."
+      ],
+      "verses": [
+        {
+          "ref": "Yuhanna 14:6",
+          "say": "Yuhanna, bölüm 14, ayet 6",
+          "text": "İsa, “Yol, gerçek ve yaşam Ben’im” dedi. “Benim aracılığım olmadan Baba’ya kimse gelemez.”"
+        }
+      ]
+    },
+    {
+      "title": "Tanrı bol bir yaşama sahip olmanı istiyor",
+      "body": [
+        "Hayatındaki en değerli şey nedir? İnsan bütün dünyayı kazansa da canını yitirirse bunun hiçbir yararı yoktur.",
+        "Tanrı insanı sevgiyle yarattı ve O’nunla birlikte bol ve sonsuz bir yaşam sürmemizi istedi.",
+        "Peki neden pek çok insan bu yaşam yerine bir boşluk içinde yaşıyor?"
+      ],
+      "verses": [
+        {
+          "ref": "Markos 8:36",
+          "say": "Markos, bölüm 8, ayet 36",
+          "text": "İnsan bütün dünyayı kazanıp da canını yitirirse, bu ona ne yarar sağlar?"
+        },
+        {
+          "ref": "Yuhanna 10:10",
+          "say": "Yuhanna, bölüm 10, ayet 10",
+          "text": "Ben, insanlar yaşama, bol yaşama kavuşsunlar diye geldim."
+        }
+      ]
+    },
+    {
+      "title": "Günah bizi Tanrı’dan ayırdı",
+      "body": [
+        "Tanrı kutsal ve adildir. Ama insanlar Tanrı’dan uzaklaşıp kendi bildikleri gibi yaşadılar.",
+        "Kutsal Kitap buna günah der. Günah, düşüncede, sözde ve davranışta Tanrı’nın isteğine karşı gelmektir.",
+        "Bu yüzden Tanrı ile insanlar arasında derin bir uçurum oluştu."
+      ],
+      "verses": [
+        {
+          "ref": "Romalılar 3:23",
+          "say": "Romalılar, bölüm 3, ayet 23",
+          "text": "Çünkü herkes günah işledi ve Tanrı’nın yüceliğinden yoksun kaldı."
+        }
+      ]
+    },
+    {
+      "title": "Günahın sonucu ölüm ve yargıdır",
+      "body": [
+        "Günahın bedeli ölümdür: yaşamın kaynağı olan Tanrı’dan sonsuza dek ayrı kalmak.",
+        "Her insan bir kez ölür ve ardından Tanrı’nın önünde yargılanır.",
+        "Bu, hayatın en önemli sorusudur ve kimse bundan kaçamaz."
+      ],
+      "verses": [
+        {
+          "ref": "Romalılar 6:23",
+          "say": "Romalılar, bölüm 6, ayet 23",
+          "text": "Çünkü günahın ücreti ölüm, Tanrı’nın armağanıysa Rabbimiz Mesih İsa’da sonsuz yaşamdır."
+        },
+        {
+          "ref": "İbraniler 9:27",
+          "say": "İbraniler, bölüm 9, ayet 27",
+          "text": "İnsanlar için bir kez ölmek, sonra yargılanmak atanmıştır."
+        }
+      ]
+    },
+    {
+      "title": "İnsan çabası uçurumu aşamaz",
+      "body": [
+        "Birçok kişi bu uçurumu iyi işlerle, ahlakla, dinle ya da eğitimle aşmaya çalışır.",
+        "Bu çabaların değeri vardır, ama kutsal Tanrı’ya ulaşmaya asla yetmez.",
+        "Kurtuluş yaptıklarımızla kazanılmaz. O, Tanrı’nın karşılıksız armağanıdır."
+      ],
+      "verses": [
+        {
+          "ref": "Yeşaya 64:6",
+          "say": "Yeşaya, bölüm 64, ayet 6",
+          "text": "Hepimiz murdar biri gibi olduk, bütün doğruluk işlerimiz kirli bez gibi."
+        },
+        {
+          "ref": "Efesliler 2:8-9",
+          "say": "Efesliler, bölüm 2, ayet 8 ile 9",
+          "text": "Çünkü iman yoluyla, lütufla kurtuldunuz. Bu sizin başarınız değil, Tanrı’nın armağanıdır. Kimse övünmesin diye iyi işlerin ödülü değildir."
+        }
+      ]
+    },
+    {
+      "title": "Tanrı köprüyü İsa Mesih aracılığıyla kurdu",
+      "body": [
+        "Tanrı bizi o kadar sevdi ki, Oğlu İsa Mesih’i dünyaya gönderdi.",
+        "Günahsız olan İsa, günahlarımızı üstlenip çarmıhta öldü. Gömüldü ve üçüncü gün dirildi.",
+        "İsa’nın çarmıhı Tanrı’ya giden tek köprüdür."
+      ],
+      "verses": [
+        {
+          "ref": "Romalılar 5:8",
+          "say": "Romalılar, bölüm 5, ayet 8",
+          "text": "Ama Tanrı bizi sevdiğini, biz daha günahkârken Mesih’in bizim için ölmesiyle kanıtlıyor."
+        },
+        {
+          "ref": "1 Korintliler 15:3-4",
+          "say": "1 Korintliler, bölüm 15, ayet 3 ile 4",
+          "text": "Kutsal Yazılar uyarınca Mesih günahlarımız için öldü, gömüldü ve yine Kutsal Yazılar uyarınca üçüncü gün dirildi."
+        }
+      ]
+    },
+    {
+      "title": "İsa’ya iman et ve O’nu kabul et, yaşama kavuş",
+      "body": [
+        "Köprünün üzerinden geçmezsen köprü işe yaramaz.",
+        "İman, İsa hakkında bilgi sahibi olmaktan fazlasıdır. O’nu Kurtarıcın ve Rabbin olarak kabul edip hayatını O’na emanet etmektir.",
+        "İsa’ya iman eden yargılanmaz, ölümden yaşama geçmiştir."
+      ],
+      "verses": [
+        {
+          "ref": "Yuhanna 1:12",
+          "say": "Yuhanna, bölüm 1, ayet 12",
+          "text": "Kendisini kabul edip adına iman edenlerin hepsine Tanrı’nın çocukları olma hakkını verdi."
+        },
+        {
+          "ref": "Yuhanna 5:24",
+          "say": "Yuhanna, bölüm 5, ayet 24",
+          "text": "Size doğrusunu söyleyeyim, sözümü işitip beni gönderene iman edenin sonsuz yaşamı vardır. Böyle biri yargılanmaz, ölümden yaşama geçmiştir."
+        }
+      ]
+    },
+    {
+      "title": "İsa’yı şimdi yüreğine kabul etmek ister misin?",
+      "body": [
+        "İsa şu anda yüreğinin kapısını çalıyor.",
+        "Aşağıdaki dua yalnızca bir örnektir. Önemli olan tam sözcükler değil, içten bir yürektir. Bu dua yüreğini anlatıyorsa, şimdi Tanrı’ya dua et."
+      ],
+      "verses": [
+        {
+          "ref": "Vahiy 3:20",
+          "say": "Vahiy, bölüm 3, ayet 20",
+          "text": "İşte kapıda durmuş, kapıyı çalıyorum. Kim sesimi duyar da kapıyı açarsa, onun yanına gireceğim. Ben onunla, o da benimle yemek yiyecek."
+        }
+      ],
+      "prayer": "Göklerdeki Babamız, günahkâr olduğumu ve kendi gücümle sana gelemeyeceğimi kabul ediyorum. İsa’nın günahlarım için çarmıhta öldüğüne ve dirildiğine iman ediyorum. Şimdi İsa’yı Kurtarıcım ve Rabbim olarak yüreğime kabul ediyorum. Günahlarımı bağışladığın ve beni çocuğun yaptığın için teşekkür ederim. Bugünden itibaren hayatıma yol göster. İsa’nın adıyla dua ediyorum. Amin."
+    },
+    {
+      "title": "Artık Tanrı’nın çocuğu olan sana",
+      "body": [
+        "İsa’yı kabul eden herkesin sonsuz yaşamı vardır. Bu güvence duygulara değil, Tanrı’nın değişmeyen vaadine dayanır."
+      ],
+      "verses": [
+        {
+          "ref": "1 Yuhanna 5:12-13",
+          "say": "1 Yuhanna, bölüm 5, ayet 12 ile 13",
+          "text": "Oğul’a sahip olan yaşama sahiptir, Tanrı’nın Oğlu’na sahip olmayan yaşama sahip değildir. Tanrı Oğlu’nun adına iman eden sizlere bunları, sonsuz yaşama sahip olduğunuzu bilesiniz diye yazdım."
+        }
+      ],
+      "list": [
+        "Her gün Tanrı’yla duada konuş.",
+        "Her gün Kutsal Kitap’ı oku. Yuhanna’ya göre İncil’den başla.",
+        "Bir kiliseye katıl ve iman ailenle birlikte Tanrı’ya tapın.",
+        "Bu iyi haberi başkalarıyla paylaş."
+      ]
+    }
+  ]
+}

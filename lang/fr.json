@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "code": "fr",
+    "name": "French",
+    "nativeName": "Français",
+    "tts": "fr-FR",
+    "dir": "ltr",
+    "bible": "Louis Segond 1910",
+    "version": 1,
+    "review": "recommended"
+  },
+  "ui": {
+    "appName": "Pont vers la vie",
+    "tagline": "Le chemin vers Dieu",
+    "start": "Commencer",
+    "prev": "Retour",
+    "next": "Suivant",
+    "listen": "Écouter",
+    "pause": "Pause",
+    "language": "Langue",
+    "installed": "Langues",
+    "addLang": "Ajouter une langue",
+    "catalog": "Liste des langues en ligne",
+    "catalogHint": "Téléchargez un fichier de langue depuis le serveur et utilisez-le aussitôt.",
+    "fromFile": "Ouvrir un fichier de langue sur cet appareil (.json)",
+    "fromUrl": "Télécharger un fichier de langue depuis une URL",
+    "load": "Télécharger",
+    "get": "Télécharger",
+    "installedBadge": "Installée",
+    "builtinBadge": "Intégrée",
+    "remove": "Supprimer",
+    "newLang": "Créer une nouvelle langue",
+    "exportBtn": "Enregistrer le fichier de langue actuel",
+    "copyBtn": "Copier le contenu",
+    "settings": "Réglages",
+    "speed": "Vitesse de lecture",
+    "voice": "Voix",
+    "voiceAuto": "Automatique",
+    "autoNext": "Passer à l’étape suivante après l’écoute",
+    "textSize": "Taille du texte",
+    "noVoice": "Cet appareil n’a pas de voix en {lang}. Téléchargez-en une dans les réglages de synthèse vocale (TTS).",
+    "noTTS": "Ce navigateur ne permet pas l’écoute.",
+    "invalid": "Impossible de lire le fichier de langue : {reason}",
+    "loaded": "{lang} a été ajouté.",
+    "removed": "Supprimé.",
+    "saved": "Fichier enregistré.",
+    "copied": "Copié.",
+    "netError": "Échec du téléchargement. Vérifiez la connexion et l’adresse.",
+    "restart": "Recommencer",
+    "prayer": "Prière pour recevoir Jésus",
+    "growth": "Grandir dans ta nouvelle vie",
+    "close": "Fermer",
+    "bible": "Bible : {v}",
+    "swipeHint": "Faites glisser ou touchez « Suivant »",
+    "home": "Début",
+    "back": "Retour",
+    "steps": "Étapes",
+    "cover": "Couverture",
+    "voiceEngine": "Voix de lecture",
+    "voiceAutoDesc": "Choisit la meilleure voix de cet appareil",
+    "aiBadge": "Qualité IA",
+    "packBadge": "Pack vocal IA",
+    "preview": "Écouter un extrait",
+    "voiceCatalog": "Télécharger des packs vocaux IA",
+    "voiceCatalogHint": "Des voix de haute qualité enregistrées à l’avance par IA. Une fois téléchargées, elles fonctionnent sans internet.",
+    "noVoicePacks": "Pas encore de pack vocal IA pour cette langue sur le serveur.",
+    "downloading": "Téléchargement {n}/{total}",
+    "packAdded": "Voix IA « {name} » ajoutée.",
+    "guideTitle": "Ajouter des voix IA gratuites au téléphone"
+  },
+  "labels": {
+    "me": "Moi",
+    "god": "Dieu",
+    "sin": "PÉCHÉ",
+    "sinner": "Pécheur",
+    "death": "Mort",
+    "judgment": "Jugement",
+    "works": "Bonnes œuvres",
+    "religion": "Religion",
+    "morality": "Morale",
+    "education": "Éducation",
+    "jesus": "JÉSUS-CHRIST",
+    "eternal": "Vie éternelle",
+    "forgiven": "Pardonné",
+    "child": "Enfant de Dieu",
+    "knock": "Toc toc",
+    "abundant": "Vie abondante"
+  },
+  "steps": [
+    {
+      "title": "Pont vers la vie",
+      "body": [
+        "Découvrons ensemble le chemin de vie que Dieu a préparé pour toi. Lis ou écoute étape par étape."
+      ],
+      "verses": [
+        {
+          "ref": "Jean 14:6",
+          "say": "Jean, chapitre 14, verset 6",
+          "text": "Jésus lui dit: Je suis le chemin, la vérité, et la vie. Nul ne vient au Père que par moi."
+        }
+      ]
+    },
+    {
+      "title": "Dieu veut que tu aies la vie en abondance",
+      "body": [
+        "Qu’est-ce qui a le plus de valeur dans ta vie ? Gagner le monde entier ne sert à rien si l’on perd sa vie.",
+        "Dieu a créé l’être humain par amour. Il a voulu que nous vivions avec lui une vie abondante et éternelle.",
+        "Alors pourquoi tant de personnes vivent-elles dans le vide au lieu de connaître cette vie ?"
+      ],
+      "verses": [
+        {
+          "ref": "Marc 8:36",
+          "say": "Marc, chapitre 8, verset 36",
+          "text": "Et que sert-il à un homme de gagner tout le monde, s’il perd son âme?"
+        },
+        {
+          "ref": "Jean 10:10",
+          "say": "Jean, chapitre 10, verset 10",
+          "text": "Moi, je suis venu afin que les brebis aient la vie, et qu’elles soient dans l’abondance."
+        }
+      ]
+    },
+    {
+      "title": "Le péché nous a séparés de Dieu",
+      "body": [
+        "Dieu est saint et juste. Mais l’être humain s’est détourné de Dieu et a vécu à sa manière.",
+        "La Bible appelle cela le péché. Pécher, c’est aller contre la volonté de Dieu en pensées, en paroles et en actes.",
+        "C’est pourquoi un profond fossé sépare Dieu et les hommes."
+      ],
+      "verses": [
+        {
+          "ref": "Romains 3:23",
+          "say": "Romains, chapitre 3, verset 23",
+          "text": "Car tous ont péché et sont privés de la gloire de Dieu."
+        }
+      ]
+    },
+    {
+      "title": "Le péché conduit à la mort et au jugement",
+      "body": [
+        "Le prix du péché est la mort : être séparé pour toujours de Dieu, la source de la vie.",
+        "Chaque personne meurt une fois, et après cela vient le jugement devant Dieu.",
+        "C’est la question la plus importante de la vie, et personne ne peut l’éviter."
+      ],
+      "verses": [
+        {
+          "ref": "Romains 6:23",
+          "say": "Romains, chapitre 6, verset 23",
+          "text": "Car le salaire du péché, c’est la mort; mais le don gratuit de Dieu, c’est la vie éternelle en Jésus-Christ notre Seigneur."
+        },
+        {
+          "ref": "Hébreux 9:27",
+          "say": "Hébreux, chapitre 9, verset 27",
+          "text": "Et comme il est réservé aux hommes de mourir une seule fois, après quoi vient le jugement."
+        }
+      ]
+    },
+    {
+      "title": "L’effort humain ne peut pas franchir le fossé",
+      "body": [
+        "Beaucoup essaient de franchir ce fossé par les bonnes œuvres, la morale, la religion ou l’éducation.",
+        "Ces efforts ont de la valeur, mais ils sont loin de suffire pour atteindre un Dieu saint.",
+        "Le salut ne se gagne pas par nos actes. C’est un don gratuit de Dieu."
+      ],
+      "verses": [
+        {
+          "ref": "Ésaïe 64:5",
+          "say": "Ésaïe, chapitre 64, verset 5",
+          "text": "Nous sommes tous comme des impurs, et toute notre justice est comme un vêtement souillé."
+        },
+        {
+          "ref": "Éphésiens 2:8-9",
+          "say": "Éphésiens, chapitre 2, versets 8 à 9",
+          "text": "Car c’est par la grâce que vous êtes sauvés, par le moyen de la foi. Et cela ne vient pas de vous, c’est le don de Dieu. Ce n’est point par les œuvres, afin que personne ne se glorifie."
+        }
+      ]
+    },
+    {
+      "title": "Dieu a construit le pont par Jésus-Christ",
+      "body": [
+        "Dieu nous a tant aimés qu’il a envoyé son Fils, Jésus-Christ, dans le monde.",
+        "Jésus, qui était sans péché, a pris nos péchés sur lui et est mort sur la croix. Il a été enseveli, et le troisième jour il est ressuscité.",
+        "La croix de Jésus est le seul pont vers Dieu."
+      ],
+      "verses": [
+        {
+          "ref": "Romains 5:8",
+          "say": "Romains, chapitre 5, verset 8",
+          "text": "Mais Dieu prouve son amour envers nous, en ce que, lorsque nous étions encore des pécheurs, Christ est mort pour nous."
+        },
+        {
+          "ref": "1 Corinthiens 15:3-4",
+          "say": "1 Corinthiens, chapitre 15, versets 3 à 4",
+          "text": "Christ est mort pour nos péchés, selon les Écritures; il a été enseveli, et il est ressuscité le troisième jour, selon les Écritures."
+        }
+      ]
+    },
+    {
+      "title": "Crois en Jésus et reçois-le, et tu auras la vie",
+      "body": [
+        "Un pont ne sert à rien si on ne le traverse pas.",
+        "La foi, c’est plus que savoir des choses sur Jésus. C’est le recevoir comme ton Sauveur et Seigneur, et lui confier ta vie.",
+        "Celui qui croit en Jésus ne vient pas en jugement, mais il est passé de la mort à la vie."
+      ],
+      "verses": [
+        {
+          "ref": "Jean 1:12",
+          "say": "Jean, chapitre 1, verset 12",
+          "text": "Mais à tous ceux qui l’ont reçue, à ceux qui croient en son nom, elle a donné le pouvoir de devenir enfants de Dieu."
+        },
+        {
+          "ref": "Jean 5:24",
+          "say": "Jean, chapitre 5, verset 24",
+          "text": "En vérité, en vérité, je vous le dis, celui qui écoute ma parole, et qui croit à celui qui m’a envoyé, a la vie éternelle et ne vient point en jugement, mais il est passé de la mort à la vie."
+        }
+      ]
+    },
+    {
+      "title": "Veux-tu recevoir Jésus dans ton cœur maintenant ?",
+      "body": [
+        "Jésus frappe en ce moment à la porte de ton cœur.",
+        "La prière ci-dessous n’est qu’un exemple. Ce qui compte, ce ne sont pas les mots exacts, mais un cœur sincère. Si cette prière exprime ce que tu ressens, adresse-la à Dieu maintenant."
+      ],
+      "verses": [
+        {
+          "ref": "Apocalypse 3:20",
+          "say": "Apocalypse, chapitre 3, verset 20",
+          "text": "Voici, je me tiens à la porte, et je frappe. Si quelqu’un entend ma voix et ouvre la porte, j’entrerai chez lui, je souperai avec lui, et lui avec moi."
+        }
+      ],
+      "prayer": "Père céleste, je reconnais que je suis pécheur et que je ne peux pas venir à toi par mes propres forces. Je crois que Jésus est mort sur la croix pour mes péchés et qu’il est ressuscité. Maintenant, je reçois Jésus dans mon cœur comme mon Sauveur et mon Seigneur. Merci de pardonner mes péchés et de faire de moi ton enfant. Conduis ma vie dès aujourd’hui. Au nom de Jésus, je prie. Amen."
+    },
+    {
+      "title": "À toi, désormais enfant de Dieu",
+      "body": [
+        "Tous ceux qui ont reçu Jésus ont la vie éternelle. Cette assurance ne repose pas sur les sentiments, mais sur la promesse immuable de Dieu."
+      ],
+      "verses": [
+        {
+          "ref": "1 Jean 5:12-13",
+          "say": "1 Jean, chapitre 5, versets 12 à 13",
+          "text": "Celui qui a le Fils a la vie; celui qui n’a pas le Fils de Dieu n’a pas la vie. Je vous ai écrit ces choses, afin que vous sachiez que vous avez la vie éternelle, vous qui croyez au nom du Fils de Dieu."
+        }
+      ],
+      "list": [
+        "Parle avec Dieu dans la prière chaque jour.",
+        "Lis la Bible chaque jour. Commence par l’Évangile de Jean.",
+        "Rejoins une Église et adore Dieu avec ta famille dans la foi.",
+        "Partage cette bonne nouvelle avec d’autres."
+      ]
+    }
+  ]
+}
