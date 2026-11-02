@@ -6,7 +6,7 @@
     "tts": "bn-BD",
     "dir": "ltr",
     "bible": "পবিত্র বাইবেল (Bengali O.V.)",
-    "version": 1,
+    "version": 2,
     "review": "required"
   },
   "ui": {
@@ -66,7 +66,12 @@
     "noVoicePacks": "সার্ভারে এখনও এই ভাষার AI কণ্ঠ প্যাক নেই।",
     "downloading": "ডাউনলোড হচ্ছে {n}/{total}",
     "packAdded": "AI কণ্ঠ “{name}” যোগ করা হয়েছে।",
-    "guideTitle": "ফোনে বিনামূল্যে AI কণ্ঠ যোগ করুন"
+    "guideTitle": "ফোনে বিনামূল্যে AI কণ্ঠ যোগ করুন",
+    "motion": "ছবির নড়াচড়া (অ্যানিমেশন)",
+    "motionOn": "সবসময় চালু",
+    "motionSystem": "ডিভাইসের সেটিং অনুযায়ী",
+    "motionOff": "বন্ধ",
+    "motionHint": "ছবিতে ট্যাপ করলে নড়াচড়া আবার দেখা যাবে। “সবসময় চালু” থাকলে ফোনে Reduce Motion চালু থাকলেও ছবি নড়বে।"
   },
   "labels": {
     "me": "আমি",

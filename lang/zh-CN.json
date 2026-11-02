@@ -6,7 +6,7 @@
     "tts": "zh-CN",
     "dir": "ltr",
     "bible": "和合本",
-    "version": 2
+    "version": 3
   },
   "ui": {
     "appName": "生命之桥",
@@ -73,7 +73,12 @@
     "guideTitle": "为手机添加免费的AI语音",
     "guideIOS": "iPhone：设置 › 辅助功能 › 朗读内容 › 声音 › 选择语言 › 下载“增强”或“高级”声音",
     "guideAndroid": "Android：设置 › 常规管理 › 文字转语音 › 引擎选 Google › ⚙ › 安装语音数据 › 选择语言和声音",
-    "guideAfter": "下载后重新打开此页面，声音会带着“AI高品质”标记出现在列表中。"
+    "guideAfter": "下载后重新打开此页面，声音会带着“AI高品质”标记出现在列表中。",
+    "motion": "图画动画",
+    "motionOn": "始终开启",
+    "motionSystem": "跟随设备设置",
+    "motionOff": "关闭",
+    "motionHint": "点击图画可重新播放该场景的动画。选择“始终开启”时，即使手机开启了“减弱动态效果”也会播放。"
   },
   "labels": {
     "me": "我",

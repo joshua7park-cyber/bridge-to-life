@@ -6,7 +6,7 @@
     "tts": "pt-BR",
     "dir": "ltr",
     "bible": "Almeida Revista e Corrigida",
-    "version": 1,
+    "version": 2,
     "review": "recommended"
   },
   "ui": {
@@ -66,7 +66,12 @@
     "noVoicePacks": "Ainda não há pacote de voz IA para este idioma no servidor.",
     "downloading": "Baixando {n}/{total}",
     "packAdded": "Voz IA “{name}” adicionada.",
-    "guideTitle": "Adicione vozes IA gratuitas ao celular"
+    "guideTitle": "Adicione vozes IA gratuitas ao celular",
+    "motion": "Movimento da imagem (animação)",
+    "motionOn": "Sempre ligado",
+    "motionSystem": "Seguir o aparelho",
+    "motionOff": "Desligado",
+    "motionHint": "Toque na imagem para ver o movimento de novo. Em “Sempre ligado”, ela se move mesmo com “Reduzir movimento” ativado no celular."
   },
   "labels": {
     "me": "Eu",

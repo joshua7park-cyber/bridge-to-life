@@ -6,7 +6,7 @@
     "tts": "id-ID",
     "dir": "ltr",
     "bible": "Terjemahan Baru (TB)",
-    "version": 2
+    "version": 3
   },
   "ui": {
     "appName": "Jembatan Kehidupan",
@@ -73,7 +73,12 @@
     "guideTitle": "Tambahkan suara AI gratis ke ponsel",
     "guideIOS": "iPhone: Pengaturan › Aksesibilitas › Konten Lisan › Suara › pilih bahasa › unduh suara “Ditingkatkan” atau “Premium”",
     "guideAndroid": "Android: Pengaturan › Manajemen umum › Teks-ke-ucapan › pilih mesin Google › ⚙ › Instal data suara › pilih bahasa dan suara",
-    "guideAfter": "Setelah diunduh, buka lagi layar ini dan suara akan muncul dengan tanda “Kualitas AI”."
+    "guideAfter": "Setelah diunduh, buka lagi layar ini dan suara akan muncul dengan tanda “Kualitas AI”.",
+    "motion": "Gerakan gambar (animasi)",
+    "motionOn": "Selalu aktif",
+    "motionSystem": "Ikuti perangkat",
+    "motionOff": "Mati",
+    "motionHint": "Ketuk gambar untuk memutar ulang gerakannya. “Selalu aktif” tetap memutarnya walaupun “Kurangi Gerakan” di ponsel aktif."
   },
   "labels": {
     "me": "Saya",

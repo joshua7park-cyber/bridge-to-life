@@ -6,7 +6,7 @@
     "tts": "fil-PH",
     "dir": "ltr",
     "bible": "Ang Biblia 1905",
-    "version": 1,
+    "version": 2,
     "review": "recommended"
   },
   "ui": {
@@ -66,7 +66,12 @@
     "noVoicePacks": "Wala pang AI voice pack para sa wikang ito sa server.",
     "downloading": "Nagda-download {n}/{total}",
     "packAdded": "Naidagdag ang AI na boses na “{name}”.",
-    "guideTitle": "Magdagdag ng libreng AI na boses sa telepono"
+    "guideTitle": "Magdagdag ng libreng AI na boses sa telepono",
+    "motion": "Galaw ng larawan (animasyon)",
+    "motionOn": "Laging bukas",
+    "motionSystem": "Sundin ang device",
+    "motionOff": "Patay",
+    "motionHint": "I-tap ang larawan para ulitin ang galaw nito. Sa “Laging bukas”, gagalaw ito kahit naka-on ang Reduce Motion ng telepono."
   },
   "labels": {
     "me": "Ako",

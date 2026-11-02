@@ -6,7 +6,7 @@
     "tts": "es-ES",
     "dir": "ltr",
     "bible": "Reina-Valera 1960",
-    "version": 2
+    "version": 3
   },
   "ui": {
     "appName": "Puente a la Vida",
@@ -73,7 +73,12 @@
     "guideTitle": "Agrega voces IA gratuitas a tu teléfono",
     "guideIOS": "iPhone: Ajustes › Accesibilidad › Contenido leído › Voces › elige un idioma › descarga una voz “Mejorada” o “Premium”",
     "guideAndroid": "Android: Ajustes › Administración general › Texto a voz › motor de Google › ⚙ › Instalar datos de voz › elige idioma y voz",
-    "guideAfter": "Después de descargarla, vuelve a abrir esta pantalla y la voz aparecerá con la marca “Calidad IA”."
+    "guideAfter": "Después de descargarla, vuelve a abrir esta pantalla y la voz aparecerá con la marca “Calidad IA”.",
+    "motion": "Movimiento de la imagen (animación)",
+    "motionOn": "Siempre",
+    "motionSystem": "Según el dispositivo",
+    "motionOff": "Apagado",
+    "motionHint": "Toca la imagen para volver a ver su movimiento. “Siempre” lo reproduce aunque el teléfono tenga activado “Reducir movimiento”."
   },
   "labels": {
     "me": "Yo",

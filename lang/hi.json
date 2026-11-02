@@ -6,7 +6,7 @@
     "tts": "hi-IN",
     "dir": "ltr",
     "bible": "पवित्र बाइबिल (Hindi O.V.)",
-    "version": 1,
+    "version": 2,
     "review": "recommended"
   },
   "ui": {
@@ -66,7 +66,12 @@
     "noVoicePacks": "सर्वर पर अभी इस भाषा का AI आवाज़ पैक नहीं है।",
     "downloading": "डाउनलोड हो रहा है {n}/{total}",
     "packAdded": "AI आवाज़ “{name}” जोड़ दी गई।",
-    "guideTitle": "फ़ोन में मुफ़्त AI आवाज़ें जोड़ें"
+    "guideTitle": "फ़ोन में मुफ़्त AI आवाज़ें जोड़ें",
+    "motion": "चित्र की गति (एनीमेशन)",
+    "motionOn": "हमेशा चालू",
+    "motionSystem": "डिवाइस के अनुसार",
+    "motionOff": "बंद",
+    "motionHint": "चित्र पर टैप करके उसकी गति फिर से देखें। “हमेशा चालू” में फ़ोन का Reduce Motion चालू होने पर भी चित्र चलेगा।"
   },
   "labels": {
     "me": "मैं",

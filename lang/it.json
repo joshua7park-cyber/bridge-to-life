@@ -6,7 +6,7 @@
     "tts": "it-IT",
     "dir": "ltr",
     "bible": "Riveduta 1927",
-    "version": 1,
+    "version": 2,
     "review": "recommended"
   },
   "ui": {
@@ -66,7 +66,12 @@
     "noVoicePacks": "Non c’è ancora un pacchetto voce IA per questa lingua sul server.",
     "downloading": "Download {n}/{total}",
     "packAdded": "Voce IA «{name}» aggiunta.",
-    "guideTitle": "Aggiungi voci IA gratuite al telefono"
+    "guideTitle": "Aggiungi voci IA gratuite al telefono",
+    "motion": "Movimento dell’immagine (animazione)",
+    "motionOn": "Sempre attivo",
+    "motionSystem": "Come il dispositivo",
+    "motionOff": "Disattivato",
+    "motionHint": "Tocca l’immagine per rivederne il movimento. Con «Sempre attivo» si muove anche se sul telefono è attivo «Riduci movimento»."
   },
   "labels": {
     "me": "Io",

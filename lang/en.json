@@ -6,7 +6,7 @@
     "tts": "en-US",
     "dir": "ltr",
     "bible": "ESV",
-    "version": 2
+    "version": 3
   },
   "ui": {
     "appName": "Bridge to Life",
@@ -73,7 +73,12 @@
     "guideTitle": "Add free AI voices to your phone",
     "guideIOS": "iPhone: Settings › Accessibility › Spoken Content › Voices › choose a language › download an “Enhanced” or “Premium” voice",
     "guideAndroid": "Android: Settings › General management › Text-to-speech › set Google as the engine › ⚙ › Install voice data › choose a language and voice",
-    "guideAfter": "After downloading, reopen this screen and the voice appears with an “AI quality” badge."
+    "guideAfter": "After downloading, reopen this screen and the voice appears with an “AI quality” badge.",
+    "motion": "Picture motion (animation)",
+    "motionOn": "Always on",
+    "motionSystem": "Follow device",
+    "motionOff": "Off",
+    "motionHint": "Tap the picture to replay its motion. “Always on” plays it even when the phone’s Reduce Motion is turned on."
   },
   "labels": {
     "me": "Me",

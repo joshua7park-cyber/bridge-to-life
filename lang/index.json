@@ -5,175 +5,182 @@
       "nativeName": "한국어",
       "name": "Korean",
       "file": "ko.json",
-      "version": 2
+      "version": 3
     },
     {
       "code": "en",
       "nativeName": "English",
       "name": "English",
       "file": "en.json",
-      "version": 2
+      "version": 3
     },
     {
       "code": "ja",
       "nativeName": "日本語",
       "name": "Japanese",
       "file": "ja.json",
-      "version": 2
+      "version": 3
     },
     {
       "code": "zh-CN",
       "nativeName": "简体中文",
       "name": "Chinese (Simplified)",
       "file": "zh-CN.json",
-      "version": 2
+      "version": 3
     },
     {
       "code": "id",
       "nativeName": "Bahasa Indonesia",
       "name": "Indonesian",
       "file": "id.json",
-      "version": 2
+      "version": 3
     },
     {
       "code": "es",
       "nativeName": "Español",
       "name": "Spanish",
       "file": "es.json",
-      "version": 2
+      "version": 3
     },
     {
       "code": "mn",
       "nativeName": "Монгол хэл",
       "name": "Mongolian",
       "file": "mn.json",
-      "version": 1
+      "version": 2
     },
     {
       "code": "fil",
       "nativeName": "Filipino",
       "name": "Filipino (Tagalog)",
       "file": "fil.json",
-      "version": 1
+      "version": 2
     },
     {
       "code": "vi",
       "nativeName": "Tiếng Việt",
       "name": "Vietnamese",
       "file": "vi.json",
-      "version": 1
+      "version": 2
     },
     {
       "code": "lo",
       "nativeName": "ພາສາລາວ",
       "name": "Lao",
       "file": "lo.json",
-      "version": 1
+      "version": 2
     },
     {
       "code": "my",
       "nativeName": "မြန်မာဘာသာ",
       "name": "Burmese",
       "file": "my.json",
-      "version": 1
+      "version": 2
     },
     {
       "code": "zh-HK",
       "nativeName": "廣東話（繁體）",
       "name": "Cantonese (Traditional Chinese)",
       "file": "zh-HK.json",
-      "version": 1
+      "version": 2
     },
     {
       "code": "th",
       "nativeName": "ภาษาไทย",
       "name": "Thai",
       "file": "th.json",
-      "version": 1
+      "version": 2
     },
     {
       "code": "ta",
       "nativeName": "தமிழ்",
       "name": "Tamil",
       "file": "ta.json",
-      "version": 1
+      "version": 2
     },
     {
       "code": "hi",
       "nativeName": "हिन्दी",
       "name": "Hindi",
       "file": "hi.json",
-      "version": 1
+      "version": 2
     },
     {
       "code": "de",
       "nativeName": "Deutsch",
       "name": "German",
       "file": "de.json",
-      "version": 1
+      "version": 2
     },
     {
       "code": "pt-BR",
       "nativeName": "Português (Brasil)",
       "name": "Portuguese (Brazil)",
       "file": "pt-BR.json",
-      "version": 1
+      "version": 2
+    },
+    {
+      "code": "pt-PT",
+      "nativeName": "Português (Portugal)",
+      "name": "Portuguese (Portugal)",
+      "file": "pt-PT.json",
+      "version": 2
     },
     {
       "code": "fr",
       "nativeName": "Français",
       "name": "French",
       "file": "fr.json",
-      "version": 1
+      "version": 2
     },
     {
       "code": "tr",
       "nativeName": "Türkçe",
       "name": "Turkish",
       "file": "tr.json",
-      "version": 1
+      "version": 2
     },
     {
       "code": "ru",
       "nativeName": "Русский",
       "name": "Russian",
       "file": "ru.json",
-      "version": 1
+      "version": 2
     },
     {
       "code": "bn",
       "nativeName": "বাংলা",
       "name": "Bengali",
       "file": "bn.json",
-      "version": 1
+      "version": 2
     },
     {
       "code": "ar",
       "nativeName": "العربية",
       "name": "Arabic",
       "file": "ar.json",
-      "version": 1
+      "version": 2
     },
     {
       "code": "it",
       "nativeName": "Italiano",
       "name": "Italian",
       "file": "it.json",
-      "version": 1
+      "version": 2
     },
     {
       "code": "he",
       "nativeName": "עברית",
       "name": "Hebrew",
       "file": "he.json",
-      "version": 1
+      "version": 2
     },
     {
       "code": "el",
       "nativeName": "Ελληνικά",
       "name": "Greek",
       "file": "el.json",
-      "version": 1
+      "version": 2
     }
   ]
 }

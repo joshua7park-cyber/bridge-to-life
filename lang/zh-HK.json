@@ -6,7 +6,7 @@
     "tts": "zh-HK",
     "dir": "ltr",
     "bible": "和合本（繁體）",
-    "version": 1,
+    "version": 2,
     "review": "recommended"
   },
   "ui": {
@@ -66,7 +66,12 @@
     "noVoicePacks": "伺服器上暫時還沒有此語言的AI語音包。",
     "downloading": "正在下載 {n}/{total}",
     "packAdded": "已添加AI語音「{name}」。",
-    "guideTitle": "為手機加入免費的 AI 語音"
+    "guideTitle": "為手機加入免費的 AI 語音",
+    "motion": "圖畫動畫",
+    "motionOn": "一律開啟",
+    "motionSystem": "跟隨裝置設定",
+    "motionOff": "關閉",
+    "motionHint": "按一下圖畫可重新播放該場景的動畫。選擇「一律開啟」時，即使手機開啟了「減少動態效果」也會播放。"
   },
   "labels": {
     "me": "我",

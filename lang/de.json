@@ -6,7 +6,7 @@
     "tts": "de-DE",
     "dir": "ltr",
     "bible": "Lutherbibel 1912",
-    "version": 1,
+    "version": 2,
     "review": "recommended"
   },
   "ui": {
@@ -66,7 +66,12 @@
     "noVoicePacks": "Für diese Sprache gibt es noch kein KI-Sprachpaket auf dem Server.",
     "downloading": "Wird geladen {n}/{total}",
     "packAdded": "KI-Stimme „{name}“ hinzugefügt.",
-    "guideTitle": "Kostenlose KI-Stimmen auf das Handy laden"
+    "guideTitle": "Kostenlose KI-Stimmen auf das Handy laden",
+    "motion": "Bewegung im Bild (Animation)",
+    "motionOn": "Immer an",
+    "motionSystem": "Wie Gerät",
+    "motionOff": "Aus",
+    "motionHint": "Tippe auf das Bild, um die Bewegung erneut abzuspielen. Mit „Immer an“ läuft sie auch, wenn „Bewegung reduzieren“ auf dem Handy aktiv ist."
   },
   "labels": {
     "me": "Ich",

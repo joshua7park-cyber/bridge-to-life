@@ -6,7 +6,7 @@
     "tts": "tr-TR",
     "dir": "ltr",
     "bible": "Kutsal Kitap (Yeni Çeviri)",
-    "version": 1,
+    "version": 2,
     "review": "recommended"
   },
   "ui": {
@@ -66,7 +66,12 @@
     "noVoicePacks": "Sunucuda bu dil için henüz yapay zekâ ses paketi yok.",
     "downloading": "İndiriliyor {n}/{total}",
     "packAdded": "“{name}” yapay zekâ sesi eklendi.",
-    "guideTitle": "Telefona ücretsiz yapay zekâ sesleri ekleyin"
+    "guideTitle": "Telefona ücretsiz yapay zekâ sesleri ekleyin",
+    "motion": "Resim hareketi (animasyon)",
+    "motionOn": "Her zaman açık",
+    "motionSystem": "Cihaza göre",
+    "motionOff": "Kapalı",
+    "motionHint": "Hareketi yeniden izlemek için resme dokunun. “Her zaman açık” seçiliyse telefonda “Hareketi Azalt” açık olsa da oynar."
   },
   "labels": {
     "me": "Ben",

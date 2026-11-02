@@ -6,7 +6,7 @@
     "tts": "vi-VN",
     "dir": "ltr",
     "bible": "Kinh Thánh 1926 (Bản Truyền Thống)",
-    "version": 1,
+    "version": 2,
     "review": "recommended"
   },
   "ui": {
@@ -66,7 +66,12 @@
     "noVoicePacks": "Máy chủ chưa có gói giọng AI cho ngôn ngữ này.",
     "downloading": "Đang tải {n}/{total}",
     "packAdded": "Đã thêm giọng AI “{name}”.",
-    "guideTitle": "Thêm giọng AI miễn phí vào điện thoại"
+    "guideTitle": "Thêm giọng AI miễn phí vào điện thoại",
+    "motion": "Chuyển động của hình (hoạt ảnh)",
+    "motionOn": "Luôn bật",
+    "motionSystem": "Theo cài đặt máy",
+    "motionOff": "Tắt",
+    "motionHint": "Chạm vào hình để xem lại chuyển động. Khi chọn “Luôn bật”, hình vẫn chuyển động dù điện thoại đang bật “Giảm chuyển động”."
   },
   "labels": {
     "me": "Tôi",
